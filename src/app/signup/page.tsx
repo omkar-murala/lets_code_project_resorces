@@ -1,5 +1,6 @@
 import React from 'react'
-import { ArrowRight } from 'lucide-react'
+import { ArrowRight } from 'lucide-react';
+import Image from 'next/image';
 
 export function SignUp() {
   return (
@@ -111,7 +112,9 @@ export function SignUp() {
           </div>
         </div>
         <div className="h-full w-full">
-          <img
+          <Image
+          height={1000}
+          width={1000}
             className="mx-auto h-full w-full rounded-md object-cover"
             src="https://images.unsplash.com/photo-1559526324-4b87b5e36e44?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1742&q=80"
             alt=""

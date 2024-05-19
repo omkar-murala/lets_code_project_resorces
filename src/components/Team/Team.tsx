@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import Image from 'next/image';
 
 export function Teams() {
   return (
@@ -19,7 +20,9 @@ export function Teams() {
               backgroundRepeat: 'no-repeat',
             }}
           >
-            <img
+            <Image
+            height={1000}
+            width={1000}
               src="https://images.unsplash.com/photo-1540569014015-19a7be504e3a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NzZ8fHBlcnNvbnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60"
               alt=""
               className="z-0 h-full w-full rounded-[10px] object-cover"
@@ -39,7 +42,9 @@ export function Teams() {
               backgroundRepeat: 'no-repeat',
             }}
           >
-            <img
+            <Image
+            width={1000}
+            height={1000}
               src="https://images.unsplash.com/photo-1513956589380-bad6acb9b9d4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDV8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=800&q=60"
               alt=""
               className="z-0 h-full w-full rounded-[10px] object-cover"
@@ -59,7 +64,9 @@ export function Teams() {
               backgroundRepeat: 'no-repeat',
             }}
           >
-            <img
+            <Image
+            width={1000}
+            height={1000}
               src="https://images.unsplash.com/photo-1567532939604-b6b5b0db2604?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDB8fHBlcnNvbnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60"
               alt=""
               className="z-0 h-full w-full rounded-[10px] object-cover"
