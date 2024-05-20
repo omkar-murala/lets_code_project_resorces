@@ -1,8 +1,7 @@
-import React from 'react'
 import { ArrowRight } from 'lucide-react';
 import Image from 'next/image';
 
-export function SignUp() {
+function SignUp() {
   return (
     <section>
       <div className="grid grid-cols-1 lg:grid-cols-2">
@@ -124,3 +123,4 @@ export function SignUp() {
     </section>
   )
 }
+export default SignUp;
