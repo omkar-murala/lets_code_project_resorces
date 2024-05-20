@@ -31,3 +31,40 @@ body {
     text-wrap: balance;
   }
 }
+
+
+
+@layer components {
+  /* Right to Left Animation */
+  @keyframes scroll-right-to-left {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+
+  /* Left to Right Animation */
+  @keyframes scroll-left-to-right {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(100%);
+    }
+  }
+
+  /* Animations applied to elements */
+  .animate-scroll-left-to-right {
+    animation: scroll-left-to-right 40s linear infinite;
+    display: flex;
+    white-space: nowrap;
+  }
+
+  .animate-scroll-right-to-left {
+    animation: scroll-right-to-left 40s linear infinite;
+    display: flex;
+    white-space: nowrap;
+  }
+}
