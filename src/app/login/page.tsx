@@ -1,8 +1,38 @@
+"use client"
 import React from 'react'
 import { ArrowRight } from 'lucide-react'
 import Image from 'next/image'
+import loginAuth from "./auth/auth";
+import { useState,useEffect } from 'react';
+import { useRouter } from 'next/navigation';
 
 function SignIn() {
+  const [email,setEmail] =  useState("");
+  const [password,setPassword] = useState("");
+  const [disabled,setDisabled] =  useState(false);
+  const Router = useRouter()
+
+  useEffect(()=>{
+      if(email.length>0 && password.length>0){
+        setDisabled(false)
+      }
+      else{
+          setDisabled(true)
+      }
+  },[email,password])
+
+  async function submitHandler() {
+    const data = await loginAuth(email, password);
+    if(data){
+      Router.push("/resourses")
+    }
+    else{
+      console.log("error")
+    }
+
+    
+  }
+
   return (
     <section>
       <div className="grid grid-cols-1 lg:grid-cols-2">
@@ -120,6 +150,7 @@ function SignIn() {
                       className="flex h-10 w-full rounded-md border border-gray-300 bg-transparent px-3 py-2 text-sm placeholder:text-gray-400 focus:outline-none focus:ring-1 focus:ring-gray-400 focus:ring-offset-1 disabled:cursor-not-allowed disabled:opacity-50"
                       type="email"
                       placeholder="Email"
+                      onChange={(e)=>setEmail(e.target.value)}
                     ></input>
                   </div>
                 </div>
@@ -143,11 +174,13 @@ function SignIn() {
                       className="flex h-10 w-full rounded-md border border-gray-300 bg-transparent px-3 py-2 text-sm placeholder:text-gray-400 focus:outline-none focus:ring-1 focus:ring-gray-400 focus:ring-offset-1 disabled:cursor-not-allowed disabled:opacity-50"
                       type="password"
                       placeholder="Password"
+                      onChange={(e)=>setPassword(e.target.value)}
                     ></input>
                   </div>
                 </div>
                 <div>
                   <button
+                  onClick={submitHandler}
                     type="button"
                     className="inline-flex w-full items-center justify-center rounded-md bg-black px-3.5 py-2.5 font-semibold leading-7 text-white hover:bg-black/80"
                   >

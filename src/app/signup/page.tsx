@@ -1,7 +1,36 @@
+"use client";
 import { ArrowRight } from 'lucide-react';
 import Image from 'next/image';
-
+import { useState, useCallback, useEffect } from 'react';
+import signupAuth from "./auth/auth";
+import { useRouter } from 'next/navigation';
 function SignUp() {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("")
+  const [disabled, setDisabled] = useState(false)
+  const Router =  useRouter();
+  useEffect(() => {
+    if (email.length > 0 && password.length > 0) {
+      setDisabled(false)
+    }
+    else {
+      setDisabled(true)
+    }
+  }, [email, password])
+
+
+ async function submitHandler(){
+   const data = await signupAuth(email,password);
+   if(data){
+    console.log("sucess")
+    setEmail("")
+    setPassword("")
+    Router.push("/login")
+   }
+   else{
+    console.log("failed")
+   }
+ } 
   return (
     <section>
       <div className="grid grid-cols-1 lg:grid-cols-2">
@@ -21,20 +50,6 @@ function SignUp() {
             <form action="#" method="POST" className="mt-8">
               <div className="space-y-5">
                 <div>
-                  <label htmlFor="name" className="text-base font-medium text-gray-900">
-                    {' '}
-                    Full Name{' '}
-                  </label>
-                  <div className="mt-2">
-                    <input
-                      className="flex h-10 w-full rounded-md border border-gray-300 bg-transparent px-3 py-2 text-sm placeholder:text-gray-400 focus:outline-none focus:ring-1 focus:ring-gray-400 focus:ring-offset-1 disabled:cursor-not-allowed disabled:opacity-50"
-                      type="text"
-                      placeholder="Full Name"
-                      id="name"
-                    ></input>
-                  </div>
-                </div>
-                <div>
                   <label htmlFor="email" className="text-base font-medium text-gray-900">
                     {' '}
                     Email address{' '}
@@ -45,6 +60,7 @@ function SignUp() {
                       type="email"
                       placeholder="Email"
                       id="email"
+                      onChange={(e) => setEmail(e.target.value)}
                     ></input>
                   </div>
                 </div>
@@ -61,11 +77,14 @@ function SignUp() {
                       type="password"
                       placeholder="Password"
                       id="password"
+                      onChange={(e) => setPassword(e.target.value)}
                     ></input>
                   </div>
                 </div>
                 <div>
                   <button
+                  disabled={disabled}
+                  onClick={submitHandler}
                     type="button"
                     className="inline-flex w-full items-center justify-center rounded-md bg-black px-3.5 py-2.5 font-semibold leading-7 text-white hover:bg-black/80"
                   >
@@ -75,7 +94,7 @@ function SignUp() {
               </div>
             </form>
             <div className="mt-3 space-y-3">
-              <button
+              <button            
                 type="button"
                 className="relative inline-flex w-full items-center justify-center rounded-md border border-gray-400 bg-white px-3.5 py-2.5 font-semibold text-gray-700 transition-all duration-200 hover:bg-gray-100 hover:text-black focus:bg-gray-100 focus:text-black focus:outline-none"
               >
@@ -112,8 +131,8 @@ function SignUp() {
         </div>
         <div className="h-full w-full">
           <Image
-          height={1000}
-          width={1000}
+            height={1000}
+            width={1000}
             className="mx-auto h-full w-full rounded-md object-cover"
             src="https://images.unsplash.com/photo-1559526324-4b87b5e36e44?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1742&q=80"
             alt=""

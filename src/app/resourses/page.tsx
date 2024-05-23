@@ -5,21 +5,27 @@ import Footer from '../resourses/components/Footer';
 import KnowledgeQuizzes from '../resourses/components/KnowledgeQuizzes';
 import LearningPaths from '../resourses/components/LearningPaths';
 import Navbar from "../resourses/components/Navbar";
+import Category from "./components/Category";
+import SubCategory from "./components/SubCategory";
 
-const AboutPage = () => {
+const page = () => {
   return (
     <div>
-      <Navbar />
+      {/* <Navbar /> */}
       <main className="container mx-auto p-4">
-        <DiscoverCourses />
+        {/* <DiscoverCourses /> */}
+        <div className="pb-10 pt-10 flex flex-col justify-center">
+        <SubCategory/>
+
+        </div>
         <FeaturedTopics />
         <LearningPaths />
         <EducationalVideos />
         <KnowledgeQuizzes />
       </main>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 };
 
-export default AboutPage;
+export default page;

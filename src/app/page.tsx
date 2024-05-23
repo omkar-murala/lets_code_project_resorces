@@ -2,18 +2,13 @@ import { Star } from 'lucide-react';
 import { Teams } from "@/components/Team/Team";
 import Gallery from '@/components/gallery/Gallery';
 import Image from 'next/image';
+import {ThreeDCardDemo} from "@/components/SlideCard/SlideCard"
 export default function Home() {
   return (
     <>
     <div className="relative w-full bg-white">
         <div className="mx-auto max-w-7xl lg:grid lg:grid-cols-12 lg:gap-x-8 lg:px-8">
           <div className="flex flex-col justify-center px-4 py-12 md:py-16 lg:col-span-7 lg:gap-x-6 lg:px-6 lg:py-24 xl:col-span-6">
-            <div className="mt-8 flex max-w-max items-center space-x-2 rounded-full bg-gray-100 p-1">
-              <div className="rounded-full bg-white p-1 px-2">
-                <p className="text-sm font-medium">We&apos; hiring</p>
-              </div>
-              <p className="text-sm font-medium">Join our team &rarr;</p>
-            </div>
             <h1 className="mt-8 text-3xl font-bold tracking-tight text-black md:text-4xl lg:text-6xl">
               People who care about your growth
             </h1>
@@ -42,14 +37,8 @@ export default function Home() {
             </form>
           </div>
           <div className="relative lg:col-span-5 lg:-mr-8 xl:col-span-6">
-            <Image
-            height={1000}
-            width={1000}
-
-              className="aspect-[3/2] bg-gray-50 object-cover lg:aspect-[4/3] lg:h-[700px] xl:aspect-[16/9]"
-              src="https://plus.unsplash.com/premium_photo-1679079456783-5d862f755557?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjQ3fHxtYW4lMjB3aXRoJTIwbGFwdG9wfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60"
-              alt=""
-            />
+           
+            <ThreeDCardDemo/>
           </div>
         </div>
       </div>
@@ -150,66 +139,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-
-
-
-      {/* Gallery */}
       <Gallery/>
-      
-
-      {/* Created By */}
-      <Teams/>
-      
-      {/* NewsLetter */}
-      <div className="mx-auto max-w-7xl bg-gray-50 px-2 py-10 lg:px-2">
-        <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between">
-          <div className="w-full md:w-2/3 lg:w-1/2">
-            <h2 className="text-3xl font-bold text-black">Sign up for our weekly newsletter</h2>
-            <p className="mt-4 text-gray-600">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at ipsum eu nunc
-              commodo posuere et sit amet ligula.
-            </p>
-            <div className="mt-4">
-              <p className="font-semibold text-gray-800">
-                Trusted by over 100,000+ businesses and individuals
-              </p>
-              <div className="mt-2 flex items-center">
-                <div className="flex space-x-1">
-                  {Array.from({ length: 5 }).map((_, i) => (
-                    <Star key={i} className="h-5 w-5 text-yellow-400" />
-                  ))}
-                </div>
-                <span className="ml-2 inline-block">
-                  <span className="text-sm font-semibold text-gray-800">4.8/5 . 3420 Reviews</span>
-                </span>
-              </div>
-            </div>
-          </div>
-          <div className="mt-10 w-full md:w-2/3 lg:mt-0 lg:w-1/2">
-            <form className="flex lg:justify-center">
-              <div className="flex w-full max-w-md flex-col space-y-4">
-                <input
-                  className="flex h-10 w-full rounded-md border border-black/30 bg-transparent px-3 py-2 text-sm placeholder:text-gray-600 focus:outline-none focus:ring-1 focus:ring-black/30 focus:ring-offset-1 disabled:cursor-not-allowed disabled:opacity-50"
-                  type="email"
-                  placeholder="Email"
-                ></input>
-                <button
-                  type="button"
-                  className="w-full rounded-md bg-black px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-black/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
-                >
-                  Subscribe
-                </button>
-              </div>
-            </form>
-            <p className="mt-2 lg:text-center">
-              <span className="text-sm text-gray-600">
-                By signing up, you agree to our terms of service and privacy policy.
-              </span>
-            </p>
-          </div>
-        </div>
-      </div>
-
     </>
   );
 }
