@@ -18,7 +18,7 @@ function SignIn() {
   async function submitHandler() {
     const data = await loginAuth(email, password);
     if (data) {
-      router.push("/resources");
+      router.push("/resourses");
     } else {
       console.log("error");
     }
