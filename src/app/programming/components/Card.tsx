@@ -1,4 +1,3 @@
-import React from 'react'
 import Link from 'next/link'
 
 export function Card({ name, image, link }: { image: string, name: string, link: string }) {
