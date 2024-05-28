@@ -1,36 +1,32 @@
 "use client";
 import { ArrowRight } from 'lucide-react';
 import Image from 'next/image';
-import { useState, useCallback, useEffect } from 'react';
-import signupAuth from "./auth/auth";
 import { useRouter } from 'next/navigation';
+import { useEffect, useState } from 'react';
+import signupAuth from "./auth/auth";
+
 function SignUp() {
   const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("")
-  const [disabled, setDisabled] = useState(false)
-  const Router =  useRouter();
+  const [password, setPassword] = useState("");
+  const [disabled, setDisabled] = useState(true);
+  const router = useRouter();
+
   useEffect(() => {
-    if (email.length > 0 && password.length > 0) {
-      setDisabled(false)
-    }
-    else {
-      setDisabled(true)
-    }
-  }, [email, password])
+    setDisabled(!(email.length > 0 && password.length > 0));
+  }, [email, password]);
 
+  async function submitHandler() {
+    const data = await signupAuth(email, password);
+    if (data) {
+      console.log("success");
+      setEmail("");
+      setPassword("");
+      router.push("/login");
+    } else {
+      console.log("failed");
+    }
+  }
 
- async function submitHandler(){
-   const data = await signupAuth(email,password);
-   if(data){
-    console.log("sucess")
-    setEmail("")
-    setPassword("")
-    Router.push("/login")
-   }
-   else{
-    console.log("failed")
-   }
- } 
   return (
     <section>
       <div className="grid grid-cols-1 lg:grid-cols-2">
@@ -47,12 +43,11 @@ function SignUp() {
                 Sign In
               </a>
             </p>
-            <form action="#" method="POST" className="mt-8">
+            <form onSubmit={e => e.preventDefault()} className="mt-8">
               <div className="space-y-5">
                 <div>
                   <label htmlFor="email" className="text-base font-medium text-gray-900">
-                    {' '}
-                    Email address{' '}
+                    Email address
                   </label>
                   <div className="mt-2">
                     <input
@@ -60,33 +55,32 @@ function SignUp() {
                       type="email"
                       placeholder="Email"
                       id="email"
+                      value={email}
                       onChange={(e) => setEmail(e.target.value)}
-                    ></input>
+                    />
                   </div>
                 </div>
                 <div>
-                  <div className="flex items-center justify-between">
-                    <label htmlFor="password" className="text-base font-medium text-gray-900">
-                      {' '}
-                      Password{' '}
-                    </label>
-                  </div>
+                  <label htmlFor="password" className="text-base font-medium text-gray-900">
+                    Password
+                  </label>
                   <div className="mt-2">
                     <input
                       className="flex h-10 w-full rounded-md border border-gray-300 bg-transparent px-3 py-2 text-sm placeholder:text-gray-400 focus:outline-none focus:ring-1 focus:ring-gray-400 focus:ring-offset-1 disabled:cursor-not-allowed disabled:opacity-50"
                       type="password"
                       placeholder="Password"
                       id="password"
+                      value={password}
                       onChange={(e) => setPassword(e.target.value)}
-                    ></input>
+                    />
                   </div>
                 </div>
                 <div>
                   <button
-                  disabled={disabled}
-                  onClick={submitHandler}
+                    disabled={disabled}
+                    onClick={submitHandler}
                     type="button"
-                    className="inline-flex w-full items-center justify-center rounded-md bg-black px-3.5 py-2.5 font-semibold leading-7 text-white hover:bg-black/80"
+                    className="inline-flex w-full items-center justify-center rounded-md bg-black px-3.5 py-2.5 font-semibold leading-7 text-white hover:bg-black/80 disabled:opacity-50"
                   >
                     Create Account <ArrowRight className="ml-2" size={16} />
                   </button>
@@ -94,7 +88,7 @@ function SignUp() {
               </div>
             </form>
             <div className="mt-3 space-y-3">
-              <button            
+              <button
                 type="button"
                 className="relative inline-flex w-full items-center justify-center rounded-md border border-gray-400 bg-white px-3.5 py-2.5 font-semibold text-gray-700 transition-all duration-200 hover:bg-gray-100 hover:text-black focus:bg-gray-100 focus:text-black focus:outline-none"
               >
@@ -140,6 +134,7 @@ function SignUp() {
         </div>
       </div>
     </section>
-  )
+  );
 }
+
 export default SignUp;
