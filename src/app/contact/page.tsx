@@ -17,15 +17,15 @@ function Page() {
           <form>
             <div className="mb-4">
               <label htmlFor="email" className="block text-gray-700 font-medium mb-2">Your email</label>
-              <input type="email" id="email" name="email" className="w-full px-4 py-2 border border-gray-300 rounded-md" defaultValue="refero.john.doe@gmail.com"/>
+              <input type="email" id="email" name="email" className="w-full px-4 py-2 border border-gray-300 rounded-md" placeholder="refero.john.doe@gmail.com"/>
             </div>
             <div className="mb-4">
               <label htmlFor="firstName" className="block text-gray-700 font-medium mb-2">Your first name</label>
-              <input type="text" id="firstName" name="firstName" className="w-full px-4 py-2 border border-gray-300 rounded-md" defaultValue="John"/>
+              <input type="text" id="firstName" name="firstName" className="w-full px-4 py-2 border border-gray-300 rounded-md" placeholder="John"/>
             </div>
             <div className="mb-4">
               <label htmlFor="username" className="block text-gray-700 font-medium mb-2">Explore username</label>
-              <input type="text" id="username" name="username" className="w-full px-4 py-2 border border-gray-300 rounded-md" defaultValue="referodesign"/>
+              <input type="text" id="username" name="username" className="w-full px-4 py-2 border border-gray-300 rounded-md" placeholder="referodesign"/>
             </div>
             <div className="mb-4">
               <label htmlFor="topic" className="block text-gray-700 font-medium mb-2">Choose your topic</label>
@@ -37,7 +37,7 @@ function Page() {
             </div>
             <div className="mb-4">
               <label htmlFor="subject" className="block text-gray-700 font-medium mb-2">Subject</label>
-              <input type="text" id="subject" name="subject" className="w-full px-4 py-2 border border-gray-300 rounded-md" defaultValue="Where do you live?"/>
+              <input type="text" id="subject" name="subject" className="w-full px-4 py-2 border border-gray-300 rounded-md" placeholder="Where do you live?"/>
             </div>
             <div className="mb-4">
               <label htmlFor="message" className="block text-gray-700 font-medium mb-2">Your message</label>
