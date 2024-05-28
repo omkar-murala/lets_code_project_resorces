@@ -1,9 +1,10 @@
-import Link from 'next/link'
+import Image from 'next/image';
+import Link from 'next/link';
 
 export function Card({ name, image, link }: { image: string, name: string, link: string }) {
     return (
         <div className="w-[300px] rounded-md border">
-            <img
+            <Image
                 src={image}
                 alt="img"
                 className="h-[250px] w-full rounded-md object-contain"
