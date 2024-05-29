@@ -17,14 +17,12 @@ export function Card({ name, image, link }: { image: string, name: string, link:
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, debitis?
                 </p>
                 <Link href={link} passHref>
-                    <a>
-                        <button
-                            type="button"
-                            className="mt-4 rounded-sm bg-black px-2.5 py-1 text-[10px] font-semibold text-white shadow-sm hover:bg-black/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
-                        >
-                            See More
-                        </button>
-                    </a>
+                    <button
+                        type="button"
+                        className="mt-4 rounded-sm bg-black px-2.5 py-1 text-[10px] font-semibold text-white shadow-sm hover:bg-black/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
+                    >
+                        See More
+                    </button>
                 </Link>
             </div>
         </div>
