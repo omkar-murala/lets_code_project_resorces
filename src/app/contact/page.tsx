@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 function Page() {
   return (
-    <div className="bg-gray-100 min-h-screen flex flex-col justify-center items-center">
+    <div className="bg-gray-100 min-h-screen flex flex-col justify-center items-center py-[3rem]">
       <div className="bg-white shadow-lg rounded-lg overflow-hidden flex flex-col md:flex-row w-full max-w-5xl">
         <div className="p-8 bg-gray-50 md:w-1/2 flex flex-col justify-center items-center">
           <h2 className="text-3xl font-bold text-gray-900 mb-4 text-center">Need help?</h2>
@@ -46,18 +46,6 @@ function Page() {
               <button type="submit" className="px-6 py-3 bg-yellow-500 text-white font-semibold rounded-md hover:bg-yellow-600 transition-colors">Submit</button>
             </div>
           </form>
-        </div>
-      </div>
-      <div className="mt-8 text-center text-gray-600">
-        <div className="flex justify-center space-x-4">
-          <a href="#" className="hover:underline">Explore</a>
-          <a href="#" className="hover:underline">Need help? Contact us</a>
-          <a href="#" className="hover:underline">Request a feature</a>
-        </div>
-        <div className="mt-4">
-          <a href="#" className="hover:underline">Terms of Service</a>
-          <a href="#" className="hover:underline ml-4">Privacy Policy</a>
-          <a href="#" className="hover:underline ml-4">Code of Conduct</a>
         </div>
       </div>
     </div>

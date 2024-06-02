@@ -1,30 +1,77 @@
-"use client";
+"use client"
 
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
-import Link from "next/link";
+import { useRouter } from "next/navigation";
+import loginAuth from "@/app/login/auth/auth";
+import { userSignOut } from "@/app/logout/logout";
+import { deleteCookie } from "cookies-next";
+
 
 const menuItems = [
-  {
-    name: "Home",
-    href: "/",
-  }, 
-  {
-    name: "Contact",
-    href: "/contact",
-  },
-  {
-    name: "Resource",
-    href: "/resourses",
-  },
+  { name: "Home", href: "/" },
+  { name: "Contact", href: "/contact" },
+  { name: "Resource", href: "/resourses" },
 ];
 
+
 export function Navbar() {
-  const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+  
+  const Router = useRouter();
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { userImage, setUserImage } = useState("")
+
+ 
+  async function logInUser() {
+    try {
+      const response = await loginAuth();
+      if (response) {
+        const image = fetchUserImage();
+        if (image) {
+          setUserImage(image);
+          localStorage.setItem("image", image);
+        }
+      }
+    } catch (error) {
+      console.error("Login failed:", error);
+      setUserImage("");
+    }
+  }
+
+
+  function fetchUserImage(): string | null {
+    return localStorage.getItem("image");
+  }
+
+
+  useEffect(() => {
+    const image = fetchUserImage();
+    if (image) {
+      setUserImage(image);
+    }
+  }, [setUserImage]);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
+
+
+  async function logOutUser() {
+    try {
+      const response = await userSignOut();
+      if (response) {
+        localStorage.removeItem("image");
+        deleteCookie("token");
+        Router.push("/")
+        window.location.reload()
+        console.log("success");
+      } else {
+        console.log("error");
+      }
+    } catch (error) {
+      console.error("Logout failed:", error);
+    }
+  }
 
   return (
     <div className="relative w-full bg-white">
@@ -61,14 +108,21 @@ export function Navbar() {
           </ul>
         </div>
         <div className="hidden lg:block">
-          <Link href="/login">
+          {userImage ? (
+            <img
+              onClick={logOutUser}
+              src={userImage}
+              alt="User"
+              className="rounded-full h-8 w-8 mouse-event"
+            />
+          ) : (
             <button
-              type="button"
+              onClick={logInUser}
               className="rounded-md bg-black px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-black/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
             >
-              Log In
+              Sign In
             </button>
-          </Link>
+          )}
         </div>
         <div className="lg:hidden">
           <Menu onClick={toggleMenu} className="h-6 w-6 cursor-pointer" />
@@ -121,14 +175,23 @@ export function Navbar() {
                     ))}
                   </nav>
                 </div>
-                <Link href="/login">
-                  <button
-                    type="button"
-                    className="mt-4 w-full rounded-md bg-black px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-black/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
-                  >
-                    Log In
-                  </button>
-                </Link>
+                <div className="flex flex-col items-center justify-center">
+                  {userImage ? (
+                    <img
+                      onClick={logOutUser}
+                      src={userImage}
+                      alt="User"
+                      className="rounded-full h-8 w-8 mouse-event"
+                    />
+                  ) : (
+                    <button
+                      onClick={logInUser}
+                      className="rounded-md bg-black px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-black/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
+                    >
+                      Sign In
+                    </button>
+                  )}
+                </div>
               </div>
             </div>
           </div>
@@ -137,3 +200,5 @@ export function Navbar() {
     </div>
   );
 }
+
+
