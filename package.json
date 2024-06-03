@@ -20,6 +20,7 @@
     "firebase": "^10.12.2",
     "framer-motion": "^11.2.6",
     "lucide-react": "^0.378.0",
+    "mongoose": "^8.4.1",
     "next": "14.2.3",
     "nodemailer": "^6.9.13",
     "react": "^18",

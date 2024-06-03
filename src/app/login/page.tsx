@@ -1,24 +1,22 @@
 "use client";
-import { ArrowRight } from 'lucide-react';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 import { useEffect, useState } from 'react';
 import loginAuth from "./auth/auth";
 
 function SignIn() {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [disabled, setDisabled] = useState(true);
+  
   const router = useRouter();
 
-  useEffect(() => {
-    setDisabled(!(email.length > 0 && password.length > 0));
-  }, [email, password]);
+ 
 
   async function submitHandler() {
     const data = await loginAuth();
     if (data) {
       router.push("/resourses");
+      setTimeout(()=>
+        window.location.reload()
+      ,2000)
     } else {
       console.log("error");
     }

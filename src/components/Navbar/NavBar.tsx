@@ -19,37 +19,29 @@ export function Navbar() {
   
   const Router = useRouter();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const { userImage, setUserImage } = useState("")
+  const [image,setImage] = useState("")
 
+  useEffect(() => {
+    const userImage = localStorage.getItem("image");
+    if (userImage) {
+      setImage(userImage);
+    }
+  }, []);
  
   async function logInUser() {
     try {
       const response = await loginAuth();
-      if (response) {
-        const image = fetchUserImage();
-        if (image) {
-          setUserImage(image);
-          localStorage.setItem("image", image);
-        }
+      if(response){
+        window.location.reload();
       }
     } catch (error) {
       console.error("Login failed:", error);
-      setUserImage("");
     }
   }
 
 
-  function fetchUserImage(): string | null {
-    return localStorage.getItem("image");
-  }
-
-
-  useEffect(() => {
-    const image = fetchUserImage();
-    if (image) {
-      setUserImage(image);
-    }
-  }, [setUserImage]);
+  
+ 
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -63,8 +55,9 @@ export function Navbar() {
         localStorage.removeItem("image");
         deleteCookie("token");
         Router.push("/")
-        window.location.reload()
-        console.log("success");
+        // Router.refresh();
+        window.location.reload();
+        // console.log("success");
       } else {
         console.log("error");
       }
@@ -108,10 +101,10 @@ export function Navbar() {
           </ul>
         </div>
         <div className="hidden lg:block">
-          {userImage ? (
+          {image ? (
             <img
               onClick={logOutUser}
-              src={userImage}
+              src={image}
               alt="User"
               className="rounded-full h-8 w-8 mouse-event"
             />
@@ -176,10 +169,10 @@ export function Navbar() {
                   </nav>
                 </div>
                 <div className="flex flex-col items-center justify-center">
-                  {userImage ? (
+                  {image ? (
                     <img
                       onClick={logOutUser}
-                      src={userImage}
+                      src={image}
                       alt="User"
                       className="rounded-full h-8 w-8 mouse-event"
                     />
