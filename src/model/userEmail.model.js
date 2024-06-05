@@ -1,14 +1,15 @@
+
 import mongoose from "mongoose";
 
-
-const userEmailSchema = mongoose.Schema({
-    email:{
-        type:String,
-        required:true
+const userEmailSchema = new mongoose.Schema({
+    email: {
+        type: String,
+        required: true,
+        unique: true, 
+        trim: true 
     }
+}, {
+    timestamps: true 
+});
 
-})
-
-
-
-export const User = mongoose.models("users") || mongoose.model("User",userEmailSchema);
+export const User = mongoose.models.User || mongoose.model("User", userEmailSchema);

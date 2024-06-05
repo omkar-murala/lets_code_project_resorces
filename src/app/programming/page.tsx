@@ -2,7 +2,7 @@
 
 // import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import {Card}from './components/Card'; 
+import { Card } from './components/Card';
 // import Skeleton from 'react-loading-skeleton';
 // import 'react-loading-skeleton/dist/skeleton.css';
 
@@ -54,7 +54,7 @@ import {Card}from './components/Card';
 
 const Page = async() =>{
   try{
-    const { data } = await axios.get(`https://resourcebackend.onrender.com/api/reources`);
+    const { data } = await axios.get (`https://resourcebackend.onrender.com/api/reources`);
     return(
       <>
         <div className='flex flex-col justify-center p-[3rem]'>
