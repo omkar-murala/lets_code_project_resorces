@@ -5,7 +5,7 @@ const resource=[
     {
         id:1,
         name:"Programming",
-        link:"/programming"
+        link:"/resouces/reources"
 
     },
 {
