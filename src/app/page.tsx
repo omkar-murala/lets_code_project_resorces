@@ -323,15 +323,15 @@ export default function Home() {
             Discover endless resources and stay updated with our latest content.
           </p>
           <div className="mt-8 flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
-            <a href="/resources" className="px-6 py-3 bg-yellow-500 text-white font-semibold rounded-md shadow-lg hover:bg-yellow-400 transition duration-300 w-full sm:w-auto">
-              Explore Resources
-            </a>
+             {/* <a href="/resources" className="px-6 py-3 bg-yellow-500 text-white font-semibold rounded-md shadow-lg hover:bg-yellow-400 transition duration-300 w-full sm:w-auto"> */}
+              {/* Explore Resources */}
+            {/* </a>  */}
             <a href="/join" className="px-6 py-3 bg-white text-blue-600 font-semibold rounded-md shadow-lg hover:bg-gray-100 transition duration-300 w-full sm:w-auto">
               Join Now
             </a>
           </div>
           <div className="mt-12">
-            <h3 className="text-xl font-semibold text-white">Subscribe to Our Newsletter</h3>
+            <h3 className="text-xl font-semibold text-white">Subscribe for the Latest Weekly E-Books</h3>
             <form className="mt-4 sm:flex sm:max-w-md mx-auto">
               <input
               //use  and import axios
