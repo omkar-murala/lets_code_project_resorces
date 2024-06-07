@@ -1,60 +1,3 @@
-// "use client";
-
-// import { useState } from 'react';
-
-// const FeaturedTopics = () => {
-//   const [showMore, setShowMore] = useState(false);
-
-//   const topics = [
-//     { name: 'Study time' },
-//     { name: 'Tech essentials' },
-//     { name: 'Innovation zone' },
-//     { name: 'Deep dive' },
-//     { name: 'Problem-solving' },
-//     { name: 'Learning break' },
-//     { name: 'Tech empowerment' },
-//     { name: 'Knowledge boost' },
-//   ];
-
-//   const moreTopics = [
-//     { name: 'Advanced coding' },
-//     { name: 'AI & ML' },
-//     { name: 'Cloud computing' },
-//     { name: 'Cyber security' },
-//   ];
-
-//   return (
-//     <div className="p-4 bg-gray-900 rounded-lg">
-//       <h2 className="text-xl font-bold mb-4 text-white">Featured topics</h2>
-//       <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
-//         {topics.map((topic, index) => (
-//           <div key={index} className="flex flex-col items-center bg-blue-600 text-white p-4 rounded-lg shadow-md hover:bg-green-700 transition">
-//             {/* Placeholder for icons */}
-//             <div className="h-20 w-20 mb-2 bg-black rounded-full"></div>
-//             <span>{topic.name}</span>
-//           </div>
-//         ))}
-//         {showMore && moreTopics.map((topic, index) => (
-//           <div key={index} className="flex flex-col items-center bg-blue-600 text-white p-4 rounded-lg shadow-md hover:bg-green-700 transition">
-//             {/* Placeholder for icons */}
-//             <div className="h-20 w-20 mb-2 bg-black rounded-full"></div>
-//             <span>{topic.name}</span>
-//           </div>
-//         ))}
-//         <button
-//           className="flex flex-col items-center bg-blue-600 text-white p-4 rounded-lg shadow-md hover:bg-green-700 transition"
-//           onClick={() => setShowMore(!showMore)}
-//         >
-//           {/* Placeholder for icons */}
-//           <div className="h-5 w-5 mb-2 bg-black rounded-full"></div>
-//           <span>{showMore ? 'Show less' : 'View more'}</span>
-//         </button>
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default FeaturedTopics;
 "use client";
 
 import { useState } from 'react';
@@ -63,44 +6,46 @@ const FeaturedTopics = () => {
   const [showMore, setShowMore] = useState(false);
 
   const topics = [
-    { name: 'Study time' },
-    { name: 'Tech essentials' },
-    { name: 'Innovation zone' },
-    { name: 'Deep dive' },
-    { name: 'Problem-solving' },
-    { name: 'Learning break' },
-    { name: 'Tech empowerment' },
-    { name: 'Knowledge boost' },
+    { name: 'Web Development' },
+    { name: 'TypeScript' } ,
+    { name: 'System Design' },
+    { name: 'Resume Guide' },
+    { name: 'React' },
+    { name: 'Python' },
+    { name: 'Java' },
+    { name: 'DBMS & SQL' },
   ];
 
   const moreTopics = [
-    { name: 'Advanced coding' },
+    { name: 'Coding Resources' },
     { name: 'AI & ML' },
-    { name: 'Cloud computing' },
-    { name: 'Cyber security' },
   ];
 
   return (
-    <div className="p-4 bg-gray-900 rounded-lg">
-      <h2 className="text-xl font-bold mb-4 text-white">Featured topics</h2>
-      <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
+    <div className="p-6 bg-gray-100 rounded-lg shadow-lg">
+      <h2 className="text-3xl font-bold mb-6 text-blue-900" style={{ textShadow: '1px 1px 5px rgba(0,0,0,0.3)', fontFamily: 'Arial, sans-serif', letterSpacing: '0.05em' }}>
+        Featured Topics
+      </h2>
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
         {topics.map((topic, index) => (
-          <div key={index} className="flex flex-col items-center bg-blue-600 text-white p-4 rounded-lg shadow-md hover:bg-green-700 transition">
-            {/* Placeholder for icons */}
-            <div className="h-20 w-20 mb-2 bg-black rounded-full"></div>
-            <span>{topic.name}</span>
+          <div key={index} className="flex flex-col items-center bg-gradient-to-r from-blue-300 to-cyan-300 text-white p-6 rounded-lg shadow-lg hover:from-teal-300 hover:to-blue-300 hover:bg-opacity-50 transition transform hover:-translate-y-1">
+            <div className="h-16 w-16 mb-4 bg-black rounded-full flex items-center justify-center">
+              <span className="text-2xl font-bold">{topic.name[0]}</span>
+            </div>
+            <span className="text-lg font-semibold">{topic.name}</span>
           </div>
         ))}
         {showMore && moreTopics.map((topic, index) => (
-          <div key={index} className="flex flex-col items-center bg-blue-600 text-white p-4 rounded-lg shadow-md hover:bg-green-700 transition">
-            {/* Placeholder for icons */}
-            <div className="h-20 w-20 mb-2 bg-black rounded-full"></div>
-            <span>{topic.name}</span>
+          <div key={index} className="flex flex-col items-center bg-gradient-to-r from-blue-300 to-cyan-300 text-white p-6 rounded-lg shadow-lg hover:from-teal-300 hover:to-blue-300 hover:bg-opacity-50 transition transform hover:-translate-y-1">
+            <div className="h-16 w-16 mb-4 bg-black rounded-full flex items-center justify-center">
+              <span className="text-2xl font-bold">{topic.name[0]}</span>
+            </div>
+            <span className="text-lg font-semibold">{topic.name}</span>
           </div>
         ))}
       </div>
       <button
-        className="mt-4 bg-blue-600 text-white p-2 rounded-lg hover:bg-green-700 transition"
+        className="mt-6 bg-gradient-to-r from-blue-300 to-cyan-300 text-white p-3 rounded-lg hover:from-teal-300 hover:to-blue-300 transition transform hover:-translate-y-1"
         onClick={() => setShowMore(!showMore)}
       >
         {showMore ? 'Show less' : 'View more'}
@@ -110,4 +55,3 @@ const FeaturedTopics = () => {
 };
 
 export default FeaturedTopics;
-
