@@ -64,11 +64,8 @@ export default function Home() {
             <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">
               Welcome to TechResourceHub!
             </h2>
-            {/* <p className="mt-4 text-lg leading-6 text-gray-600">
-              Welcome to our platform, your ultimate destination for a comprehensive collection of tech resources. We provide a wide range of PDF and Excel resources covering various domains in technology, ensuring you have access to the best materials for your learning and career development. Our offerings include ATS-friendly resume templates, detailed roadmaps for tech enthusiasts, and much more. We meticulously gather these resources from various reputable sources and content creators, giving full credit to the original providers. Our mission is to simplify your tech journey by consolidating these invaluable resources into one accessible website. Whether you are a student, professional, or tech enthusiast, we aim to make your learning and professional growth seamless and efficient.
-            </p> */}
             <p className="mt-8 text-lg text-gray-700 animate-fade-in">
-              We provide a wide range of PDF and Excel resources covering various domains in technology, ensuring you have access to the best materials for your learning and career development. Our offerings include ATS-friendly resume templates, detailed roadmaps for tech enthusiasts, and much more. We meticulously gather these resources from various reputable sources and content creators, giving full credit to the original providers. Our mission is to simplify your tech journey by consolidating these invaluable resources into one accessible website. Whether you are a student, professional, or tech enthusiast, we aim to make your learning and professional growth seamless and efficient.
+            We provide a variety of tech resources like resume templates and roadmaps, all from reputable sources, to simplify your learning and career growth.
             </p>
           </div>
           <div className="mt-10 grid gap-10 md:grid-cols-3">
@@ -150,6 +147,9 @@ export default function Home() {
           </div>
         </div>
       </div>
+      {/* ///////////////////////// */}
+        
+      {/* /////////////////////////// */}
       {/* Featured Resources */}
       <div className="bg-gradient-to-r from-blue-50 to-blue-100 py-16">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -261,7 +261,7 @@ export default function Home() {
                   />
                 </div>
                 <div className="ml-4">
-                  <h3 className="text-lg font-medium leading-6 text-gray-900">Jane Doe</h3>
+                  <h3 className="text-lg font-medium leading-6 text-gray-900">Abhijeet Singh</h3>
                   <div className="flex">
                     {[...Array(5)].map((_, index) => (
                       <svg key={index} className="h-5 w-5 text-yellow-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
@@ -272,7 +272,7 @@ export default function Home() {
                 </div>
               </div>
               <p className="mt-4 text-base text-gray-600">
-                These resources have been incredibly helpful. I have learned so much and the user experience is fantastic!
+              Realy very helpful resources. Through this i am able to boost my preparation.
               </p>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-lg">
@@ -286,7 +286,7 @@ export default function Home() {
                   />
                 </div>
                 <div className="ml-4">
-                  <h3 className="text-lg font-medium leading-6 text-gray-900">John Smith</h3>
+                  <h3 className="text-lg font-medium leading-6 text-gray-900">Esha Mandal</h3>
                   <div className="flex">
                     {[...Array(4)].map((_, index) => (
                       <svg key={index} className="h-5 w-5 text-yellow-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
@@ -297,7 +297,7 @@ export default function Home() {
                 </div>
               </div>
               <p className="mt-4 text-base text-gray-600">
-                Great resources and very easy to use. Highly recommend to anyone looking to improve their skills.
+              This group is incredibly useful! 📚 The content is top-notch, and the admin deserves more recognition. 🌟 Wishing you all the best and thank you for your help. Take care and have a great day! 😊
               </p>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-lg">
@@ -311,7 +311,7 @@ export default function Home() {
                   />
                 </div>
                 <div className="ml-4">
-                  <h3 className="text-lg font-medium leading-6 text-gray-900">Emily Johnson</h3>
+                  <h3 className="text-lg font-medium leading-6 text-gray-900">Kuldeep Panwar</h3>
                   <div className="flex">
                     {[...Array(5)].map((_, index) => (
                       <svg key={index} className="h-5 w-5 text-yellow-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
@@ -322,7 +322,7 @@ export default function Home() {
                 </div>
               </div>
               <p className="mt-4 text-base text-gray-600">
-                Absolutely love the resources available. They have helped me immensely in my career development.
+                Im deeply grateful to everyone in the Lets Code 🤗 community, especially Avinash sir. Your support has been crucial in providing me with invaluable technical resources and fostering my growth in computer science. Thank you! 🙏💻
               </p>
             </div>
           </div>
