@@ -49,6 +49,20 @@ const nextConfig = {
         },
         {
           protocol: 'https',
+          hostname:`next.config.js`,
+        },
+
+        {
+          protocol: 'https',
+          hostname: 'encrypted-tbn0.gstatic.com',
+        },
+        {
+          protocol: 'https',
+          hostname: 'w7.pngwing.com',
+        },
+
+        {
+          protocol: 'https',
           hostname: 'static.vecteezy.com',
         },
       ],
