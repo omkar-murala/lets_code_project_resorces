@@ -65,6 +65,31 @@ const nextConfig = {
           protocol: 'https',
           hostname: 'static.vecteezy.com',
         },
+        {
+          protocol:'https',
+          hostname:'cdn-icons-png.flaticon.com'
+        },
+        {
+          protocol: 'https',
+          hostname: 'media.istockphoto.com'
+        },
+        {
+          protocol:'https',
+          hostname:'iro.medium.com'
+        },
+        {
+          protocol: 'https',
+          hostname: 'miro.medium.com'
+        },
+        {
+          protocol:'https',
+          hostname:'www.scholarhat.com'
+        },
+        {
+          protocol:'https',
+          hostname:'cdni.iconscout.com'
+
+        }
       ],
     },
   };

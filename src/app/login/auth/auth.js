@@ -1,35 +1,33 @@
 import { app } from "@/firebase/firebase";
 import { setCookie } from "cookies-next";
-import { getAuth, signInWithEmailAndPassword, signInWithPopup } from "firebase/auth";
-import { GoogleAuthProvider } from "firebase/auth";
+import { getAuth, getRedirectResult, GoogleAuthProvider } from "firebase/auth";
 
 
 const auth = getAuth(app);
-const provider = new GoogleAuthProvider();
 
-async function loginAuth() {
+async function handleRedirectResult() {
+
   try {
-    const userAuth = await signInWithPopup(auth,provider);
-    const credential = await GoogleAuthProvider.credentialFromResult(userAuth);
-    const token = credential.accessToken;
-    const users = userAuth.user.photoURL;
-    // console.log(token,users)
-    setCookie("token",token)
-    localStorage.setItem("image",users)
+    const result = await getRedirectResult(auth);
+    if (result) {
+      const credential = GoogleAuthProvider.credentialFromResult(result);
+      if (credential) {
+        const token = credential.accessToken;
+        const user = result.user;
+        const photoURL = user.photoURL;
+        window.location.href= "http://localhost:3000/resourses"
 
-    return true
-    
+        // Store token and user photo URL
+        setCookie("token", token);
+        localStorage.setItem("image", photoURL);
+        
+      }
+    }
   } catch (error) {
-    
     const errorCode = error.code;
     const errorMessage = error.message;
-    const email = error.customData.email;
-    const credential = GoogleAuthProvider.credentialFromError(error);
-    console.log(errorCode,errorMessage)
-    return false
+    console.log(errorCode, errorMessage);
   }
- 
-  
 }
 
-export default loginAuth;
+export default handleRedirectResult;

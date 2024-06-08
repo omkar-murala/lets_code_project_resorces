@@ -1,12 +1,12 @@
-"use client"
+"use client";
 
 import React, { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { useRouter } from "next/navigation";
-import loginAuth from "@/app/login/auth/auth";
 import { userSignOut } from "@/app/logout/logout";
 import { deleteCookie } from "cookies-next";
-
+import handleRedirectResult from "@/app/login/auth/auth";
+import initiateLogin from "@/app/login/auth/InitalAuth";
 
 const menuItems = [
   { name: "Home", href: "/" },
@@ -14,12 +14,15 @@ const menuItems = [
   { name: "Resource", href: "/resourses" },
 ];
 
-
 export function Navbar() {
-  
-  const Router = useRouter();
+  const router = useRouter();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [image,setImage] = useState("")
+  const [image, setImage] = useState("");
+
+  useEffect(() => {
+    // Handle redirect result on component mount
+    handleRedirectResult();
+  }, []);
 
   useEffect(() => {
     const userImage = localStorage.getItem("image");
@@ -27,26 +30,18 @@ export function Navbar() {
       setImage(userImage);
     }
   }, []);
- 
+
   async function logInUser() {
     try {
-      const response = await loginAuth();
-      if(response){
-        window.location.reload();
-      }
-    } catch (error) {
-      console.error("Login failed:", error);
-    }
+      await initiateLogin();
+      } catch (error) {
+        console.error("Login failed:", error);
+        }
   }
-
-
-  
- 
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
-
 
   async function logOutUser() {
     try {
@@ -54,10 +49,8 @@ export function Navbar() {
       if (response) {
         localStorage.removeItem("image");
         deleteCookie("token");
-        Router.push("/")
-        // Router.refresh();
+        router.push("/");
         window.location.reload();
-        // console.log("success");
       } else {
         console.log("error");
       }
@@ -65,7 +58,6 @@ export function Navbar() {
       console.error("Logout failed:", error);
     }
   }
-
   return (
     <div className="relative w-full bg-white">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-2 sm:px-6 lg:px-8">
@@ -193,5 +185,6 @@ export function Navbar() {
     </div>
   );
 }
+
 
 

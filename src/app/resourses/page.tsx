@@ -2,7 +2,7 @@ import EducationalVideos from '../resourses/components/EducationalVideos';
 import FeaturedTopics from '../resourses/components/FeaturedTopics';
 import KnowledgeQuizzes from '../resourses/components/KnowledgeQuizzes';
 import LearningPaths from '../resourses/components/LearningPaths';
-// import SubCategory from "./components/SubCategory";
+import FeatureCard from './_components/FeatureCard';
 
 const page = () => {
   return (
@@ -14,7 +14,8 @@ const page = () => {
         {/* <SubCategory/> */}
 
         </div>
-        <FeaturedTopics />
+        <FeatureCard/>
+        {/* <FeaturedTopics /> */}
         <br></br>
         <LearningPaths />
         <EducationalVideos />
