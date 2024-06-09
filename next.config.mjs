@@ -89,6 +89,11 @@ const nextConfig = {
           protocol:'https',
           hostname:'cdni.iconscout.com'
 
+        },
+        {
+          protocol:'https',
+          hostname:'utfs.io'
+
         }
       ],
     },

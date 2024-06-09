@@ -100,7 +100,7 @@ function Page({ params }: { params: { slug: string } }) {
 
   async function fetchApi() {
     try {
-      const { data } = await axios.get(`https://resourcebackend.onrender.com/api/${params.slug}`);
+      const { data } = await axios.get(`http://localhost:8000/api/v1/${params.slug}`);
       setInfo(data.data);
     } catch (error) {
       setInfo([]);
@@ -115,8 +115,8 @@ function Page({ params }: { params: { slug: string } }) {
   }, []);
 
   return (
-    <div className='flex flex-col justify-center p-[3rem]'>
-      <div className="grid grid-rows-1  lg:grid-cols-4 gap-[3rem] items-center justify-center ">
+    <div className='flex flex-col justify-center'>
+      <div className="grid grid-rows-1  lg:grid-cols-4 items-center justify-center px-[8rem] py-[2rem] ">
         {loading ? (
           Array.from({ length: 20 }).map((_, index) => (
              <Skeleton key={index} height={200} />
@@ -125,9 +125,9 @@ function Page({ params }: { params: { slug: string } }) {
           info.map((ele: any, index: number) => (
             <Card
               key={index}
-              link={`/subresources/${ele.attributes.apiPath}`}
-              name={ele.attributes.Name}
-              image={ele.attributes.Image}
+              link={ele.link}
+              name={ele.name}
+              image={ele.imageUrl}
             />
           ))
         )}
