@@ -7,14 +7,14 @@ import axios from "axios";
 import Link from 'next/link';
 
 function FeatureCard() {
-  const [data, setData] = useState([]);
+  const [datas, setData] = useState([]);
   const [showMore, setShowMore] = useState(false);
-  const itemsToShow = showMore ? data.length : 4;
+  const itemsToShow = showMore ? datas.length : 4;
 
   useEffect(() => {
     async function fetchData() {
       try {
-        const { data } = await axios.get(`https://resourcebackend.onrender.com/api/features`);
+        const { data } = await axios.get(`http://localhost:8000/api/v1/feature`);
         console.log(data.data);
         setData(data.data);
       } catch (error) {
@@ -33,19 +33,19 @@ function FeatureCard() {
           FEATURED TOPICS
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-          {data.slice(0, itemsToShow).map((topic: any, index) => {
-              const attributes = topic.attributes || {}; // Fallback to an empty object if attributes is undefined
+          {datas.slice(0, itemsToShow).map((topic: any, index) => {
+              // const attributes = topic.attributes || {}; // Fallback to an empty object if attributes is undefined
               return (
-                  <Link key={index + '-' + index} href={`resouces/${attributes.link}`}>
+                  <Link key={index + '-' + index} href={`resouces/${topic.link}`}>
                   <div key={index} className="flex flex-col items-center bg-gradient-to-r from-blue-300 to-cyan-300 text-white p-6 rounded-lg shadow-lg hover:from-teal-300 hover:to-blue-300 hover:bg-opacity-50 transition transform hover:-translate-y-1">
                 <Image
-                  src={attributes.image}
-                  alt={attributes.title}
+                  src={topic.imageUrl}
+                  alt={topic.name}
                   width={64}
                   height={64}
                   className="rounded-full object-cover"
                   />
-                <span className="text-lg font-semibold mt-2">{attributes.title}</span>
+                <span className="text-lg font-semibold mt-2">{topic.name}</span>
               </div>
         </Link>
             );
