@@ -334,10 +334,9 @@ export default function Home() {
             <h3 className="text-xl font-semibold text-white">Subscribe for the Latest Weekly E-Books</h3>
             <form className="mt-4 sm:flex sm:max-w-md mx-auto">
               <input
-              //use  and import axios
-              // imposrt se user ka details lena hei 
-              // if no email id is been in the email box then then the subscribe button should be disabeled
-              //use react tostify 
+              // disabled={disabled}
+              //   value={email}
+              //   onChange={(e)=>setEmail(e.target.value)} 
                 type="email"
                 className="w-full px-5 py-3 border border-transparent rounded-md text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-yellow-500"
                 placeholder="Enter your email"

@@ -1,18 +1,31 @@
-import { NextResponse } from 'next/server'
-import { NextRequest } from 'next/server'
-import {cookies} from "next/headers"
-export function middleware(request: NextRequest) {
+import { clerkMiddleware, createRouteMatcher } from '@clerk/nextjs/server';
+import { NextResponse } from 'next/server';
 
-    const path = "/resourses";
-    const cookie = request.cookies.get("token")
-    if(path && !cookie){
-        return NextResponse.redirect(new URL('/login', request.url))
+// Create matchers for the routes
+const isResourcesRoute = createRouteMatcher(['/resouces(.*)']);
+const isAdminRoute = createRouteMatcher(['/admin(.*)']);
 
-     
-    } 
-}
- 
+export default clerkMiddleware((auth, req) => {
+  // Restrict resources route to signed-in users
+  if (isResourcesRoute(req)) {
+    auth().protect();
+  }
+
+  // Restrict admin route to users with a specific role
+  if (isAdminRoute(req)) {
+    auth().protect({ role: 'org:admin' });
+  }
+
+  // Continue processing the request
+  return NextResponse.next();
+});
 
 export const config = {
-  matcher: '/resourses',
-}
+  matcher: [
+    // Exclude files with a "." followed by an extension, which are typically static files.
+    // Exclude files in the _next directory, which are Next.js internals.
+    "/((?!.+\\.[\\w]+$|_next).*)",
+    // Re-include any files in the api or trpc folders that might have an extension
+    "/(api|trpc)(.*)"
+  ]
+};

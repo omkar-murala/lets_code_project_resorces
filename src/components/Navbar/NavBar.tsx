@@ -3,10 +3,12 @@
 import React, { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { useRouter } from "next/navigation";
-import { userSignOut } from "@/app/logout/logout";
-import { deleteCookie } from "cookies-next";
-import handleRedirectResult from "@/app/login/auth/auth";
-import initiateLogin from "@/app/login/auth/InitalAuth";
+
+import {
+  SignInButton,
+  SignedOut,
+  UserButton
+} from '@clerk/nextjs'
 
 const menuItems = [
   { name: "Home", href: "/" },
@@ -19,45 +21,12 @@ export function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [image, setImage] = useState("");
 
-  useEffect(() => {
-    // Handle redirect result on component mount
-    handleRedirectResult();
-  }, []);
-
-  useEffect(() => {
-    const userImage = localStorage.getItem("image");
-    if (userImage) {
-      setImage(userImage);
-    }
-  }, []);
-
-  async function logInUser() {
-    try {
-      await initiateLogin();
-      } catch (error) {
-        console.error("Login failed:", error);
-        }
-  }
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
-  async function logOutUser() {
-    try {
-      const response = await userSignOut();
-      if (response) {
-        localStorage.removeItem("image");
-        deleteCookie("token");
-        router.push("/");
-        window.location.reload();
-      } else {
-        console.log("error");
-      }
-    } catch (error) {
-      console.error("Logout failed:", error);
-    }
-  }
+
   return (
     <div className="relative w-full bg-white">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-2 sm:px-6 lg:px-8">
@@ -93,21 +62,13 @@ export function Navbar() {
           </ul>
         </div>
         <div className="hidden lg:block">
-          {image ? (
-            <img
-              onClick={logOutUser}
-              src={image}
-              alt="User"
-              className="rounded-full h-8 w-8 mouse-event"
-            />
-          ) : (
-            <button
-              onClick={logInUser}
-              className="rounded-md bg-black px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-black/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
-            >
-              Sign In
-            </button>
-          )}
+          <SignedOut>
+            <SignInButton/>
+          </SignedOut>
+          <SignInButton>
+            <UserButton/>
+          </SignInButton>
+         
         </div>
         <div className="lg:hidden">
           <Menu onClick={toggleMenu} className="h-6 w-6 cursor-pointer" />
@@ -161,21 +122,12 @@ export function Navbar() {
                   </nav>
                 </div>
                 <div className="flex flex-col items-center justify-center">
-                  {image ? (
-                    <img
-                      onClick={logOutUser}
-                      src={image}
-                      alt="User"
-                      className="rounded-full h-8 w-8 mouse-event"
-                    />
-                  ) : (
-                    <button
-                      onClick={logInUser}
-                      className="rounded-md bg-black px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-black/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
-                    >
-                      Sign In
-                    </button>
-                  )}
+                     <SignedOut>
+                       <SignInButton/>
+                      </SignedOut>
+                      <SignInButton>
+                        <UserButton/>
+                      </SignInButton>
                 </div>
               </div>
             </div>
