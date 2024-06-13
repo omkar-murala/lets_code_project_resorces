@@ -5,12 +5,7 @@ export async function db() {
         if (!process.env.DATABASE_URL) {
             throw new Error("DATABASE_URL is not defined in environment variables");
         }
-
-        await mongoose.connect(process.env.DATABASE_URL, {
-            useNewUrlParser: true,
-            useUnifiedTopology: true,
-        });
-
+        await mongoose.connect(process.env.DATABASE_URL)
         console.log('Database connection successful');
     } catch (error) {
         console.error('Database connection error:', error);

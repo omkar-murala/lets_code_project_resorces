@@ -5,20 +5,24 @@ import { useState } from 'react';
 import Image from 'next/image';
 import axios from "axios";
 import Link from 'next/link';
+import toast,{Toaster} from 'react-hot-toast';
+
+
 
 function FeatureCard() {
   const [datas, setData] = useState([]);
   const [showMore, setShowMore] = useState(false);
   const itemsToShow = showMore ? datas.length : 4;
+  
 
   useEffect(() => {
     async function fetchData() {
       try {
         const { data } = await axios.get(`http://localhost:8000/api/v1/feature`);
-        console.log(data.data);
         setData(data.data);
       } catch (error) {
         console.log(error);
+        toast.error("Too Much Request")
         setData([]);
       }
     }
@@ -28,6 +32,7 @@ function FeatureCard() {
 
   return (
     <div>
+      <div><Toaster position="top-center" reverseOrder={false}/></div>
       <div className="p-6 bg-gray-100 rounded-lg shadow-lg">
         <h2 className="text-3xl font-bold mb-6 text-blue-900" style={{ textShadow: '1px 1px 5px rgba(0,0,0,0.3)', fontFamily: 'Arial, sans-serif', letterSpacing: '0.05em' }}>
           FEATURED TOPICS
