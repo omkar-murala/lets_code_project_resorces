@@ -40,7 +40,7 @@ function Page() {
             </div>
             <div className="mb-4">
               <label htmlFor="message" className="block text-gray-700 font-medium mb-2">Your message</label>
-              <textarea id="message" name="message" rows={4} className="w-full px-4 py-2 border border-gray-300 rounded-md">No place - anywhere.</textarea>
+              <textarea id="message" name="message" rows={4} className="w-full px-4 py-2 border border-gray-300 rounded-md" defaultValue="No place - anywhere."></textarea>
             </div>
             <div className="text-center">
               <button type="submit" className="px-6 py-3 bg-yellow-500 text-white font-semibold rounded-md hover:bg-yellow-600 transition-colors">Submit</button>

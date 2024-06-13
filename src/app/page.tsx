@@ -223,96 +223,96 @@ export default function Home() {
           </div>
         </div>
       </div>
-      {/* Testimonials/Reviews */}
-      <div className="bg-gray-50 py-16">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">
-              Testimonials
-            </h2>
-            <p className="mt-4 text-lg leading-6 text-gray-600">
-              Hear from our satisfied users who have benefited from our resources.
-            </p>
-          </div>
-          <div className="mt-10 grid gap-10 md:grid-cols-3">
-            <div className="bg-white p-6 rounded-lg shadow-lg">
-              <div className="flex items-center">
-                <div className="relative w-12 h-12 rounded-full overflow-hidden">
-                  <Image
-                    src="https://media.licdn.com/dms/image/D4D03AQH17TTE9vOjuQ/profile-displayphoto-shrink_800_800/0/1647151902936?e=1723075200&v=beta&t=jJHyoAZUaLxVjJFsQOl0q2yflpkWXwYGy8GvZx_4c1k"
-                    alt="User Photo"
-                    layout="fill"
-                    objectFit="cover"
-                  />
-                </div>
-                <div className="ml-4">
-                  <h3 className="text-lg font-medium leading-6 text-gray-900">Abhijeet Singh</h3>
-                  <div className="flex">
-                    {[...Array(5)].map((_, index) => (
-                      <svg key={index} className="h-5 w-5 text-yellow-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                        <path d="M9.049 2.927a1 1 0 011.902 0l1.717 4.253a1 1 0 00.832.674l4.564.33a1 1 0 01.584 1.786l-3.41 2.845a1 1 0 00-.29.96l1.04 4.517a1 1 0 01-1.45 1.054L10 16.61l-4.038 2.47a1 1 0 01-1.45-1.054l1.04-4.517a1 1 0 00-.29-.96L1.852 9.97a1 1 0 01.584-1.786l4.564-.33a1 1 0 00.832-.674l1.717-4.253z" />
-                      </svg>
-                    ))}
-                  </div>
-                </div>
-              </div>
-              <p className="mt-4 text-base text-gray-600">
-              Realy very helpful resources. Through this i am able to boost my preparation.
+       {/* Testimonials/Reviews */}
+        <div className="bg-gray-50 py-16">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div className="text-center">
+              <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">
+                Testimonials
+              </h2>
+              <p className="mt-4 text-lg leading-6 text-gray-600">
+                Hear from our satisfied users who have benefited from our resources.
               </p>
             </div>
-            <div className="bg-white p-6 rounded-lg shadow-lg">
-              <div className="flex items-center">
-                <div className="relative w-12 h-12 rounded-full overflow-hidden">
-                  <Image
-                    src="https://media.licdn.com/dms/image/D4D03AQFXoJBsX7Bhpg/profile-displayphoto-shrink_800_800/0/1669910633333?e=1723075200&v=beta&t=cWIRdV-XYcvsnxhYPNHqfC-C5iNTPOIy35QKFR0yQgY"
-                    alt="User Photo"
-                    layout="fill"
-                    objectFit="cover"
-                  />
-                </div>
-                <div className="ml-4">
-                  <h3 className="text-lg font-medium leading-6 text-gray-900">Esha Mandal</h3>
-                  <div className="flex">
-                    {[...Array(4)].map((_, index) => (
-                      <svg key={index} className="h-5 w-5 text-yellow-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                        <path d="M9.049 2.927a1 1 0 011.902 0l1.717 4.253a1 1 0 00.832.674l4.564.33a1 1 0 01.584 1.786l-3.41 2.845a1 1 0 00-.29.96l1.04 4.517a1 1 0 01-1.45 1.054L10 16.61l-4.038 2.47a1 1 0 01-1.45-1.054l1.04-4.517a1 1 0 00-.29-.96L1.852 9.97a1 1 0 01.584-1.786l4.564-.33a1 1 0 00.832-.674l1.717-4.253z" />
-                      </svg>
-                    ))}
+            <div className="mt-10 grid gap-10 md:grid-cols-3">
+              <div className="bg-white p-6 rounded-lg shadow-lg">
+                <div className="flex items-center">
+                  <div className="relative w-12 h-12 rounded-full overflow-hidden">
+                    <Image
+                      src="https://utfs.io/f/9ca0264f-47ac-4690-9119-f9c14c48b942-ei8toq.png"
+                      alt="User Photo"
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                  <div className="ml-4">
+                    <h3 className="text-lg font-medium leading-6 text-gray-900">Abhijeet Singh</h3>
+                    <div className="flex">
+                      {[...Array(5)].map((_, index) => (
+                        <svg key={index} className="h-5 w-5 text-yellow-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                          <path d="M9.049 2.927a1 1 0 011.902 0l1.717 4.253a1 1 0 00.832.674l4.564.33a1 1 0 01.584 1.786l-3.41 2.845a1 1 0 00-.29.96l1.04 4.517a1 1 0 01-1.45 1.054L10 16.61l-4.038 2.47a1 1 0 01-1.45-1.054l1.04-4.517a1 1 0 00-.29-.96L1.852 9.97a1 1 0 01.584-1.786l4.564-.33a1 1 0 00.832-.674l1.717-4.253z" />
+                        </svg>
+                      ))}
+                    </div>
                   </div>
                 </div>
+                <p className="mt-4 text-base text-gray-600">
+                  Really very helpful resources. Through this I am able to boost my preparation.
+                </p>
               </div>
-              <p className="mt-4 text-base text-gray-600">
-              This group is incredibly useful! 📚 The content is top-notch, and the admin deserves more recognition. 🌟 Wishing you all the best and thank you for your help. Take care and have a great day! 😊
-              </p>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-lg">
-              <div className="flex items-center">
-                <div className="relative w-12 h-12 rounded-full overflow-hidden">
-                  <Image
-                    src="https://lh3.googleusercontent.com/a-/ALV-UjXNOQDZPcDj_WMRRxzmlHKrCd7CXnRHHX8FDZt4k6z_8JcFibQu=s80-p-k-rw-no"
-                    alt="User Photo"
-                    layout="fill"
-                    objectFit="cover"
-                  />
-                </div>
-                <div className="ml-4">
-                  <h3 className="text-lg font-medium leading-6 text-gray-900">Kuldeep Panwar</h3>
-                  <div className="flex">
-                    {[...Array(5)].map((_, index) => (
-                      <svg key={index} className="h-5 w-5 text-yellow-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                        <path d="M9.049 2.927a1 1 0 011.902 0l1.717 4.253a1 1 0 00.832.674l4.564.33a1 1 0 01.584 1.786l-3.41 2.845a1 1 0 00-.29.96l1.04 4.517a1 1 0 01-1.45 1.054L10 16.61l-4.038 2.47a1 1 0 01-1.45-1.054l1.04-4.517a1 1 0 00-.29-.96L1.852 9.97a1 1 0 01.584-1.786l4.564-.33a1 1 0 00.832-.674l1.717-4.253z" />
-                      </svg>
-                    ))}
+              <div className="bg-white p-6 rounded-lg shadow-lg">
+                <div className="flex items-center">
+                  <div className="relative w-12 h-12 rounded-full overflow-hidden">
+                    <Image
+                      src="https://utfs.io/f/a497c927-b542-43a2-9519-19595f39a537-ei8top.png"
+                      alt="User Photo"
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                  <div className="ml-4">
+                    <h3 className="text-lg font-medium leading-6 text-gray-900">Esha Mandal</h3>
+                    <div className="flex">
+                      {[...Array(4)].map((_, index) => (
+                        <svg key={index} className="h-5 w-5 text-yellow-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                          <path d="M9.049 2.927a1 1 0 011.902 0l1.717 4.253a1 1 0 00.832.674l4.564.33a1 1 0 01.584 1.786l-3.41 2.845a1 1 0 00-.29.96l1.04 4.517a1 1 0 01-1.45 1.054L10 16.61l-4.038 2.47a1 1 0 01-1.45-1.054l1.04-4.517a1 1 0 00-.29-.96L1.852 9.97a1 1 0 01.584-1.786l4.564-.33a1 1 0 00.832-.674l1.717-4.253z" />
+                        </svg>
+                      ))}
+                    </div>
                   </div>
                 </div>
+                <p className="mt-4 text-base text-gray-600">
+                  This group is incredibly useful! 📚 The content is top-notch, and the admin deserves more recognition. 🌟 Wishing you all the best and thank you for your help. Take care and have a great day! 😊
+                </p>
               </div>
-              <p className="mt-4 text-base text-gray-600">
-                Im deeply grateful to everyone in the Lets Code 🤗 community, especially Avinash sir. Your support has been crucial in providing me with invaluable technical resources and fostering my growth in computer science. Thank you! 🙏💻
-              </p>
+              <div className="bg-white p-6 rounded-lg shadow-lg">
+                <div className="flex items-center">
+                  <div className="relative w-12 h-12 rounded-full overflow-hidden">
+                    <Image
+                      src="https://utfs.io/f/5d434ceb-b575-4a74-8f16-5c05599e1e31-ei8too.png"
+                      alt="User Photo"
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                  <div className="ml-4">
+                    <h3 className="text-lg font-medium leading-6 text-gray-900">Kuldeep Panwar</h3>
+                    <div className="flex">
+                      {[...Array(5)].map((_, index) => (
+                        <svg key={index} className="h-5 w-5 text-yellow-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                          <path d="M9.049 2.927a1 1 0 011.902 0l1.717 4.253a1 1 0 00.832.674l4.564.33a1 1 0 01.584 1.786l-3.41 2.845a1 1 0 00-.29.96l1.04 4.517a1 1 0 01-1.45 1.054L10 16.61l-4.038 2.47a1 1 0 01-1.45-1.054l1.04-4.517a1 1 0 00-.29-.96L1.852 9.97a1 1 0 01.584-1.786l4.564-.33a1 1 0 00.832-.674l1.717-4.253z" />
+                        </svg>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+                <p className="mt-4 text-base text-gray-600">
+                  Im deeply grateful to everyone in the Lets Code 🤗 community, especially Avinash sir. Your support has been crucial in providing me with invaluable technical resources and fostering my growth in computer science. Thank you! 🙏💻
+                </p>
+              </div>
             </div>
           </div>
         </div>
-      </div>
       {/* Call to Action (CTA) */}
       <div className="bg-gradient-to-r from-blue-600 to-blue-800 py-16">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
