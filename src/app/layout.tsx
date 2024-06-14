@@ -20,8 +20,6 @@ export default function RootLayout({
 }>) {
   return (
     <ClerkProvider>
-    
-
     <html lang="en">
       <body className={inter.className}>
       <Script  id="G-Q0QC4R4RC9" strategy="lazyOnload" src={`https://www.googletagmanager.com/gtag/js?id=G-Q0QC4R4RC9`}/>
@@ -36,8 +34,7 @@ export default function RootLayout({
       `
       }
       </Script>
-      <Script strategy="lazyOnload" src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8907718595878644`} crossOrigin="anonymous"/>
-
+      <Script id="AdSense-id" data-ad-client={`ca-pub-8907718595878644`} async={true} strategy={`beforeInteractive`} src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8907718595878644`} />
           <Navbar />
           {children}
           <Footer />

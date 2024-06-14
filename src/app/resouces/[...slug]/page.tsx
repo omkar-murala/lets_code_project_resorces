@@ -5,7 +5,7 @@ import axios from 'axios';
 import { Card } from './components/Card';
 import Skeleton from 'react-loading-skeleton';
 import 'react-loading-skeleton/dist/skeleton.css';
-import toast ,{ Toaster } from 'react-hot-toast';
+import { PRODUCTIONDOMAIN } from '@/env';
 
 function Page({ params }: { params: { slug: string } }) {
   const [info, setInfo] = useState([]);
@@ -13,11 +13,10 @@ function Page({ params }: { params: { slug: string } }) {
 
   const fetchApi = useCallback(async()=>{
      try {
-      const { data } = await axios.get(`http://localhost:8000/api/v1/${params.slug}`);
+      const { data } = await axios.get(`https://custombackend-vgpn.onrender.com/api/v1/${params.slug}`);
       setInfo(data.data);
     } catch (error:any) {
       setInfo([]);
-      toast.error("Too Much Request")
       console.log(error);
     } finally {
       setLoading(false);
@@ -32,10 +31,6 @@ function Page({ params }: { params: { slug: string } }) {
 
   return (
     <>
-    <div><Toaster
-  position="top-center"
-  reverseOrder={false}
-/></div>
     <div className='flex flex-col justify-center'>
       <div className="grid grid-rows-1  lg:grid-cols-4 items-center justify-center px-[8rem] py-[2rem] ">
         {loading ? (
