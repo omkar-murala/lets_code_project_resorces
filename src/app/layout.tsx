@@ -23,7 +23,6 @@ export default function RootLayout({
     
 
     <html lang="en">
-      <meta name="google-adsense-account" content="ca-pub-8907718595878644"></meta>
       <body className={inter.className}>
       <Script  id="G-Q0QC4R4RC9" strategy="lazyOnload" src={`https://www.googletagmanager.com/gtag/js?id=G-Q0QC4R4RC9`}/>
           <Script 
@@ -37,7 +36,8 @@ export default function RootLayout({
       `
       }
       </Script>
-      <Script strategy="lazyOnload" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8907718595878644" crossOrigin="anonymous"/>
+      <Script strategy="lazyOnload" src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8907718595878644`} crossOrigin="anonymous"/>
+
           <Navbar />
           {children}
           <Footer />
