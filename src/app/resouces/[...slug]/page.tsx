@@ -5,7 +5,7 @@ import axios from 'axios';
 import { Card } from './components/Card';
 import Skeleton from 'react-loading-skeleton';
 import 'react-loading-skeleton/dist/skeleton.css';
-import { PRODUCTIONDOMAIN } from '@/env';
+
 
 function Page({ params }: { params: { slug: string } }) {
   const [info, setInfo] = useState([]);

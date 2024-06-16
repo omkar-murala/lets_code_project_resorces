@@ -1,9 +1,8 @@
 import EducationalVideos from '../resourses/components/EducationalVideos';
 import FeaturedTopics from '../resourses/components/FeaturedTopics';
 import KnowledgeQuizzes from '../resourses/components/KnowledgeQuizzes';
-import LearningPaths from '../resourses/components/LearningPaths';
 import FeatureCard from './_components/FeatureCard';
-
+import LearningCard from './_components/LearningCard';
 const page = () => {
   return (
     <div>
@@ -17,7 +16,8 @@ const page = () => {
         <FeatureCard/>
         {/* <FeaturedTopics /> */}
         <br></br>
-        <LearningPaths />
+        {/* <LearningPaths /> */}
+        <LearningCard/>
         <EducationalVideos />
         <KnowledgeQuizzes />
       </main>
