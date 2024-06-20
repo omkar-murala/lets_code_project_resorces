@@ -40,3 +40,44 @@
   }
 }
 
+
+.tree-container {
+  display: flex;
+  justify-content: center;
+}
+
+.tree {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.branch {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.connector {
+  width: 2px;
+  height: 20px;
+  background-color: gray;
+  margin-bottom: 10px;
+}
+
+.branch .grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+}
+
+.team-member .group {
+  position: relative;
+}
+
+.team-member .group .absolute {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
