@@ -8,10 +8,12 @@ export default function Home() {
 
   return (
     <>
-      <div className="relative w-full">
+    <div className="h-[40rem] bg-slate-950">
+
+      <div className="relative w-full ">
         <div className="mx-auto max-w-7xl lg:grid lg:grid-cols-12 lg:gap-x-8 lg:px-8">
           <div className="flex flex-col justify-center px-4 py-12 md:py-16 lg:col-span-7 lg:gap-x-6 lg:px-6 lg:py-24 xl:col-span-6">
-            <h1 className="mt-8 text-3xl font-bold tracking-tight text-gray-700 md:text-4xl lg:text-6xl">
+            <h1 className="mt-8 text-3xl font-bold tracking-tight text-white md:text-4xl lg:text-6xl">
               <TypeAnimation
                 sequence={[
                   'Accelerate Your Tech Journey',
@@ -27,60 +29,61 @@ export default function Home() {
                 speed={50}
                 style={{ fontSize: '1em', display: 'inline-block' }}
                 repeat={Infinity}
-              />
+                />
             </h1>
-            <p className="mt-8 text-lg text-gray-500">
+            <p className="mt-8 text-lg text-white">
               Discover a treasure trove of tech resources, featuring in-depth notes, comprehensive guides, practical templates, and detailed roadmaps designed to accelerate your learning and career growth.
             </p>
             <div className="relative mt-8">
               <Link href="/resourses" passHref>
-                <button className="absolute left-0 top-0 rounded-md bg-black px-3 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-black/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black">
+                <button className="absolute left-0 top-0 rounded-md bg-white px-3 py-2.5 text-sm font-semibold text-black shadow-sm  focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black">
                   Get Started
                 </button>
               </Link>
             </div>
           </div>
-          <div className="relative lg:col-span-5 lg:-mr-8 xl:col-span-6">
+          <div className="relative lg:col-span-5 lg:-mr-8 xl:col-span-6  ">
             <ThreeDCardDemo />
           </div>
         </div>
       </div>
+      </div>
       {/* Introduction */}
-      <div className="bg-gray-50 py-16">
+      <div className="bg-slate-900 py-16">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">
+            <h2 className="text-3xl font-extrabold text-white sm:text-4xl">
               Welcome to TechResourceHub!
             </h2>
-            <p className="mt-8 text-lg text-gray-700 animate-fade-in">
+            <p className="mt-8 text-lg text-white animate-fade-in">
             We provide a variety of tech resources like resume templates and roadmaps, all from reputable sources, to simplify your learning and career growth.
             </p>
           </div>
           <div className="mt-10 grid gap-10 md:grid-cols-3">
-            <div className="flex flex-col items-center bg-white p-6 rounded-lg shadow-lg">
+            <div className="flex flex-col items-center bg-slate-700 p-6 rounded-lg shadow-lg transition-colors hover:bg-purple-600">
               <div className="w-16 h-16 rounded-full overflow-hidden">
                 <Image src="https://www.shutterstock.com/image-vector/3d-download-icon-isolated-on-600nw-2096369137.jpg" alt="Free Downloads" width={96} height={96} />
               </div>
-              <h3 className="mt-4 text-lg font-medium leading-6 text-gray-900">Free Downloads</h3>
-              <p className="mt-2 text-base text-gray-600 text-center">
+              <h3 className="mt-4 text-lg font-medium leading-6 text-white">Free Downloads</h3>
+              <p className="mt-2 text-base text-white text-center">
                 All resources are available for free download.
               </p>
             </div>
-            <div className="flex flex-col items-center bg-white p-6 rounded-lg shadow-lg">
+            <div className="flex flex-col items-center bg-slate-700 p-6 rounded-lg shadow-l transition-colors hover:bg-blue-500">
               <div className="w-16 h-16 rounded-full overflow-hidden">
                 <Image src="https://cdn3d.iconscout.com/3d/premium/thumb/customer-services-7013376-5727383.png" alt="Expert Curated" width={96} height={96} />
               </div>
-              <h3 className="mt-4 text-lg font-medium leading-6 text-gray-900">Expert Curated</h3>
-              <p className="mt-2 text-base text-gray-600 text-center">
+              <h3 className="mt-4 text-lg font-medium leading-6 text-white">Expert Curated</h3>
+              <p className="mt-2 text-base text-white text-center">
                 Resources curated by industry experts.
               </p>
             </div>
-            <div className="flex flex-col items-center bg-white p-6 rounded-lg shadow-lg">
+            <div className="flex flex-col items-center bg-slate-700 p-6 rounded-lg shadow-lg transition-colors hover:bg-yellow-500">
               <div className="w-16 h-16 rounded-full overflow-hidden">
                 <Image src="https://img.freepik.com/premium-psd/3d-chat-message-mail-icon-illustration_148391-6438.jpg" alt="Regular Updates" width={96} height={96} />
               </div>
-              <h3 className="mt-4 text-lg font-medium leading-6 text-gray-900">Regular Updates</h3>
-              <p className="mt-2 text-base text-gray-600 text-center">
+              <h3 className="mt-4 text-lg font-medium leading-6 text-white">Regular Updates</h3>
+              <p className="mt-2 text-base text-white text-center">
                 Regularly updated with new and relevant content.
               </p>
             </div>
@@ -88,46 +91,46 @@ export default function Home() {
         </div>
       </div>
       {/* CATAGORY */}
-      <div className="bg-white py-16">
+      <div className="bg-slate-950 py-16">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">
+            <h2 className="text-3xl font-extrabold text-white sm:text-4xl">
               Categories
             </h2>
             <div className="mt-10 grid gap-10 md:grid-cols-4">
-              <div className="flex flex-col items-center">
+              <div className="flex flex-col items-center bg-slate-900 p-10 rounded-md transition-colors hover:bg-blue-600">
                 <div className="w-24 h-24 rounded-lg overflow-hidden">
                   <Image src="https://cdn3d.iconscout.com/3d/premium/thumb/signature-on-agreement-8146457-6477431.png?f=webp" alt="Notes" width={86} height={86} className="object-cover" />
                 </div>
-                <h3 className="mt-4 text-lg font-medium leading-6 text-gray-900">Notes</h3>
-                <p className="mt-2 text-base text-gray-600 text-center">
+                <h3 className="mt-4 text-lg font-medium leading-6 text-white">Notes</h3>
+                <p className="mt-2 text-base text-white text-center">
                   Comprehensive notes on various tech topics.
                 </p>
               </div>
-              <div className="flex flex-col items-center">
+              <div className="flex flex-col items-center  bg-slate-900 p-10 rounded-md transition-colors hover:bg-red-600">
                 <div className="w-24 h-24 rounded-lg overflow-hidden">
                   <Image src="https://cdn3d.iconscout.com/3d/premium/thumb/roadmap-6851956-5624882.png?f=webp" alt="Roadmaps" width={86} height={86} className="object-cover" />
                 </div>
-                <h3 className="mt-4 text-lg font-medium leading-6 text-gray-900">Roadmaps</h3>
-                <p className="mt-2 text-base text-gray-600 text-center">
+                <h3 className="mt-4 text-lg font-medium leading-6 text-white">Roadmaps</h3>
+                <p className="mt-2 text-base text-white text-center">
                   Detailed roadmaps for your tech career path.
                 </p>
               </div>
-              <div className="flex flex-col items-center">
+              <div className="flex flex-col items-center bg-slate-900 p-10 rounded-md transition-colors hover:bg-orange-600">
                 <div className="w-24 h-24 rounded-lg overflow-hidden">
                   <Image src="https://cdn3d.iconscout.com/3d/premium/thumb/employees-profile-10760000-8746820.png" alt="Resume Templates" width={86} height={86} className="object-cover" />
                 </div>
-                <h3 className="mt-4 text-lg font-medium leading-6 text-gray-900">Resume Templates</h3>
-                <p className="mt-2 text-base text-gray-600 text-center">
+                <h3 className="mt-4 text-lg font-medium leading-6 text-white">Resume Templates</h3>
+                <p className="mt-2 text-base text-white text-center">
                   ATS-friendly resume templates to stand out.
                 </p>
               </div>
-              <div className="flex flex-col items-center">
+              <div className="flex flex-col items-center  bg-slate-900 p-10 rounded-md transition-colors hover:bg-yellow-600">
                 <div className="w-24 h-24 rounded-lg overflow-hidden">
                   <Image src="https://cdn3d.iconscout.com/3d/premium/thumb/technical-analysis-4721286-3931540.png?f=webp" alt="Cheat Sheets" width={86} height={86} className="object-cover" />
                 </div>
-                <h3 className="mt-4 text-lg font-medium leading-6 text-gray-900">Cheat Sheets</h3>
-                <p className="mt-2 text-base text-gray-600 text-center">
+                <h3 className="mt-4 text-lg font-medium leading-6 text-white">Cheat Sheets</h3>
+                <p className="mt-2 text-base text-white text-center">
                   Essential cheat sheets for tech professionals.
                 </p>
               </div>
@@ -136,44 +139,44 @@ export default function Home() {
         </div>
       </div>
       {/* Featured Resources */}
-      <div className="bg-gradient-to-r from-blue-50 to-blue-100 py-16">
+      <div className=" py-16 bg-slate-900 ">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             {/* <h2 className="text-4xl font-extrabold text-gray-900 sm:text-5xl"> */}
-            <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">
+            <h2 className="text-3xl font-extrabold text-white  sm:text-4xl">
               Featured Resources
             </h2>
           </div>
           <div className="mt-12 grid gap-8 md:grid-cols-3">
-            <div className="flex flex-col bg-white rounded-lg shadow-lg overflow-hidden" style={{ transform: 'scale(1.0)' }}>
+            <div className="flex flex-col bg-slate-900 rounded-lg shadow-lg overflow-hidden transition-colors hover:bg-blue-700" style={{ transform: 'scale(1.0)' }}>
               <div className="flex justify-center items-center p-6">
                 <Image src="https://cdn3d.iconscout.com/3d/premium/thumb/resume-5527385-4623366.png" alt="Sample Resume" width={180} height={140} />
               </div>
               <div className="p-6">
-                <h3 className="text-lg font-medium text-gray-900">Sample Resume</h3>
-                <p className="mt-4 text-base text-gray-600">
+                <h3 className="text-lg font-medium text-white">Sample Resume</h3>
+                <p className="mt-4 text-base text-white">
                   An example of a well-structured resume for tech professionals, showcasing best practices in resume writing.
                 </p>
               </div>
             </div>
-            <div className="flex flex-col bg-white rounded-lg shadow-lg overflow-hidden" style={{ transform: 'scale(1.0)' }}>
+            <div className="flex flex-col bg-slate-900 hover:bg-yellow-500 transition-colors rounded-lg shadow-lg overflow-hidden" style={{ transform: 'scale(1.0)' }}>
               <div className="flex justify-center items-center p-6">
                 <Image src="https://cdn3d.iconscout.com/3d/premium/thumb/marketing-strategy-10760000-8746822.png" alt="Software Development Roadmap" width={180} height={140} />
               </div>
               <div className="p-6">
-                <h3 className="text-lg font-medium text-gray-900">Software Development Roadmap</h3>
-                <p className="mt-4 text-base text-gray-600">
+                <h3 className="text-lg font-medium text-white">Software Development Roadmap</h3>
+                <p className="mt-4 text-base text-white">
                   A comprehensive roadmap outlining the essential skills and knowledge areas for a successful career in software development.
                 </p>
               </div>
             </div>
-            <div className="flex flex-col bg-white rounded-lg shadow-lg overflow-hidden" style={{ transform: 'scale(1.0)' }}>
+            <div className="flex flex-col bg-slate-900 hover:bg-orange-500  rounded-lg shadow-lg overflow-hidden" style={{ transform: 'scale(1.0)' }}>
               <div className="flex justify-center items-center p-6">
                 <Image src="https://cdn3d.iconscout.com/3d/premium/thumb/data-analysis-10760000-8746821.png" alt="Data Science Cheat Sheet" width={180} height={140} />
               </div>
               <div className="p-6">
-                <h3 className="text-lg font-medium text-gray-900">Data Science Cheat Sheet</h3>
-                <p className="mt-4 text-base text-gray-600">
+                <h3 className="text-lg font-medium text-white">Data Science Cheat Sheet</h3>
+                <p className="mt-4 text-base text-white">
                   A handy cheat sheet covering key concepts, techniques, and tools for data science professionals.
                 </p>
               </div>
@@ -224,18 +227,18 @@ export default function Home() {
         </div>
       </div>
        {/* Testimonials/Reviews */}
-        <div className="bg-gray-50 py-16">
+        <div className="bg-slate-950  py-16">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="text-center">
-              <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">
+              <h2 className="text-3xl font-extrabold text-white sm:text-4xl">
                 Testimonials
               </h2>
-              <p className="mt-4 text-lg leading-6 text-gray-600">
+              <p className="mt-4 text-lg leading-6 text-white">
                 Hear from our satisfied users who have benefited from our resources.
               </p>
             </div>
             <div className="mt-10 grid gap-10 md:grid-cols-3">
-              <div className="bg-white p-6 rounded-lg shadow-lg">
+              <div className="bg-slate-900 p-6 rounded-lg shadow-lg">
                 <div className="flex items-center">
                   <div className="relative w-12 h-12 rounded-full overflow-hidden">
                     <Image
@@ -246,7 +249,7 @@ export default function Home() {
                     />
                   </div>
                   <div className="ml-4">
-                    <h3 className="text-lg font-medium leading-6 text-gray-900">Abhijeet Singh</h3>
+                    <h3 className="text-lg font-medium leading-6 text-white">Abhijeet Singh</h3>
                     <div className="flex">
                       {[...Array(5)].map((_, index) => (
                         <svg key={index} className="h-5 w-5 text-yellow-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
@@ -256,11 +259,11 @@ export default function Home() {
                     </div>
                   </div>
                 </div>
-                <p className="mt-4 text-base text-gray-600">
+                <p className="mt-4 text-base text-white">
                   Really very helpful resources. Through this I am able to boost my preparation.
                 </p>
               </div>
-              <div className="bg-white p-6 rounded-lg shadow-lg">
+              <div className="bg-slate-900  p-6 rounded-lg shadow-lg">
                 <div className="flex items-center">
                   <div className="relative w-12 h-12 rounded-full overflow-hidden">
                     <Image
@@ -271,7 +274,7 @@ export default function Home() {
                     />
                   </div>
                   <div className="ml-4">
-                    <h3 className="text-lg font-medium leading-6 text-gray-900">Esha Mandal</h3>
+                    <h3 className="text-lg font-medium leading-6 text-white">Esha Mandal</h3>
                     <div className="flex">
                       {[...Array(4)].map((_, index) => (
                         <svg key={index} className="h-5 w-5 text-yellow-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
@@ -281,11 +284,11 @@ export default function Home() {
                     </div>
                   </div>
                 </div>
-                <p className="mt-4 text-base text-gray-600">
+                <p className="mt-4 text-base text-white">
                   This group is incredibly useful! 📚 The content is top-notch, and the admin deserves more recognition. 🌟 Wishing you all the best and thank you for your help. Take care and have a great day! 😊
                 </p>
               </div>
-              <div className="bg-white p-6 rounded-lg shadow-lg">
+              <div className="bg-slate-900  p-6 rounded-lg shadow-lg">
                 <div className="flex items-center">
                   <div className="relative w-12 h-12 rounded-full overflow-hidden">
                     <Image
@@ -296,7 +299,7 @@ export default function Home() {
                     />
                   </div>
                   <div className="ml-4">
-                    <h3 className="text-lg font-medium leading-6 text-gray-900">Kuldeep Panwar</h3>
+                    <h3 className="text-lg font-medium leading-6 text-white">Kuldeep Panwar</h3>
                     <div className="flex">
                       {[...Array(5)].map((_, index) => (
                         <svg key={index} className="h-5 w-5 text-yellow-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
@@ -306,7 +309,7 @@ export default function Home() {
                     </div>
                   </div>
                 </div>
-                <p className="mt-4 text-base text-gray-600">
+                <p className="mt-4 text-base text-white">
                   Im deeply grateful to everyone in the Lets Code 🤗 community, especially Avinash sir. Your support has been crucial in providing me with invaluable technical resources and fostering my growth in computer science. Thank you! 🙏💻
                 </p>
               </div>

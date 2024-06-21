@@ -10,7 +10,7 @@ const AboutUsPage = () => {
   // Simulating client count animation
   useEffect(() => {
     const interval = setInterval(() => {
-      setClientCount((prevCount) => (prevCount < 400 ? prevCount + 1 : prevCount));
+      setClientCount((prevCount) => (prevCount < 71 ? prevCount + 1 : prevCount));
     }, 50);
 
     return () => clearInterval(interval);
@@ -18,15 +18,8 @@ const AboutUsPage = () => {
 
   return (
     <div>
-      <Head>
-        <title>About Us - Lets Code</title>
-        <meta name="description" content="Learn more about Let's Code and our mission to advance technology's frontier." />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
-      <main> 
-      
-      {/* INTRODUCTION */}
+      <main>   
+    {/* INTRODUCTION */}
       <section className="relative py-20 bg-gradient-to-r from-purple-400 via-pink-500 to-red-500">
           <div className="container mx-auto flex flex-col lg:flex-row items-center px-4 lg:px-16">
             {/* Text Content Container */}
@@ -100,9 +93,9 @@ const AboutUsPage = () => {
               {/* CEO */}
               <div className="team-member bg-white p-4 rounded-lg shadow-md flex flex-col items-center transition duration-500 hover:-translate-y-1 hover:shadow-lg w-48">
                 <div className="w-24 h-24 rounded-full overflow-hidden mb-4">
-                  <Image src="/path-to-ceo-image.jpg" alt="CEO Image" width={96} height={96} layout="responsive" className="object-cover" />
+                  <Image src="https://avatars.githubusercontent.com/u/61057666?v=4" alt="CEO Image" width={96} height={96} layout="responsive" className="object-cover" />
                 </div>
-                <h3 className="text-lg font-bold mb-1">John Doe</h3>
+                <h3 className="text-lg font-bold mb-1">Avinash Singh</h3>
                 <p className="text-gray-700 text-sm">CEO</p>
                 <div className="flex mt-2 space-x-2">
                   <a href="https://twitter.com/johndoe" target="_blank" rel="noopener noreferrer" className="text-blue-500">
@@ -121,7 +114,7 @@ const AboutUsPage = () => {
                     <Image src={developer.image} alt={developer.name} width={96} height={96} layout="responsive" className="object-cover" />
                   </div>
                   <h3 className="text-lg font-bold mb-1">{developer.name}</h3>
-                  <p className="text-gray-700 text-sm">{developer.role}</p>
+                  <p className="text-gray-700 text-sm text-center">{developer.role}</p>
                   <div className="flex mt-2 space-x-2">
                     {developer.socials.map((social, i) => (
                       <a key={i} href={social.link} target="_blank" rel="noopener noreferrer" className="text-blue-500">
@@ -133,7 +126,7 @@ const AboutUsPage = () => {
               ))}
 
               {/* Support Roles */}
-              {supportRoles.map((support, index) => (
+              {/* {supportRoles.map((support, index) => (
                 <div key={index} className="team-member bg-white p-4 rounded-lg shadow-md flex flex-col items-center transition duration-500 hover:-translate-y-1 hover:shadow-lg w-48">
                   <div className="w-24 h-24 rounded-full overflow-hidden mb-4">
                     <Image src={support.image} alt={support.name} width={96} height={96} layout="responsive" className="object-cover" />
@@ -148,7 +141,7 @@ const AboutUsPage = () => {
                     ))}
                   </div>
                 </div>
-              ))}
+              ))} */}
             </div>
           </div>
         </section>
@@ -156,9 +149,9 @@ const AboutUsPage = () => {
     {/* Client Impact Section */}
       <section className="py-20 bg-gradient-to-r from-blue-500 to-purple-600 text-white">
         <div className="container mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-8">Client Impact</h2>
-          <div className="text-6xl font-bold mb-4">{clientCount}</div>
-          <p className="text-lg md:text-xl">Clients Helped</p>
+          <h2 className="text-3xl md:text-4xl font-bold mb-8">Community Impact</h2>
+          <div className="text-6xl font-bold mb-4">{clientCount} K+</div>
+          <p className="text-lg md:text-xl">Members</p>
         </div>
       </section>
 
@@ -200,27 +193,27 @@ const AboutUsPage = () => {
 
 const webDevelopers = [
   {
-    name: 'Jane Smith',
-    role: 'Web Developer',
-    image: '/path-to-janesmith-image.jpg',
+    name: 'Karan Rana',
+    role: 'CTO',
+    image: 'https://avatars.githubusercontent.com/u/103360966?v=4',
     socials: [
       { name: 'Twitter', link: 'https://twitter.com/janesmith', icon: '/path-to-twitter-icon.svg' },
       { name: 'LinkedIn', link: 'https://linkedin.com/in/janesmith', icon: '/path-to-linkedin-icon.svg' },
     ],
   },
   {
-    name: 'Michael Brown',
-    role: 'Web Developer',
-    image: '/path-to-michaelbrown-image.jpg',
+    name: 'Omlar Murala',
+    role: 'Product Development Manager',
+    image: 'https://avatars.githubusercontent.com/u/119599104?s=400&u=0fa3118ae4df74ab92e19c3dd44f97d0134997de&v=4',
     socials: [
       { name: 'Twitter', link: 'https://twitter.com/michaelbrown', icon: '/path-to-twitter-icon.svg' },
       { name: 'LinkedIn', link: 'https://linkedin.com/in/michaelbrown', icon: '/path-to-linkedin-icon.svg' },
     ],
   },
   {
-    name: 'Sarah Wilson',
-    role: 'Web Developer',
-    image: '/path-to-sarahwilson-image.jpg',
+    name: 'Shubham Paul',
+    role: 'Software Engineer',
+    image: 'https://avatars.githubusercontent.com/u/91714143?v=4',
     socials: [
       { name: 'Twitter', link: 'https://twitter.com/sarahwilson', icon: '/path-to-twitter-icon.svg' },
       { name: 'LinkedIn', link: 'https://linkedin.com/in/sarahwilson', icon: '/path-to-linkedin-icon.svg' },

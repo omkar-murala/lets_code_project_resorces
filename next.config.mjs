@@ -1,13 +1,6 @@
 /** @type {import('next').NextConfig} */
 /** @type {import('next').NextConfig} */
-const nextConfig = {
-   experimental: {
-   turbo: {
-     resolveAlias: {
-       canvas: './empty-module.ts',
-     },
-  },
- },
+const nextConfig = { 
     images: {
       remotePatterns: [
         {
@@ -101,6 +94,10 @@ const nextConfig = {
           protocol:'https',
           hostname:'utfs.io'
 
+        },
+        {
+          protocol:'https',
+          hostname:'avatars.githubusercontent.com'
         }
       ],
     },

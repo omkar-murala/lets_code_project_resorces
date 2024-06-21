@@ -4,6 +4,7 @@ import { Menu, X } from "lucide-react";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
+import Link from "next/link";
 
 import {
   SignInButton,
@@ -13,8 +14,9 @@ import {
 
 const menuItems = [
   { name: "Home", href: "/" },
+  {name:"About", href:"/about"},
   { name: "Contact", href: "/contact" },
-  { name: "Resource", href: "/resourses" },
+  { name: "Resource", href: "/resourses" }
 ];
 
 export function Navbar() {
@@ -29,18 +31,20 @@ export function Navbar() {
 
 
   return (
-    <div className="relative w-full bg-white">
+    <div className="relative w-full bg-slate-700">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-2 sm:px-6 lg:px-8">
         <div className="inline-flex items-center space-x-2">
           <span>       
+            <Link href="/">
             <Image
               width={50}
               height={50}
-              src="https://utfs.io/f/8ad9470c-f41a-467e-9864-07ec96f7dd84-5t6ga5.png"
+              src="https://utfs.io/f/a4db92de-2163-4ff9-885f-581e139e6a22-xkywas.png"
               alt="logo of website"
-            />
+              />
+          </Link>
           </span>
-          <span className="font-bold">Lets Resource</span>
+          <span className="font-bold text-white">Lets Resource</span>
         </div>
         <div className="hidden lg:block">
           <ul className="inline-flex space-x-8">
@@ -48,7 +52,7 @@ export function Navbar() {
               <li key={item.name}>
                 <a
                   href={item.href}
-                  className="text-sm font-semibold text-gray-800 hover:text-gray-900"
+                  className="text-sm font-semibold text-white hover:text-gray-300"
                 >
                   {item.name}
                 </a>
