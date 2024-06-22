@@ -8,39 +8,33 @@
    Creating an optimized production build ...
  ✓ Compiled successfully
    Linting and checking validity of types ...
-
-./src/app/subresources/[...slug]/components/Card.tsx
-7:7  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
-
-info  - Need to disable some ESLint rules? Learn more here: https://nextjs.org/docs/basic-features/eslint#disabling-rules
    Collecting page data ...
    Generating static pages (0/10) ...
    Generating static pages (2/10) 
    Generating static pages (4/10) 
+Database connection successful
    Generating static pages (7/10) 
-Analytics not supported in this environment.
-Analytics not supported in this environment.
  ✓ Generating static pages (10/10)
    Finalizing page optimization ...
    Collecting build traces ...
 
 Route (app)                              Size     First Load JS
-┌ ○ /                                    8.45 kB         101 kB
-├ ○ /_not-found                          875 B            88 kB
-├ ○ /contact                             174 B          92.3 kB
-├ ○ /login                               2.31 kB         138 kB
-├ ○ /programming                         1.31 kB         121 kB
-├ ○ /resourses                           1.31 kB        95.1 kB
-├ ○ /signup                              2.17 kB         138 kB
-└ ƒ /subresources/[...slug]              1.66 kB         109 kB
+┌ ƒ /                                    15.9 kB         115 kB
+├ ƒ /_not-found                          871 B          87.9 kB
+├ ƒ /about                               3.23 kB        95.4 kB
+├ ƒ /api/newsletters                     0 B                0 B
+├ ƒ /contact                             175 B          92.3 kB
+├ ƒ /CustomerSupport                     137 B          87.2 kB
+├ ƒ /resouces/[...slug]                  6.3 kB          118 kB
+├ ƒ /resourses                           3.15 kB         122 kB
+└ ƒ /subresources/[...slug]              190 B          92.4 kB
 + First Load JS shared by all            87.1 kB
-  ├ chunks/23-b6e5de30aa2a26bf.js        31.5 kB
-  ├ chunks/fd9d1056-cc804a1e952f84f5.js  53.7 kB
-  └ other shared chunks (total)          1.95 kB
+  ├ chunks/23-18ec38de183b2ab4.js        31.5 kB
+  ├ chunks/fd9d1056-f3ca8dc5e1338c4d.js  53.6 kB
+  └ other shared chunks (total)          1.96 kB
 
 
-ƒ Middleware                             26.8 kB
+ƒ Middleware                             49.9 kB
 
-○  (Static)   prerendered as static content
 ƒ  (Dynamic)  server-rendered on demand
 
