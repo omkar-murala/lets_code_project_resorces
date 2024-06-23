@@ -32,7 +32,7 @@ function Page({ params }: { params: { slug: string } }) {
   return (
     <>
     <div className='flex flex-col justify-center'>
-      <div className="grid grid-rows-1  lg:grid-cols-4 items-center justify-center px-[8rem] py-[2rem] ">
+      <div className="grid grid-rows-1 md:grid-cols-2  lg:grid-cols-4 items-center justify-center px-[8rem] py-[2rem] ">
         {loading ? (
           Array.from({ length: 20 }).map((_, index) => (
             <Skeleton key={index} height={200} />

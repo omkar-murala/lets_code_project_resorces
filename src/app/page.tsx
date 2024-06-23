@@ -3,11 +3,45 @@ import { ThreeDCardDemo } from "@/components/SlideCard/SlideCard";
 import Image from 'next/image';
 import Link from 'next/link';
 import { TypeAnimation } from 'react-type-animation';
+import {  useEffect, useState } from "react";;
+import axios from "axios";
+import toast,{Toaster} from "react-hot-toast"
+
+
 
 export default function Home() {
+  const [email,setEmail] = useState('')
+  const [disabled,setDisabled] = useState(true)
+
+  useEffect(()=>{
+    if(email.length>3){
+      setDisabled(false)
+    }
+    else{
+      setDisabled(true)
+    }
+  },[email])
+
+
+
+  async function submithandler(){
+    try {
+        const response = await axios.post("https://custombackend-vgpn.onrender.com/api/v1/subscribe",{
+          email
+        })
+       if(response.status === 200){
+        toast.success("Thanks for Subscribing")
+       }
+    } catch (error) {
+        toast.error("Something went wrong")
+      
+    }
+
+  }
 
   return (
     <>
+    <Toaster/>
     <div className=" bg-slate-950">
       <div className="relative w-full ">
         <div className="mx-auto max-w-7xl lg:grid lg:grid-cols-12 lg:gap-x-8 lg:px-8">
@@ -334,22 +368,24 @@ export default function Home() {
           </div>
           <div className="mt-12">
             <h3 className="text-xl font-semibold text-white">Subscribe for the Latest Weekly E-Books</h3>
-            <form className="mt-4 sm:flex sm:max-w-md mx-auto">
+            <div className="mt-4 sm:flex sm:max-w-md mx-auto">
               <input
-              // disabled={disabled}
-              //   value={email}
-              //   onChange={(e)=>setEmail(e.target.value)} 
+                required
+                value={email}
+                onChange={(e)=>setEmail(e.target.value)} 
                 type="email"
                 className="w-full px-5 py-3 border border-transparent rounded-md text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-yellow-500"
                 placeholder="Enter your email"
               />
               <button
+              onClick={submithandler}
+              disabled={disabled}
                 type="submit"
                 className="mt-3 w-full px-5 py-3 border border-transparent rounded-md shadow-lg bg-yellow-500 text-white font-medium hover:bg-yellow-400 sm:mt-0 sm:ml-3 sm:w-auto sm:flex-shrink-0 transition duration-300"
               >
                 Subscribe
               </button>
-            </form>
+            </div>
           </div>
           <div className="mt-8 flex justify-center space-x-6">
             <a href="https://www.facebook.com/letscodeforever" className="text-blue-200 hover:text-white transition duration-300">
