@@ -42,7 +42,7 @@ export default function Home() {
   return (
     <>
     <Toaster/>
-    <div className=" bg-slate-950">
+    <div className="bg-slate-950">
       <div className="relative w-full ">
         <div className="mx-auto max-w-7xl lg:grid lg:grid-cols-12 lg:gap-x-8 lg:px-8">
           <div className="flex flex-col justify-center px-4 py-12 md:py-16 lg:col-span-7 lg:gap-x-6 lg:px-6 lg:py-24 xl:col-span-6">
@@ -131,7 +131,7 @@ export default function Home() {
               Categories
             </h2>
             <div className="mt-10 grid gap-10 md:grid-cols-4">
-              <div className="flex flex-col items-center bg-slate-900 p-10 rounded-md transition-colors hover:bg-blue-600">
+              <div className="flex flex-col items-center bg-slate-700 p-10 rounded-md transition-colors hover:bg-blue-600">
                 <div className="w-24 h-24 rounded-lg overflow-hidden">
                   <Image src="https://cdn3d.iconscout.com/3d/premium/thumb/signature-on-agreement-8146457-6477431.png?f=webp" alt="Notes" width={86} height={86} className="object-cover" />
                 </div>
@@ -140,7 +140,7 @@ export default function Home() {
                   Comprehensive notes on various tech topics.
                 </p>
               </div>
-              <div className="flex flex-col items-center  bg-slate-900 p-10 rounded-md transition-colors hover:bg-red-600">
+              <div className="flex flex-col items-center  bg-slate-700 p-10 rounded-md transition-colors hover:bg-red-600">
                 <div className="w-24 h-24 rounded-lg overflow-hidden">
                   <Image src="https://cdn3d.iconscout.com/3d/premium/thumb/roadmap-6851956-5624882.png?f=webp" alt="Roadmaps" width={86} height={86} className="object-cover" />
                 </div>
@@ -149,7 +149,7 @@ export default function Home() {
                   Detailed roadmaps for your tech career path.
                 </p>
               </div>
-              <div className="flex flex-col items-center bg-slate-900 p-10 rounded-md transition-colors hover:bg-orange-600">
+              <div className="flex flex-col items-center bg-slate-700 p-10 rounded-md transition-colors hover:bg-orange-600">
                 <div className="w-24 h-24 rounded-lg overflow-hidden">
                   <Image src="https://cdn3d.iconscout.com/3d/premium/thumb/employees-profile-10760000-8746820.png" alt="Resume Templates" width={86} height={86} className="object-cover" />
                 </div>
@@ -158,7 +158,7 @@ export default function Home() {
                   ATS-friendly resume templates to stand out.
                 </p>
               </div>
-              <div className="flex flex-col items-center  bg-slate-900 p-10 rounded-md transition-colors hover:bg-yellow-600">
+              <div className="flex flex-col items-center  bg-slate-700 p-10 rounded-md transition-colors hover:bg-yellow-600">
                 <div className="w-24 h-24 rounded-lg overflow-hidden">
                   <Image src="https://cdn3d.iconscout.com/3d/premium/thumb/technical-analysis-4721286-3931540.png?f=webp" alt="Cheat Sheets" width={86} height={86} className="object-cover" />
                 </div>
@@ -181,7 +181,7 @@ export default function Home() {
             </h2>
           </div>
           <div className="mt-12 grid gap-8 md:grid-cols-3">
-            <div className="flex flex-col bg-slate-900 rounded-lg shadow-lg overflow-hidden transition-colors hover:bg-blue-700" style={{ transform: 'scale(1.0)' }}>
+            <div className="flex flex-col bg-slate-700 rounded-lg shadow-lg overflow-hidden transition-colors hover:bg-blue-700" style={{ transform: 'scale(1.0)' }}>
               <div className="flex justify-center items-center p-6">
                 <Image src="https://cdn3d.iconscout.com/3d/premium/thumb/resume-5527385-4623366.png" alt="Sample Resume" width={180} height={140} />
               </div>
@@ -192,7 +192,7 @@ export default function Home() {
                 </p>
               </div>
             </div>
-            <div className="flex flex-col bg-slate-900 hover:bg-yellow-500 transition-colors rounded-lg shadow-lg overflow-hidden" style={{ transform: 'scale(1.0)' }}>
+            <div className="flex flex-col bg-slate-700 hover:bg-yellow-500 transition-colors rounded-lg shadow-lg overflow-hidden" style={{ transform: 'scale(1.0)' }}>
               <div className="flex justify-center items-center p-6">
                 <Image src="https://cdn3d.iconscout.com/3d/premium/thumb/marketing-strategy-10760000-8746822.png" alt="Software Development Roadmap" width={180} height={140} />
               </div>
@@ -203,7 +203,7 @@ export default function Home() {
                 </p>
               </div>
             </div>
-            <div className="flex flex-col bg-slate-900 hover:bg-orange-500  rounded-lg shadow-lg overflow-hidden" style={{ transform: 'scale(1.0)' }}>
+            <div className="flex flex-col bg-slate-700 hover:bg-orange-500  rounded-lg shadow-lg overflow-hidden" style={{ transform: 'scale(1.0)' }}>
               <div className="flex justify-center items-center p-6">
                 <Image src="https://cdn3d.iconscout.com/3d/premium/thumb/data-analysis-10760000-8746821.png" alt="Data Science Cheat Sheet" width={180} height={140} />
               </div>
