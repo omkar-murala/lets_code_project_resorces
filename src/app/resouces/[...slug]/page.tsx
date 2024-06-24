@@ -31,8 +31,8 @@ function Page({ params }: { params: { slug: string } }) {
 
   return (
     <>
-    <div className='flex flex-col justify-center'>
-      <div className="grid grid-rows-1 md:grid-cols-2  lg:grid-cols-4 items-center justify-center px-[8rem] py-[2rem] ">
+    <div className='flex flex-col justify-center bg-slate-600'>
+      <div className="grid grid-rows-1 md:grid-cols-2  gap-10 lg:grid-cols-4 items-center justify-center px-[8rem] py-[2rem] ">
         {loading ? (
           Array.from({ length: 20 }).map((_, index) => (
             <Skeleton key={index} height={200} />
@@ -41,10 +41,9 @@ function Page({ params }: { params: { slug: string } }) {
               info.map((ele: any, index: number) => {
                 return(
                   <>
-              <div  key={index} className='py-8'>
+              <div  key={index + "-" + index} className='py-8'>
 
               <Card
-             
               link={ele.link}
               name={ele.name}
               image={ele.imageUrl}

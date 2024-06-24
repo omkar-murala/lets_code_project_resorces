@@ -8,7 +8,6 @@ import toast,{Toaster} from 'react-hot-toast';
 function Page() {
   const [email,setEmail] = useState('')
   const [name,setName] = useState('')
-  // const [username]
   const [topic,setTopic] =  useState('')
   const [subject,setSubject] =  useState('')
   const [message,setMessage] =  useState('')
@@ -26,7 +25,7 @@ function Page() {
       })
       console.log(response)
       if(response.status===200){
-        toast.success("We will contact you soon")
+        toast.success("We will get back to you")
         setEmail('')
         setName('')
         setMessage('')

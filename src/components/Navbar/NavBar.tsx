@@ -9,7 +9,8 @@ import Link from "next/link";
 import {
   SignInButton,
   SignedOut,
-  UserButton
+  UserButton,
+  SignedIn
 } from '@clerk/nextjs';
 
 const menuItems = [
@@ -62,13 +63,16 @@ export function Navbar() {
         </div>
         <div className="hidden lg:block">
           <SignedOut>
-            <SignInButton/>
+            <span className="text-white font-semibold">
+            <SignInButton mode="modal"/>
+            </span>
           </SignedOut>
-          <SignInButton>
+          <SignedIn>
             <UserButton/>
-          </SignInButton>
-         
+          </SignedIn>
         </div>
+
+         
         <div className="lg:hidden">
           <Menu onClick={toggleMenu} className="h-6 w-6 cursor-pointer text-white" />
         </div>
@@ -116,7 +120,10 @@ export function Navbar() {
                 </div>
                 <div className="flex flex-col items-center justify-center">
                      <SignedOut>
+                      <span className="text-white font-semibold">
                        <SignInButton/>
+
+                      </span>
                       </SignedOut>
                       <SignInButton>
                         <UserButton/>

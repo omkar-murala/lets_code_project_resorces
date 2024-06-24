@@ -30,7 +30,7 @@ export default function Home() {
           email
         })
        if(response.status === 200){
-        toast.success("Thanks for Subscribing")
+        toast.success("Thanks for subscribing! Tech updates and E-Books from Let's Code coming your way!")
        }
     } catch (error) {
         toast.error("Something went wrong")
@@ -362,12 +362,12 @@ export default function Home() {
              {/* <a href="/resources" className="px-6 py-3 bg-yellow-500 text-white font-semibold rounded-md shadow-lg hover:bg-yellow-400 transition duration-300 w-full sm:w-auto"> */}
               {/* Explore Resources */}
             {/* </a>  */}
-            <a href="/join" className="px-6 py-3 bg-white text-blue-600 font-semibold rounded-md shadow-lg hover:bg-gray-100 transition duration-300 w-full sm:w-auto">
+            <a href="https://t.me/offcampusjobsupdatess" target="_blank" className="px-6 py-3 bg-white text-blue-600 font-semibold rounded-md shadow-lg hover:bg-gray-100 transition duration-300 w-full sm:w-auto">
               Join Now
             </a>
           </div>
           <div className="mt-12">
-            <h3 className="text-xl font-semibold text-white">Subscribe for the Latest Weekly E-Books</h3>
+            <h3 className="text-xl font-semibold text-white">Subscribe for the Latest Weekly E-Books and Tech News</h3>
             <div className="mt-4 sm:flex sm:max-w-md mx-auto">
               <input
                 required

@@ -35,7 +35,7 @@ function EducationalCard() {
    <div>
       <div className="p-6 shadow-lg rounded-lg bg-slate-800 ">
         <h2 className="text-3xl font-bold mb-6 text-blue-500" style={{ textShadow: '1px 1px 5px rgba(0,0,0,0.3)', fontFamily: 'Arial, sans-serif', letterSpacing: '0.05em' }}>
-          Hands Projects
+          HAND&apos;s ON PROJECTS
         </h2>
         {loading ? <div className='flex flex-1 items-center justify-center'><PacmanLoader color="#71dffa" /></div> : <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
           {datas.slice(0, itemsToShow).map((topic: any, index) => {

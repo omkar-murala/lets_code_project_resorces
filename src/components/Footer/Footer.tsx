@@ -1,8 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
+import { Info,X } from "lucide-react";
 
 export function Footer() {
   return (
+    <>
     <section className="relative bg-slate-700 text-white overflow-hidden py-10">
       <div className="relative z-10 mx-auto max-w-7xl px-4">
         <div className="-m-6 flex flex-wrap">
@@ -140,5 +142,15 @@ export function Footer() {
         </div>
       </div>
     </section>
+    <div className="bg-transparent p-4 opacity-80">
+  <div className="flex items-center justify-center space-x-4">
+    <div>
+      <p className="text-sm font-medium">
+        ⚠️ Credits to all individual respective contributors. Let&apos;s Code curated these resources for tech students and professionals ⚠️.
+      </p>
+    </div> 
+  </div>
+</div>
+    </>
   );
 }
