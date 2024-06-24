@@ -13,7 +13,7 @@ function Page({ params }: { params: { slug: string } }) {
 
   const fetchApi = useCallback(async()=>{
      try {
-      const { data } = await axios.get(`https://custombackend-vgpn.onrender.com/api/v1/${params.slug}`);
+      const { data } = await axios.get(`https://custombackend-nurw.onrender.com/api/v1/${params.slug}`);
       setInfo(data.data);
     } catch (error:any) {
       setInfo([]);

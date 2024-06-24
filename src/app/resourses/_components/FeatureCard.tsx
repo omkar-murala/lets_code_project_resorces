@@ -22,7 +22,7 @@ function FeatureCard() {
   useEffect(() => {
     async function fetchData() {
       try {
-        const { data } = await axios.get(`https://custombackend-vgpn.onrender.com/api/v1/feature`);
+        const { data } = await axios.get(`https://custombackend-nurw.onrender.com/api/v1/feature`);
         setData(data.data);
         setLoading(false)
       } catch (error) {

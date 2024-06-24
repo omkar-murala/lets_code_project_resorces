@@ -20,7 +20,7 @@ function LearningCard() {
   useEffect(() => {
     async function fetchData() {
       try {
-        const { data } = await axios.get(`https://custombackend-vgpn.onrender.com/api/v1/roadmaps`);
+        const { data } = await axios.get(`https://custombackend-nurw.onrender.com/api/v1/roadmaps`);
         setData(data.data);
         setLoading(false)
       } catch (error) {
@@ -44,7 +44,7 @@ function LearningCard() {
           {datas.slice(0, itemsToShow).map((topic: any, index) => {
               return (
                   <Link key={index + '-' + index} href={`resouces/${topic.link}`}>
-                  <div key={index} className="flex flex-col items-center bg-gradient-to-r from-red-400 to-orange-500 text-white p-6 rounded-lg shadow-lg hover:from-yellow-500 hover:to-red-500 transition transform hover:-translate-y-1">
+                  <div key={index} className="flex flex-col items-center bg-gradient-to-r from-green-300 to-green-400 text-white p-6 rounded-lg shadow-lg hover:from-green-500 hover:to-green-500 transition transform hover:-translate-y-1">
                 <Image
                   src={topic.imageUrl}
                   alt={topic.name}
@@ -60,7 +60,7 @@ function LearningCard() {
         </div>}
         
         <button
-          className="mt-6 bg-gradient-to-r from-red-300 to-orange-300 text-white p-3 rounded-lg hover:from-yellow-500 hover:to-red-500 transition transform hover:-translate-y-1"
+          className="mt-6 bg-gradient-to-r from-green-300 to-green-300 text-white p-3 rounded-lg hover:from-green-500 hover:to-green-500 transition transform hover:-translate-y-1"
           onClick={() => setShowMore(!showMore)}
         >
           {showMore ? 'Show less' : 'View more'}

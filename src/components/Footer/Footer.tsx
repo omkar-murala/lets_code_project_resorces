@@ -34,27 +34,27 @@ export function Footer() {
                 Company
               </h3>
               <ul>
-                <li className="mb-4">
-                  <Link href="/services">
+                {/* <li className="mb-4"> */}
+                  {/* <Link href="/services">
                     <span className="text-base font-medium  hover:text-gray-100">
                       Services
                     </span>
-                  </Link>
-                </li>
+                  </Link> */}
+                {/* </li> */}
                 <li className="mb-4">
-                  <Link href="/community">
+                  <Link href="https://t.me/offcampusjobsupdatess" target="_blank">
                     <span className="text-base font-medium  hover:text-gray-100">
                       Community
                     </span>
                   </Link>
                 </li>
-                <li className="mb-4">
-                  <Link href="/products">
+                {/* <li className="mb-4"> */}
+                  {/* <Link href="/products">
                     <span className="text-base font-medium  hover:text-gray-100">
                       Products
                     </span>
-                  </Link>
-                </li>
+                  </Link> */}
+                {/* </li> */}
                 <li>
                   <Link href="/about">
                     <span className="text-base font-medium  hover:text-gray-100">
@@ -71,20 +71,20 @@ export function Footer() {
                 Support
               </h3>
               <ul>
-                <li className="mb-4">
+                {/* <li className="mb-4">
                   <Link href="/account">
                     <span className="text-base font-medium  hover:text-gray-100">
                       Account
                     </span>
                   </Link>
-                </li>
-                <li className="mb-4">
+                </li> */}
+                {/* <li className="mb-4">
                   <Link href="/help">
                     <span className="text-base font-medium  hover:text-gray-100">
                       Help
                     </span>
                   </Link>
-                </li>
+                </li> */}
                 <li className="mb-4">
                   <Link href="/contact">
                     <span className="text-base font-medium  hover:text-gray-100">
@@ -93,11 +93,11 @@ export function Footer() {
                   </Link>
                 </li>
                 <li>
-                  <Link href="/CustomerSupport">
+                  {/* <Link href="/CustomerSupport">
                     <span className="text-base font-medium  hover:text-gray-100">
                       Customer Support
                     </span>
-                  </Link>
+                  </Link> */}
                 </li>
               </ul>
             </div>
@@ -116,14 +116,14 @@ export function Footer() {
                   </Link>
                 </li>
                 <li className="mb-4">
-                  <Link href="/cancellation">
+                  {/* <Link href="/cancellation">
                     <span className="text-base font-medium  hover:text-gray-100">
                       Cancellation
                     </span>
-                  </Link>
+                  </Link> */}
                 </li>
                 <li className="mb-4">
-                  <Link href="/privacy-policy">
+                  <Link href="/policy">
                     <span className="text-base font-medium hover:text-gray-100">
                       Privacy Policy
                     </span>

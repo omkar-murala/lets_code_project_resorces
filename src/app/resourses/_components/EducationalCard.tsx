@@ -17,7 +17,7 @@ function EducationalCard() {
   useEffect(() => {
     async function fetchData() {
       try {
-        const { data } = await axios.get(`https://custombackend-vgpn.onrender.com/api/v1/project`);
+        const { data } = await axios.get(`https://custombackend-nurw.onrender.com/api/v1/project`);
         setData(data.data);
         setLoading(false)
       } catch (error) {

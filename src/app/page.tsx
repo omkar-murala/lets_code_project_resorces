@@ -26,14 +26,14 @@ export default function Home() {
 
   async function submithandler(){
     try {
-        const response = await axios.post("https://custombackend-vgpn.onrender.com/api/v1/subscribe",{
+        const response = await axios.post("https://custombackend-nurw.onrender.com/api/v1/subscribe",{
           email
         })
        if(response.status === 200){
         toast.success("Thanks for subscribing! Tech updates and E-Books from Let's Code coming your way!")
        }
     } catch (error) {
-        toast.error("Something went wrong")
+        toast.error("You have Already subscribed")
       
     }
 

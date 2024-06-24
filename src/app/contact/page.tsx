@@ -14,7 +14,7 @@ function Page() {
 
   async function submithandler() {
     try {
-      const response  =  await axios.post("https://custombackend-vgpn.onrender.com/api/v1/emailquery",{
+      const response  =  await axios.post("https://custombackend-nurw.onrender.com/api/v1/emailquery",{
         email,
         name,
         topic,

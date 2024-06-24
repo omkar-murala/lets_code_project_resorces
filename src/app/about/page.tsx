@@ -1,8 +1,8 @@
 "use client";
 
-import Head from 'next/head';
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
+
 
 const AboutUsPage = () => {
   const [clientCount, setClientCount] = useState(0);
@@ -96,13 +96,13 @@ const AboutUsPage = () => {
                   <Image src="https://avatars.githubusercontent.com/u/61057666?v=4" alt="CEO Image" width={96} height={96} layout="responsive" className="object-cover" />
                 </div>
                 <h3 className="text-lg font-bold mb-1">Avinash Singh</h3>
-                <p className="text-gray-700 text-sm">CEO</p>
+                <p className="text-gray-700 text-sm">Founder</p>
                 <div className="flex mt-2 space-x-2">
                   <a href="https://twitter.com/johndoe" target="_blank" rel="noopener noreferrer" className="text-blue-500">
-                    <Image src="/path-to-twitter-icon.svg" alt="Twitter" width={16} height={16} />
+                    <Image src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGNsYXNzPSJsdWNpZGUgbHVjaWRlLXR3aXR0ZXIiPjxwYXRoIGQ9Ik0yMiA0cy0uNyAyLjEtMiAzLjRjMS42IDEwLTkuNCAxNy4zLTE4IDExLjYgMi4yLjEgNC40LS42IDYtMkMzIDE1LjUuNSA5LjYgMyA1YzIuMiAyLjYgNS42IDQuMSA5IDQtLjktNC4yIDQtNi42IDctMy44IDEuMSAwIDMtMS4yIDMtMS4yeiIvPjwvc3ZnPg==" alt="Twitter" width={16} height={16} />
                   </a>
                   <a href="https://linkedin.com/in/johndoe" target="_blank" rel="noopener noreferrer" className="text-blue-500">
-                    <Image src="/path-to-linkedin-icon.svg" alt="LinkedIn" width={16} height={16} />
+                    <Image src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGNsYXNzPSJsdWNpZGUgbHVjaWRlLWxpbmtlZGluIj48cGF0aCBkPSJNMTYgOGE2IDYgMCAwIDEgNiA2djdoLTR2LTdhMiAyIDAgMCAwLTItMiAyIDIgMCAwIDAtMiAydjdoLTR2LTdhNiA2IDAgMCAxIDYtNnoiLz48cmVjdCB3aWR0aD0iNCIgaGVpZ2h0PSIxMiIgeD0iMiIgeT0iOSIvPjxjaXJjbGUgY3g9IjQiIGN5PSI0IiByPSIyIi8+PC9zdmc+" alt="LinkedIn" width={16} height={16} />
                   </a>
                 </div>
               </div>
@@ -124,24 +124,6 @@ const AboutUsPage = () => {
                   </div>
                 </div>
               ))}
-
-              {/* Support Roles */}
-              {/* {supportRoles.map((support, index) => (
-                <div key={index} className="team-member bg-white p-4 rounded-lg shadow-md flex flex-col items-center transition duration-500 hover:-translate-y-1 hover:shadow-lg w-48">
-                  <div className="w-24 h-24 rounded-full overflow-hidden mb-4">
-                    <Image src={support.image} alt={support.name} width={96} height={96} layout="responsive" className="object-cover" />
-                  </div>
-                  <h3 className="text-lg font-bold mb-1">{support.name}</h3>
-                  <p className="text-gray-700 text-sm">{support.role}</p>
-                  <div className="flex mt-2 space-x-2">
-                    {support.socials.map((social, i) => (
-                      <a key={i} href={social.link} target="_blank" rel="noopener noreferrer" className="text-blue-500">
-                        <Image src={social.icon} alt={`${support.name} ${social.name}`} width={16} height={16} />
-                      </a>
-                    ))}
-                  </div>
-                </div>
-              ))} */}
             </div>
           </div>
         </section>
@@ -177,12 +159,11 @@ const AboutUsPage = () => {
               Ready to transform your ideas into reality? Connect with Lets Code today and embark on a journey of innovation and growth.
             </p>
             <div className="mt-8 space-x-4 justify-center flex">
+              <a href="https://t.me/offcampusjobsupdatess" target='_blank'>
               <button className="py-4 px-4 bg-blue-500 hover:bg-blue-600 text-white font-bold rounded-full transition duration-300">
                 Join Our Community
               </button>
-              <button className="py-4 px-8 bg-green-500 hover:bg-green-600 text-white font-bold rounded-full transition duration-300">
-                Work With Us
-              </button>
+              </a>
             </div>
           </div>
         </section>
@@ -197,8 +178,8 @@ const webDevelopers = [
     role: 'CTO',
     image: 'https://avatars.githubusercontent.com/u/103360966?v=4',
     socials: [
-      { name: 'Twitter', link: 'https://twitter.com/janesmith', icon: '/path-to-twitter-icon.svg' },
-      { name: 'LinkedIn', link: 'https://linkedin.com/in/janesmith', icon: '/path-to-linkedin-icon.svg' },
+      { name: 'Twitter', link: 'https://twitter.com/janesmith', icon: 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGNsYXNzPSJsdWNpZGUgbHVjaWRlLXR3aXR0ZXIiPjxwYXRoIGQ9Ik0yMiA0cy0uNyAyLjEtMiAzLjRjMS42IDEwLTkuNCAxNy4zLTE4IDExLjYgMi4yLjEgNC40LS42IDYtMkMzIDE1LjUuNSA5LjYgMyA1YzIuMiAyLjYgNS42IDQuMSA5IDQtLjktNC4yIDQtNi42IDctMy44IDEuMSAwIDMtMS4yIDMtMS4yeiIvPjwvc3ZnPg==' },
+      { name: 'LinkedIn', link: 'https://www.linkedin.com/in/karanrana30', icon: 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGNsYXNzPSJsdWNpZGUgbHVjaWRlLWxpbmtlZGluIj48cGF0aCBkPSJNMTYgOGE2IDYgMCAwIDEgNiA2djdoLTR2LTdhMiAyIDAgMCAwLTItMiAyIDIgMCAwIDAtMiAydjdoLTR2LTdhNiA2IDAgMCAxIDYtNnoiLz48cmVjdCB3aWR0aD0iNCIgaGVpZ2h0PSIxMiIgeD0iMiIgeT0iOSIvPjxjaXJjbGUgY3g9IjQiIGN5PSI0IiByPSIyIi8+PC9zdmc+' },
     ],
   },
   {
@@ -206,8 +187,8 @@ const webDevelopers = [
     role: 'Product Development Manager',
     image: 'https://avatars.githubusercontent.com/u/119599104?s=400&u=0fa3118ae4df74ab92e19c3dd44f97d0134997de&v=4',
     socials: [
-      { name: 'Twitter', link: 'https://twitter.com/michaelbrown', icon: '/path-to-twitter-icon.svg' },
-      { name: 'LinkedIn', link: 'https://linkedin.com/in/michaelbrown', icon: '/path-to-linkedin-icon.svg' },
+      { name: 'Twitter', link: 'https://twitter.com/michaelbrown', icon: 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGNsYXNzPSJsdWNpZGUgbHVjaWRlLXR3aXR0ZXIiPjxwYXRoIGQ9Ik0yMiA0cy0uNyAyLjEtMiAzLjRjMS42IDEwLTkuNCAxNy4zLTE4IDExLjYgMi4yLjEgNC40LS42IDYtMkMzIDE1LjUuNSA5LjYgMyA1YzIuMiAyLjYgNS42IDQuMSA5IDQtLjktNC4yIDQtNi42IDctMy44IDEuMSAwIDMtMS4yIDMtMS4yeiIvPjwvc3ZnPg=='  },
+      { name: 'LinkedIn', link: 'https://linkedin.com/in/michaelbrown', icon: 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGNsYXNzPSJsdWNpZGUgbHVjaWRlLWxpbmtlZGluIj48cGF0aCBkPSJNMTYgOGE2IDYgMCAwIDEgNiA2djdoLTR2LTdhMiAyIDAgMCAwLTItMiAyIDIgMCAwIDAtMiAydjdoLTR2LTdhNiA2IDAgMCAxIDYtNnoiLz48cmVjdCB3aWR0aD0iNCIgaGVpZ2h0PSIxMiIgeD0iMiIgeT0iOSIvPjxjaXJjbGUgY3g9IjQiIGN5PSI0IiByPSIyIi8+PC9zdmc+' },
     ],
   },
   {
@@ -215,31 +196,11 @@ const webDevelopers = [
     role: 'Software Engineer',
     image: 'https://avatars.githubusercontent.com/u/91714143?v=4',
     socials: [
-      { name: 'Twitter', link: 'https://twitter.com/sarahwilson', icon: '/path-to-twitter-icon.svg' },
-      { name: 'LinkedIn', link: 'https://linkedin.com/in/sarahwilson', icon: '/path-to-linkedin-icon.svg' },
+      { name: 'Twitter', link: 'https://x.com/shubham007913', icon: 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGNsYXNzPSJsdWNpZGUgbHVjaWRlLXR3aXR0ZXIiPjxwYXRoIGQ9Ik0yMiA0cy0uNyAyLjEtMiAzLjRjMS42IDEwLTkuNCAxNy4zLTE4IDExLjYgMi4yLjEgNC40LS42IDYtMkMzIDE1LjUuNSA5LjYgMyA1YzIuMiAyLjYgNS42IDQuMSA5IDQtLjktNC4yIDQtNi42IDctMy44IDEuMSAwIDMtMS4yIDMtMS4yeiIvPjwvc3ZnPg=='  },
+      { name: 'LinkedIn', link: 'https://www.linkedin.com/in/shubham-paul-5a3a8a21b', icon: 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGNsYXNzPSJsdWNpZGUgbHVjaWRlLWxpbmtlZGluIj48cGF0aCBkPSJNMTYgOGE2IDYgMCAwIDEgNiA2djdoLTR2LTdhMiAyIDAgMCAwLTItMiAyIDIgMCAwIDAtMiAydjdoLTR2LTdhNiA2IDAgMCAxIDYtNnoiLz48cmVjdCB3aWR0aD0iNCIgaGVpZ2h0PSIxMiIgeD0iMiIgeT0iOSIvPjxjaXJjbGUgY3g9IjQiIGN5PSI0IiByPSIyIi8+PC9zdmc+' },
     ],
   },
 ];
 
-const supportRoles = [
-  {
-    name: 'Emily Davis',
-    role: 'Customer Support',
-    image: '/path-to-emilydavis-image.jpg',
-    socials: [
-      { name: 'Twitter', link: 'https://twitter.com/emilydavis', icon: '/path-to-twitter-icon.svg' },
-      { name: 'LinkedIn', link: 'https://linkedin.com/in/emilydavis', icon: '/path-to-linkedin-icon.svg' },
-    ],
-  },
-  {
-    name: 'Chris Lee',
-    role: 'Technical Support',
-    image: '/path-to-chrislee-image.jpg',
-    socials: [
-      { name: 'Twitter', link: 'https://twitter.com/chrislee', icon: '/path-to-twitter-icon.svg' },
-      { name: 'LinkedIn', link: 'https://linkedin.com/in/chrislee', icon: '/path-to-linkedin-icon.svg' },
-    ],
-  },
-];
 
 export default AboutUsPage;
