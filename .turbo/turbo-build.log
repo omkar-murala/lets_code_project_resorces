@@ -1,40 +1,32 @@
-
+[2J[m[H]0;npm[?25h]0;npm run build[25l
 > lets_code@0.1.0 build
-> next build
+> next build[11X[5;1H[?25h[K]0;C:\Windows\system32\cmd.exe   [1m[38;2;173;127;168m▲ Next.js 14.2.3
+[25l[m  - Environments: .env[8;1H[?25h [1m[97m [m Creating an optimized production build ...
+ [1m[92m✓[m Compiled successfully
+ [1m[97m [m Linting and checking validity of types  [36m.[?25l[m[K[120C [1m[97m [m Linting and checking validity of types  [36m..[m[K[120C [1m[97m [m Linting and checking validity of types  [36m...[m[K[120C [1m[97m [m Linting and checking validity of types  [36m.[m[K[120C [1m[97m [m Linting and checking validity of types  [36m..[m[K[120C [1m[97m [m Linting and checking validity of types  [36m...[m[K[120C [1m[97m [m Linting and checking validity of types  [36m.[m[K[120C [1m[97m [m Linting and checking validity of types  [36m..[m[K[120C [1m[97m [m Linting and checking validity of types  [36m...[m[K[120C [1m[97m [m Linting and checking validity of types  [36m.[m[K[120C [1m[97m [m Linting and checking validity of types  [36m..[m[K[120C [1m[97m [m Linting and checking validity of types  [36m...[m[K[120C [1m[97m [m Linting and checking validity of types  [36m.[m[K[120C [1m[97m [m Linting and checking validity of types  [36m..[m[K[120C [1m[97m [m Linting and checking validity of types  [36m...[m[K[120C [1m[97m [m Linting and checking validity of types  [36m.[m[K[120C [1m[97m [m Linting and checking validity of types  [36m..[m[K[120C [1m[97m [m Linting and checking validity of types  [36m...[m[K[120C [1m[97m [m Linting and checking validity of types  [36m.[m[K[120C [1m[97m [m Linting and checking validity of types  [36m..[m[K[120C [1m[97m [m Linting and checking validity of types  [36m...[m[K[120C [1m[97m [m Linting and checking validity of types  [36m.[m[K[120C [1m[97m [m Linting and checking validity of types  [36m..[m[K[120C [1m[97m [m Linting and checking validity of types  [36m...[m[K[120C [1m[97m [m Linting and checking validity of types  [36m.[m[K[120C [1m[97m [m Linting and checking validity of types  [36m..[m[K[120C [1m[97m [m Linting and checking validity of types  [36m...[m[K[120C [1m[97m [m Linting and checking validity of types  [36m.[m[K[120C [1m[97m [m Linting and checking validity of types  [36m..[m[K[120C [1m[97m [m Linting and checking validity of types  [36m...[m[K[120C [1m[97m [m Linting and checking validity of types  [36m.[m[K[120C [1m[97m [m Linting and checking validity of types  [36m..[m[K[120C [1m[97m [m Linting and checking validity of types  [36m...[m[K[120C [1m[97m [m Linting and checking validity of types  [36m.[m[K[120C [1m[97m [m Linting and checking validity of types  [36m..[m[K[120C [1m[97m [m Linting and checking validity of types  [36m...[m[K[120C [1m[97m [m Linting and checking validity of types  [36m.[m[K[120C [1m[97m [m Linting and checking validity of types  [36m..[m[K[120C [1m[97m [m Linting and checking validity of types  [36m...[m[K[120C [1m[97m [m Linting and checking validity of types  [36m.[m[K[120C [1m[97m [m Linting and checking validity of types  [36m..[m[K[120C [1m[97m [m Linting and checking validity of types  [36m...[m[K[120C [1m[97m [m Linting and checking validity of types  [36m.[m[K[120C [1m[97m [m Linting and checking validity of types  [36m..[m[K[120C [1m[97m [m Linting and checking validity of types  [36m...[m[K[120C [1m[97m [m Linting and checking validity of types  [36m.[m[K[120C [1m[97m [m Linting and checking validity of types  [36m..[m[K[120C [1m[97m [m Linting and checking validity of types  [36m...[m[K[120C [1m[97m [m Linting and checking validity of types  [36m.[m[K[120C [1m[97m [m Linting and checking validity of types  [36m..[m[K[120C [1m[97m [m Linting and checking validity of types  [36m...[m[K[120C [1m[97m [m Linting and checking validity of types  [36m.[m[K[120C [1m[97m [m Linting and checking validity of types  [36m..[m[K[120C [1m[97m [m Linting and checking validity of types  [36m...[m[K[120C [1m[97m [m Linting and checking validity of types  [36m.[m[K[120C [1m[97m [m Linting and checking validity of types  [36m..[m[K[120C [1m[97m [m Linting and checking validity of types  [36m...[m[K[120C [1m[97m [m Linting and checking validity of types  [36m.[m[K[120C [1m[97m [m Linting and checking validity of types  [36m..[m[K[120C [1m[97m [m Linting and checking validity of types  [36m...[m[K[120C [1m[97m [m Linting and checking validity of types  [36m.[m[K[120C [1m[97m [m Linting and checking validity of types  [36m..[m[K[120C [1m[97m [m Linting and checking validity of types  [36m...[m[K[120C [1m[97m [m Linting and checking validity of types  [36m.[m[K[120C [1m[97m [m Linting and checking validity of types  [36m..[m[K[120C [1m[92m✓[m Linting and checking validity of types    [?25h
+[?25l[120C [1m[97m [m Collecting page data  [36m.[m[K[120C [1m[97m [m Collecting page data  [36m..[m[K[120C [1m[97m [m Collecting page data  [36m...[m[K[120C [1m[97m [m Collecting page data  [36m.[m[K[120C [1m[97m [m Collecting page data  [36m..[m[K[120C [1m[97m [m Collecting page data  [36m...[m[K[120C [1m[97m [m Collecting page data  [36m.[m[K[120C [1m[97m [m Collecting page data  [36m..[m[K[120C [1m[97m [m Collecting page data  [36m...[m[K[120C [1m[97m [m Collecting page data  [36m.[m[K[120C [1m[92m✓[m Collecting page data    [?25h
+[?25l [1m[97m [m Generating static pages (0/11)  [36m[    ][m[K[120C [1m[97m [m Generating static pages (1/11)  [36m[=   ][m[K[120C [1m[97m [m Generating static pages (4/11)  [36m[==  ][m[K[120C [1m[97m [m Generating static pages (8/11)  [36m[=== ][m[K[120C [1m[97m [m Generating static pages (10/11)  [36m[ ===][m[K[120C [1m[92m✓[m Generating static pages (11/11)[?25h
+[?25l [1m[97m [m Finalizing page optimization  [36m.[m [1m[97m [m Collecting build traces  [36m.[m[K[120C [1m[97m [m Collecting build traces  [36m..[m[K[90C[K[120C [1m[97m [m Collecting build traces  [36m...[m[K[89C[K[120C [1m[97m [m Collecting build traces  [36m.[m[K[91C[K[120C [1m[97m [m Collecting build traces  [36m..[m[K[90C[K[120C [1m[97m [m Collecting build traces  [36m...[m[K[89C[K[120C [1m[97m [m Collecting build traces  [36m.[m[K[91C[K[120C [1m[97m [m Collecting build traces  [36m..[m[K[90C[K[120C [1m[97m [m Collecting build traces  [36m...[m[K[89C[K[120C [1m[97m [m Finalizing page optimization  [36m.[m [1m[97m [m Collecting build traces  [36m.[m[K[91C[K[120C [1m[97m [m Finalizing page optimization  [36m..[m[K[120C [1m[97m [m Collecting build traces  [36m..[m[K[120C [1m[97m [m Finalizing page optimization  [36m...[m[K[120C [1m[97m [m Collecting build traces  [36m...[m[K[120C [1m[97m [m Finalizing page optimization  [36m.[m[K[120C [1m[97m [m Finalizing page optimization  [36m..[m[K[85C[K[120C [1m[97m [m Finalizing page optimization  [36m...[m[K[84C[K[120C [1m[97m [m Finalizing page optimization  [36m.[m[K[86C[K[120C [1m[97m [m Finalizing page optimization  [36m..[m[K[85C[K[120C [1m[97m [m Finalizing page optimization  [36m...[m[K[84C[K[120C [1m[97m [m Finalizing page optimization  [36m.[m[K[86C[K[120C [1m[97m [m Finalizing page optimization  [36m..[m[K[85C[K[120C [1m[97m [m Finalizing page optimization  [36m...[m[K[84C[K[120C [1m[97m [m Finalizing page optimization  [36m.[m[K[86C[K[120C [1m[97m [m Finalizing page optimization  [36m..[m[K[85C[K[120C [1m[97m [m Finalizing page optimization  [36m...[m[K[84C[K[120C [1m[97m [m Finalizing page optimization  [36m.[m[K[86C[K[120C [1m[97m [m Finalizing page optimization  [36m..[m[K[85C[K[120C [1m[97m [m Finalizing page optimization  [36m...[m[K[84C[K[120C [1m[97m [m Finalizing page optimization  [36m.[m[K[86C[K[120C [1m[97m [m Finalizing page optimization  [36m..[m[K[85C[K[120C [1m[97m [m Finalizing page optimization  [36m...[m[K[84C[K[120C [1m[97m [m Finalizing page optimization  [36m.[m[K[86C[K[120C [1m[97m [m Finalizing page optimization  [36m..[m[K[85C[K[120C [1m[97m [m Finalizing page optimization  [36m...[m[K[84C[K[120C [1m[97m [m Finalizing page optimization  [36m.[m[K[86C[K[120C [1m[97m [m Finalizing page optimization  [36m..[m[K[85C[K[120C [1m[97m [m Collecting build traces  [36m..[m [1m[97m [m Finalizing page optimization  [36m...[m[K[84C [1m[92m✓[m Collecting build traces[K[?25h
+ [1m[92m✓[m Finalizing page optimization[K
 
-  ▲ Next.js 14.2.3
-  - Environments: .env
-
-   Creating an optimized production build ...
- ✓ Compiled successfully
-   Linting and checking validity of types ...
-   Collecting page data ...
-   Generating static pages (0/10) ...
-   Generating static pages (2/10) 
-   Generating static pages (4/10) 
-Database connection successful
-   Generating static pages (7/10) 
- ✓ Generating static pages (10/10)
-   Finalizing page optimization ...
-   Collecting build traces ...
-
-Route (app)                              Size     First Load JS
-┌ ƒ /                                    15.9 kB         115 kB
-├ ƒ /_not-found                          871 B          87.9 kB
-├ ƒ /about                               3.23 kB        95.4 kB
-├ ƒ /api/newsletters                     0 B                0 B
-├ ƒ /contact                             175 B          92.3 kB
-├ ƒ /CustomerSupport                     137 B          87.2 kB
-├ ƒ /resouces/[...slug]                  6.3 kB          118 kB
-├ ƒ /resourses                           3.15 kB         122 kB
-└ ƒ /subresources/[...slug]              190 B          92.4 kB
-+ First Load JS shared by all            87.1 kB
-  ├ chunks/23-18ec38de183b2ab4.js        31.5 kB
-  ├ chunks/fd9d1056-f3ca8dc5e1338c4d.js  53.6 kB
+[4mRoute (app)[24m[30X[4m[30CSize[24m     [4mFirst Load JS[24m
+┌ ƒ /                                    16.2 kB[1m[97m[9C140 kB[m[K
+├ ƒ /_not-found                          871 B[1m[97m[10C87.9 kB[m[K
+├ ƒ /about                               3.49 kB        [1m[97m95.8 kB[m[K
+├ ƒ /contact                             1.3 kB[1m[97m[10C118 kB[m[K
+├ ƒ /CustomerSupport                     145 B[1m[97m[10C87.2 kB[m[K
+├ ƒ /policy                              145 B[1m[97m[10C87.2 kB[m[K
+├ ƒ /resouces/[...slug]                  5.9 kB[1m[97m[10C118 kB[m[K
+├ ƒ /resourses                           3.19 kB[1m[97m[9C122 kB[m[K
+└ ƒ /terms                               145 B[1m[97m[10C87.2 kB[m[K
++ First Load JS shared by all[1m[97m[12C87.1 kB[m[K
+  ├ chunks/23-731eb5f0cc5361b5.js        31.5 kB
+  ├ chunks/fd9d1056-ccadfb34ff28481c.js  53.6 kB
   └ other shared chunks (total)          1.96 kB
 
 
-ƒ Middleware                             49.9 kB
+ƒ Middleware[1m[97m[29C49.9 kB[m[K
 
 ƒ  (Dynamic)  server-rendered on demand
 
+⠙[K[K
