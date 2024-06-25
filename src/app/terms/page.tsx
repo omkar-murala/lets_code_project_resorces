@@ -6,7 +6,7 @@ const Terms = () => {
 
       <main className="rounded-md bg-white mx-auto p-10">
         <h1 className="text-3xl sm:text-4xl font-bold mb-6 sm:mb-8">Terms and Conditions</h1>
-
+        
         <section className="mb-8">
           <h2 className="text-2xl sm:text-3xl font-bold mb-4">Welcome to Lets Resources!</h2>
           <p className="">
