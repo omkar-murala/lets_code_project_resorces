@@ -30,7 +30,7 @@ export function Footer() {
           </div>
           <div className="w-full text-white p-6 md:w-1/2 lg:w-2/12">
             <div className="h-full">
-              <h3 className="tracking-px mb-9 text-xs font-semibold uppercase ">
+              <h3 className="tracking-px mb-9 text-xs font-semibold uppercase underline ">
                 Company
               </h3>
               <ul>
@@ -67,7 +67,7 @@ export function Footer() {
           </div>
           <div className="w-full p-6 md:w-1/2 lg:w-2/12">
             <div className="h-full">
-              <h3 className="tracking-px mb-9 text-xs font-semibold uppercase">
+              <h3 className="tracking-px mb-9 text-xs font-semibold uppercase underline">
                 Support
               </h3>
               <ul>
@@ -104,7 +104,7 @@ export function Footer() {
           </div>
           <div className="w-full p-6 md:w-1/2 lg:w-3/12">
             <div className="h-full">
-              <h3 className="tracking-px mb-9 text-xs font-semibold uppercase ">
+              <h3 className="tracking-px mb-9 text-xs font-semibold uppercase underline ">
                 Legals
               </h3>
               <ul>
@@ -116,11 +116,11 @@ export function Footer() {
                   </Link>
                 </li>
                 <li className="mb-4">
-                  {/* <Link href="/cancellation">
+                  <Link href="/guidelines">
                     <span className="text-base font-medium  hover:text-gray-100">
-                      Cancellation
+                      Guidelines
                     </span>
-                  </Link> */}
+                  </Link>
                 </li>
                 <li className="mb-4">
                   <Link href="/policy">
@@ -130,7 +130,7 @@ export function Footer() {
                   </Link>
                 </li>
                 <li>
-                  <Link href="/licensing">
+                  <Link href="/license">
                     <span className="text-base font-medium  hover:text-gray-100">
                       Licensing
                     </span>

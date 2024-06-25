@@ -242,18 +242,18 @@ export default function Home() {
               <div className="w-24 h-24 rounded-full bg-white shadow-2xl flex items-center justify-center mb-4">
                 <Image src="https://static.vecteezy.com/system/resources/thumbnails/014/386/141/small_2x/3d-save-for-later-icon-render-isolated-icon-free-png.png" alt="Download & Save" width={150} height={150} />
               </div>
-              <h3 className="text-2xl font-semibold text-white">Download & Save</h3>
+              <h3 className="text-2xl font-semibold text-white">Learn & Prepare</h3>
               <p className="mt-3 text-lg text-indigo-200">
-                Download the resources you need and save them for offline use.
+              Learn to prepare yourself to be interview-ready.
               </p>
             </div>
             <div className="flex flex-col items-center text-center transform transition-transform hover:scale-105">
               <div className="w-24 h-24 rounded-full bg-white shadow-2xl flex items-center justify-center mb-4">
                 <Image src="https://static.vecteezy.com/system/resources/previews/017/217/123/original/collaboration-management-icon-3d-rendering-png.png" alt="Share & Collaborate" width={64} height={64} />
               </div>
-              <h3 className="text-2xl font-semibold text-white">Share & Collaborate</h3>
+              <h3 className="text-2xl font-semibold text-white">Collaborate & Successed</h3>
               <p className="mt-3 text-lg text-indigo-200">
-                Share resources with peers and collaborate effectively.
+                Collaborate with other tech enthusiasts for mutual growth.
               </p>
             </div>
           </div>

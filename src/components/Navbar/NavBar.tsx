@@ -120,7 +120,7 @@ export function Navbar() {
                 </div>
                 <div className="flex flex-col items-center justify-center">
                      <SignedOut>
-                      <span className="text-white font-semibold">
+                      <span className="text-black font-semibold">
                        <SignInButton/>
 
                       </span>

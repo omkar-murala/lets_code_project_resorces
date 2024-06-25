@@ -1,22 +1,15 @@
 // pages/terms.js
 
-import Head from 'next/head';
-
 const Terms = () => {
   return (
-    <div className="bg-white min-h-screen p-6 sm:p-10">
-      <Head>
-        <title>Terms and Conditions - Lets Resources</title>
-        <meta name="description" content="Terms and conditions of Let's Resources." />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+    <div className="w-full px-4 py-3 bg-slate-800 sm:px-6 md:px-12 lg:px-20 xl:px-32 2xl:px-40">
 
-      <main className="max-w-3xl mx-auto">
+      <main className="rounded-md bg-white mx-auto p-10">
         <h1 className="text-3xl sm:text-4xl font-bold mb-6 sm:mb-8">Terms and Conditions</h1>
 
         <section className="mb-8">
           <h2 className="text-2xl sm:text-3xl font-bold mb-4">Welcome to Lets Resources!</h2>
-          <p className="text-gray-800">
+          <p className="">
             These terms and conditions outline the rules and regulations for the use of Lets code Website, located at letsresource.in.
           </p>
           <p className="text-gray-800">
