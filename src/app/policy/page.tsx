@@ -1,10 +1,9 @@
-import React from 'react';
 
 const PrivacyPolicy = () => {
   return (
-    <div className="w-full  px-[20rem] py-3 bg-slate-800">
+    <div className="w-full px-4 py-3 bg-slate-800 sm:px-6 md:px-12 lg:px-20 xl:px-32 2xl:px-40">
       <div className="bg-white shadow-lg rounded-lg p-6">
-        <h1 className="text-3xl font-bold mb-4">Privacy Policy</h1>
+        <h1 className="text-3xl font-bold mb-4 sm:text-4xl">Privacy Policy</h1>
         <p className="text-gray-600 mb-4">Last updated: June 24, 2024</p>
         <p className="text-gray-800 mb-4">
           This Privacy Policy describes Our policies and procedures on the collection, use and disclosure of Your information when You use the Service and tells You about Your privacy rights and how the law protects You.
@@ -13,12 +12,12 @@ const PrivacyPolicy = () => {
           We use Your Personal data to provide and improve the Service. By using the Service, You agree to the collection and use of information in accordance with this Privacy Policy. This Privacy Policy has been created with the help of the 
           <a href="https://www.termsfeed.com/privacy-policy-generator/" target="_blank" rel="noopener noreferrer" className="text-blue-500">Privacy Policy Generator</a>.
         </p>
-        <h2 className="text-2xl font-bold mt-6 mb-4">Interpretation and Definitions</h2>
-        <h3 className="text-xl font-semibold mb-2">Interpretation</h3>
+        <h2 className="text-2xl font-bold mt-6 mb-4 sm:text-3xl">Interpretation and Definitions</h2>
+        <h3 className="text-xl font-semibold mb-2 sm:text-2xl">Interpretation</h3>
         <p className="text-gray-800 mb-4">
           The words of which the initial letter is capitalized have meanings defined under the following conditions. The following definitions shall have the same meaning regardless of whether they appear in singular or in plural.
         </p>
-        <h3 className="text-xl font-semibold mb-2">Definitions</h3>
+        <h3 className="text-xl font-semibold mb-2 sm:text-2xl">Definitions</h3>
         <p className="text-gray-800 mb-4">For the purposes of this Privacy Policy:</p>
         <ul className="list-disc pl-6 mb-4">
           <li className="mb-2">
@@ -58,9 +57,9 @@ const PrivacyPolicy = () => {
             <strong>You</strong> means the individual accessing or using the Service, or the company, or other legal entity on behalf of which such individual is accessing or using the Service, as applicable.
           </li>
         </ul>
-        <h2 className="text-2xl font-bold mt-6 mb-4">Collecting and Using Your Personal Data</h2>
-        <h3 className="text-xl font-semibold mb-2">Types of Data Collected</h3>
-        <h4 className="text-lg font-medium mb-2">Personal Data</h4>
+        <h2 className="text-2xl font-bold mt-6 mb-4 sm:text-3xl">Collecting and Using Your Personal Data</h2>
+        <h3 className="text-xl font-semibold mb-2 sm:text-2xl">Types of Data Collected</h3>
+        <h4 className="text-lg font-medium mb-2 sm:text-xl">Personal Data</h4>
         <p className="text-gray-800 mb-4">
           While using Our Service, We may ask You to provide Us with certain personally identifiable information that can be used to contact or identify You. Personally identifiable information may include, but is not limited to:
         </p>
@@ -69,7 +68,7 @@ const PrivacyPolicy = () => {
           <li className="mb-2">First name and last name</li>
           <li className="mb-2">Usage Data</li>
         </ul>
-        <h4 className="text-lg font-medium mb-2">Usage Data</h4>
+        <h4 className="text-lg font-medium mb-2 sm:text-xl">Usage Data</h4>
         <p className="text-gray-800 mb-4">
           Usage Data is collected automatically when using the Service.
         </p>
@@ -82,7 +81,7 @@ const PrivacyPolicy = () => {
         <p className="text-gray-800 mb-4">
           We may also collect information that Your browser sends whenever You visit our Service or when You access the Service by or through a mobile device.
         </p>
-        <h4 className="text-lg font-medium mb-2">Tracking Technologies and Cookies</h4>
+        <h4 className="text-lg font-medium mb-2 sm:text-xl">Tracking Technologies and Cookies</h4>
         <p className="text-gray-800 mb-4">
           We use Cookies and similar tracking technologies to track the activity on Our Service and store certain information. Tracking technologies used are beacons, tags, and scripts to collect and track information and to improve and analyze Our Service. The technologies We use may include:
         </p>
@@ -103,51 +102,42 @@ const PrivacyPolicy = () => {
         <ul className="list-disc pl-6 mb-4">
           <li className="mb-2">
             <strong>Necessary / Essential Cookies</strong>
-            <ul className="list-disc pl-6 mb-2">
-              <li className="mb-2">
-                <strong>Type:</strong> Session Cookies
-              </li>
-              <li className="mb-2">
-                <strong>Administered by:</strong> Us
-              </li>
-              <li className="mb-2">
-                <strong>Purpose:</strong> These Cookies are essential to provide You with services available through the Website and to enable You to use some of its features. They help to authenticate users and prevent fraudulent use of user accounts. Without these Cookies, the services that You have asked for cannot be provided, and We only use these Cookies to provide You with those services.
-              </li>
-            </ul>
+            <br />
+            Type: Session Cookies
+            <br />
+            Administered by: Us
+            <br />
+            Purpose: These Cookies are essential to provide You with services available through the Website and to enable You to use some of its features. They help to authenticate users and prevent fraudulent use of user accounts. Without these Cookies, the services that You have asked for cannot be provided, and We only use these Cookies to provide You with those services.
           </li>
           <li className="mb-2">
             <strong>Cookies Policy / Notice Acceptance Cookies</strong>
-            <ul className="list-disc pl-6 mb-2">
-              <li className="mb-2">
-                <strong>Type:</strong> Persistent Cookies
-              </li>
-              <li className="mb-2">
-                <strong>Administered by:</strong> Us
-              </li>
-              <li className="mb-2">
-                <strong>Purpose:</strong> These Cookies identify if users have accepted the use of cookies on the Website.
-              </li>
-            </ul>
+            <br />
+            Type: Persistent Cookies
+            <br />
+            Administered by: Us
+            <br />
+            Purpose: These Cookies identify if users have accepted the use of cookies on the Website.
           </li>
           <li className="mb-2">
             <strong>Functionality Cookies</strong>
-            <ul className="list-disc pl-6 mb-2">
-              <li className="mb-2">
-                <strong>Type:</strong> Persistent Cookies
-              </li>
-              <li className="mb-2">
-                <strong>Administered by:</strong> Us
-              </li>
-              <li className="mb-2">
-                <strong>Purpose:</strong> These Cookies allow us to remember choices You make when You use the Website, such as remembering your login details or language preference. The purpose of these Cookies is to provide You with a more personal experience and to avoid You having to re-enter your preferences every time You use the Website.
-              </li>
-            </ul>
+            <br />
+            Type: Persistent Cookies
+            <br />
+            Administered by: Us
+            <br />
+            Purpose: These Cookies allow us to remember choices You make when You use the Website, such as remembering your login details or language preference. The purpose of these Cookies is to provide You with a more personal experience and to avoid You having to re-enter your preferences every time You use the Website.
+          </li>
+          <li className="mb-2">
+            <strong>Tracking and Performance Cookies</strong>
+            <br />
+            Type: Persistent Cookies
+            <br />
+            Administered by: Third-Parties
+            <br />
+            Purpose: These Cookies are used to track information about traffic to the Website and how users use the Website. The information gathered via these Cookies may directly or indirectly identify you as an individual visitor. This is because the information collected is typically linked to a pseudonymous identifier associated with the device you use to access the Website. We may also use these Cookies to test new pages, features or new functionality of the Website to see how our users react to them.
           </li>
         </ul>
-        <p className="text-gray-800 mb-4">
-          For more information about the cookies we use and your choices regarding cookies, please visit our Cookies Policy or the Cookies section of our Privacy Policy.
-        </p>
-        <h3 className="text-xl font-semibold mb-2">Use of Your Personal Data</h3>
+        <h2 className="text-2xl font-bold mt-6 mb-4 sm:text-3xl">Use of Your Personal Data</h2>
         <p className="text-gray-800 mb-4">
           The Company may use Personal Data for the following purposes:
         </p>
@@ -165,7 +155,7 @@ const PrivacyPolicy = () => {
             <strong>To contact You:</strong> To contact You by email, telephone calls, SMS, or other equivalent forms of electronic communication, such as a mobile application&apos;s push notifications regarding updates or informative communications related to the functionalities, products or contracted services, including the security updates, when necessary or reasonable for their implementation.
           </li>
           <li className="mb-2">
-            <strong>To provide You</strong> with news, special offers and general information about other goods, services and events which we offer that are similar to those that you have already purchased or enquired about unless You have opted not to receive such information.
+          <strong>To provide You</strong> with news, special offers and general information about other goods, services and events which we offer that are similar to those that you have already purchased or enquired about unless You have opted not to receive such information.
           </li>
           <li className="mb-2">
             <strong>To manage Your requests:</strong> To attend and manage Your requests to Us.
@@ -188,16 +178,16 @@ const PrivacyPolicy = () => {
           <li className="mb-2"><strong>With other users:</strong> when You share personal information or otherwise interact in the public areas with other users, such information may be viewed by all users and may be publicly distributed outside.</li>
           <li className="mb-2"><strong>With Your consent</strong>: We may disclose Your personal information for any other purpose with Your consent.</li>
         </ul>
-        <h3 className="text-xl font-semibold mb-2">Retention of Your Personal Data</h3>
+        <h2 className="text-2xl font-bold mt-6 mb-4 sm:text-3xl">Retention of Your Personal Data</h2>
         <p className="text-gray-800 mb-4">
           The Company will retain Your Personal Data only for as long as is necessary for the purposes set out in this Privacy Policy. We will retain and use Your Personal Data to the extent necessary to comply with our legal obligations (for example, if we are required to retain your data to comply with applicable laws), resolve disputes, and enforce our legal agreements and policies.
         </p>
         <p className="text-gray-800 mb-4">
           The Company will also retain Usage Data for internal analysis purposes. Usage Data is generally retained for a shorter period of time, except when this data is used to strengthen the security or to improve the functionality of Our Service, or We are legally obligated to retain this data for longer time periods.
         </p>
-        <h3 className="text-xl font-semibold mb-2">Transfer of Your Personal Data</h3>
+        <h2 className="text-2xl font-bold mt-6 mb-4 sm:text-3xl">Transfer of Your Personal Data</h2>
         <p className="text-gray-800 mb-4">
-          Your information, including Personal Data, is processed at the Company&apo;s operating offices and in any other places where the parties involved in the processing are located. It means that this information may be transferred to — and maintained on — computers located outside of Your state, province, country or other governmental jurisdiction where the data protection laws may differ than those from Your jurisdiction.
+          Your information, including Personal Data, is processed at the Company&apos;s operating offices and in any other places where the parties involved in the processing are located. It means that this information may be transferred to — and maintained on — computers located outside of Your state, province, country or other governmental jurisdiction where the data protection laws may differ than those from Your jurisdiction.
         </p>
         <p className="text-gray-800 mb-4">
           Your consent to this Privacy Policy followed by Your submission of such information represents Your agreement to that transfer.
@@ -205,7 +195,7 @@ const PrivacyPolicy = () => {
         <p className="text-gray-800 mb-4">
           The Company will take all steps reasonably necessary to ensure that Your data is treated securely and in accordance with this Privacy Policy and no transfer of Your Personal Data will take place to an organization or a country unless there are adequate controls in place including the security of Your data and other personal information.
         </p>
-        <h3 className="text-xl font-semibold mb-2">Delete Your Personal Data</h3>
+        <h2 className="text-2xl font-bold mt-6 mb-4 sm:text-3xl">Delete Your Personal Data</h2>
         <p className="text-gray-800 mb-4">
           You have the right to delete or request that We assist in deleting the Personal Data that We have collected about You.
         </p>
@@ -215,14 +205,14 @@ const PrivacyPolicy = () => {
         <p className="text-gray-800 mb-4">
           We have no control over and assume no responsibility for the content, privacy policies or practices of any third party sites or services.
         </p>
-        <h3 className="text-xl font-semibold mb-2">Changes to this Privacy Policy</h3>
+        <h2 className="text-2xl font-bold mt-6 mb-4 sm:text-3xl">Changes to this Privacy Policy</h2>
         <p className="text-gray-800 mb-4">
           We may update Our Privacy Policy from time to time. We will notify You of any changes by posting the new Privacy Policy on this page.
         </p>
         <p className="text-gray-800 mb-4">
           You are advised to review this Privacy Policy periodically for any changes. Changes to this Privacy Policy are effective when they are posted on this page.
         </p>
-        <h3 className="text-xl font-semibold mb-2">Contact Us</h3>
+        <h2 className="text-2xl font-bold mt-6 mb-4 sm:text-3xl">Contact Us</h2>
         <p className="text-gray-800 mb-4">
           If you have any questions about this Privacy Policy, You can contact us:
         </p>
@@ -237,3 +227,4 @@ const PrivacyPolicy = () => {
 }
 
 export default PrivacyPolicy;
+
