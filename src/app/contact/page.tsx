@@ -2,9 +2,12 @@
 
 
 import Image from 'next/image';
-import {useState,useEffect} from "react"
+import {useState} from "react"
 import axios from "axios";
 import toast,{Toaster} from 'react-hot-toast';
+import {DOMAIN} from "@/env";
+
+
 function Page() {
   const [email,setEmail] = useState('')
   const [name,setName] = useState('')
@@ -14,7 +17,7 @@ function Page() {
 
   async function submithandler() {
     try {
-      const response  =  await axios.post("https://custombackend-nurw.onrender.com/api/v1/emailquery",{
+      const response  =  await axios.post(`${DOMAIN}/api/v1/emailquery`,{
         email,
         name,
         topic,

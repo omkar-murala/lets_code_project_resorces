@@ -6,6 +6,8 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { PacmanLoader } from 'react-spinners';
 import axios from "axios";
+import {DOMAIN} from "@/env";
+
 
 
 function EducationalCard() {
@@ -17,7 +19,7 @@ function EducationalCard() {
   useEffect(() => {
     async function fetchData() {
       try {
-        const { data } = await axios.get(`https://custombackend-nurw.onrender.com/api/v1/project`);
+        const { data } = await axios.get(`${DOMAIN}/api/v1/project`);
         setData(data.data);
         setLoading(false)
       } catch (error) {

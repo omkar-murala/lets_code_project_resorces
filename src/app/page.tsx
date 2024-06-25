@@ -6,7 +6,7 @@ import { TypeAnimation } from 'react-type-animation';
 import {  useEffect, useState } from "react";;
 import axios from "axios";
 import toast,{Toaster} from "react-hot-toast"
-
+import {DOMAIN} from "@/env";
 
 
 export default function Home() {
@@ -26,7 +26,7 @@ export default function Home() {
 
   async function submithandler(){
     try {
-        const response = await axios.post("https://custombackend-nurw.onrender.com/api/v1/subscribe",{
+        const response = await axios.post(`${DOMAIN}/api/v1/subscribe`,{
           email
         })
        if(response.status === 200){

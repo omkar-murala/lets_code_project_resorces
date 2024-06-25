@@ -6,7 +6,7 @@ import Image from 'next/image';
 import axios from "axios";
 import Link from 'next/link';
 import PacmanLoader from 'react-spinners/PacmanLoader';
-
+import {DOMAIN} from "@/env";
 
 
 
@@ -17,12 +17,13 @@ function FeatureCard() {
   const [showMore, setShowMore] = useState(false);
   const itemsToShow = showMore ? datas.length : 4;
   const [loading,setLoading] = useState(true)
+
   
 
   useEffect(() => {
     async function fetchData() {
       try {
-        const { data } = await axios.get(`https://custombackend-nurw.onrender.com/api/v1/feature`);
+        const { data } = await axios.get(`${DOMAIN}/api/v1/feature`);
         setData(data.data);
         setLoading(false)
       } catch (error) {
