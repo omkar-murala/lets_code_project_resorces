@@ -1,17 +1,17 @@
 "use client"
 
 
-import Image from 'next/image';
-import {useState} from "react"
+import { DOMAIN } from "@/env";
 import axios from "axios";
-import toast,{Toaster} from 'react-hot-toast';
-import {DOMAIN} from "@/env";
+import Image from 'next/image';
+import { useState } from "react";
+import toast, { Toaster } from 'react-hot-toast';
 
 
 function Page() {
   const [email,setEmail] = useState('')
   const [name,setName] = useState('')
-  const [topic,setTopic] =  useState('')
+  const [topic,setTopic] =  useState('Feedback')
   const [subject,setSubject] =  useState('')
   const [message,setMessage] =  useState('')
 
@@ -33,7 +33,7 @@ function Page() {
         setName('')
         setMessage('')
         setSubject('')
-        setTopic('')
+        setTopic('Feedback')
 
       }
     } catch (error) {
