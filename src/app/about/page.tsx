@@ -183,7 +183,7 @@ const webDevelopers = [
     ],
   },
   {
-    name: 'Omlar Murala',
+    name: 'Murala Omkar',
     role: 'Product Development Manager',
     image: 'https://avatars.githubusercontent.com/u/119599104?s=400&u=0fa3118ae4df74ab92e19c3dd44f97d0134997de&v=4',
     socials: [
