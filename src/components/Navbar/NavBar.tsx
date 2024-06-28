@@ -2,15 +2,14 @@
 
 import { Menu, X } from "lucide-react";
 import Image from "next/image";
-import { useRouter } from "next/navigation";
-import { useState } from "react";
 import Link from "next/link";
+import { useState } from "react";
 
 import {
   SignInButton,
+  SignedIn,
   SignedOut,
-  UserButton,
-  SignedIn
+  UserButton
 } from '@clerk/nextjs';
 
 const menuItems = [
@@ -21,9 +20,15 @@ const menuItems = [
 ];
 
 export function Navbar() {
-  const router = useRouter();
+  // const router = useRouter();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [image, setImage] = useState("");
+  // const router = useRouter();
+
+  // const handleSignIn = () => {
+  //   // Redirect to dashboard after sign-in
+  //   router.push('/dashboard');
+  // };
 
 
   const toggleMenu = () => {
@@ -64,7 +69,7 @@ export function Navbar() {
         <div className="hidden lg:block">
           <SignedOut>
             <span className="text-white font-semibold">
-            <SignInButton mode="modal"/>
+            <SignInButton/>
             </span>
           </SignedOut>
           <SignedIn>
