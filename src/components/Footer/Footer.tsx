@@ -142,10 +142,10 @@ export function Footer() {
         </div>
       </div>
     </section>
-    <div className="bg-transparent p-4 opacity-80">
+    <div className="bg-slate-700 p-4 ">
   <div className="flex items-center justify-center space-x-4">
     <div>
-      <p className="text-sm font-medium">
+      <p className="text-sm font-medium text-white">
         ⚠️ Credits to all individual respective contributors. Let&apos;s Code curated these resources for tech students and professionals ⚠️.
       </p>
     </div> 

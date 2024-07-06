@@ -43,10 +43,11 @@ export default function Home() {
     <>
     <Toaster/>
     <div className="bg-slate-950">
-      <div className="relative w-full ">
+      <div className="relative w-full">
         <div className="mx-auto max-w-7xl lg:grid lg:grid-cols-12 lg:gap-x-8 lg:px-8">
           <div className="flex flex-col justify-center px-4 py-12 md:py-16 lg:col-span-7 lg:gap-x-6 lg:px-6 lg:py-24 xl:col-span-6">
-            <h1 className="mt-8 text-3xl font-bold tracking-tight text-white md:text-4xl lg:text-6xl">
+            <div className="h-[100px] flex flex-col justify-center">
+            <h1 className="text-3xl font-bold tracking-tight text-white md:text-4xl lg:text-6xl">
               <TypeAnimation
                 sequence={[
                   'Accelerate Your Tech Journey',
@@ -59,12 +60,13 @@ export default function Home() {
                   1000
                 ]}
                 wrapper="span"
-                speed={50}
-                style={{ fontSize: '1em', display: 'inline-block' }}
+                speed={10}
+                style={{ fontSize: '0.7em', display: 'inline-block' }}
                 repeat={Infinity}
                 />
             </h1>
-            <p className="mt-8 text-lg text-white">
+          </div>
+            <p className="mt-8 text-md text-white">
               Discover a treasure trove of tech resources, featuring in-depth notes, comprehensive guides, practical templates, and detailed roadmaps designed to accelerate your learning and career growth.
             </p>
             <div className="relative mt-8">
