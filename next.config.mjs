@@ -98,6 +98,9 @@ const nextConfig = {
         {
           protocol:'https',
           hostname:'avatars.githubusercontent.com'
+        },{
+          protocol:'https',
+          hostname:'d3l4smlx4vuygm.cloudfront.net'
         }
       ],
     },
