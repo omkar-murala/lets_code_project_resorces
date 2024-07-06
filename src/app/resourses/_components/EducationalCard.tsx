@@ -43,7 +43,7 @@ function EducationalCard() {
           {datas.slice(0, itemsToShow).map((topic: any, index) => {
               return (
                   <Link key={index + '-' + index} href={`${topic.link}`}>
-                  <div key={index} className="flex flex-col items-center bg-gradient-to-r from-red-400 to-orange-500 text-white p-6 rounded-lg shadow-lg hover:from-yellow-500 hover:to-red-500 transition transform hover:-translate-y-1">
+                  <div key={index} className="flex flex-col items-center h-[150px] bg-gradient-to-r from-red-400 to-orange-500 text-white p-6 rounded-lg shadow-lg hover:from-yellow-500 hover:to-red-500 transition transform hover:-translate-y-1">
                 <Image
                   src={topic.imageUrl}
                   alt={topic.name}

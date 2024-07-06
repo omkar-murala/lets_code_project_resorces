@@ -47,7 +47,7 @@ function FeatureCard() {
           {datas.slice(0, itemsToShow).map((topic: any, index) => {
               return (
                   <Link key={index + '-' + index} href={`resouces/${topic.link}`}>
-                  <div key={index} className="flex flex-col items-center bg-gradient-to-r from-blue-300 to-cyan-300 text-white p-6 rounded-lg shadow-lg hover:from-teal-300 hover:to-blue-300 hover:bg-opacity-50 transition transform hover:-translate-y-1">
+                  <div key={index} className="flex flex-col h-[150px] items-center bg-gradient-to-r from-blue-300 to-cyan-300 text-white p-6 rounded-lg shadow-lg hover:from-teal-300 hover:to-blue-300 hover:bg-opacity-50 transition transform hover:-translate-y-1">
                 <Image
                   src={topic.imageUrl}
                   alt={topic.name}
