@@ -91,7 +91,7 @@ export function Navbar() {
                       <Image
                         width={50}
                         height={50}
-                        src="https://utfs.io/f/8ad9470c-f41a-467e-9864-07ec96f7dd84-5t6ga5.png"
+                        src="https://utfs.io/f/a4db92de-2163-4ff9-885f-581e139e6a22-xkywas.png"
                         alt="logo of website"
                       />
                     </span>
