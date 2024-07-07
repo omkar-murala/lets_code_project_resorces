@@ -145,7 +145,7 @@ export function Footer() {
     <div className="bg-slate-700 p-4 ">
   <div className="flex items-center justify-center space-x-4">
     <div>
-      <p className="text-sm font-medium text-white">
+      <p className="text-sm font-medium text-white text-center">
         ⚠️ Credits to all individual respective contributors. Let&apos;s Code curated these resources for tech students and professionals ⚠️.
       </p>
     </div> 

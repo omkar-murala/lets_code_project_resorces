@@ -3,85 +3,85 @@ import { ThreeDCardDemo } from "@/components/SlideCard/SlideCard";
 import Image from 'next/image';
 import Link from 'next/link';
 import { TypeAnimation } from 'react-type-animation';
-import {  useEffect, useState } from "react";;
+import { useEffect, useState } from "react";;
 import axios from "axios";
-import toast,{Toaster} from "react-hot-toast"
-import {DOMAIN} from "@/env";
+import toast, { Toaster } from "react-hot-toast"
+import { DOMAIN } from "@/env";
 
 
 export default function Home() {
-  const [email,setEmail] = useState('')
-  const [disabled,setDisabled] = useState(true)
+  const [email, setEmail] = useState('')
+  const [disabled, setDisabled] = useState(true)
 
-  useEffect(()=>{
-    if(email.length>3){
+  useEffect(() => {
+    if (email.length > 3) {
       setDisabled(false)
     }
-    else{
+    else {
       setDisabled(true)
     }
-  },[email])
+  }, [email])
 
 
 
-  async function submithandler(){
+  async function submithandler() {
     try {
-        const response = await axios.post(`${DOMAIN}/api/v1/subscribe`,{
-          email
-        })
-       if(response.status === 200){
+      const response = await axios.post(`${DOMAIN}/api/v1/subscribe`, {
+        email
+      })
+      if (response.status === 200) {
         toast.success("Thanks for subscribing! Tech updates and E-Books from Let's Code coming your way!")
-       }
+      }
     } catch (error) {
-        toast.error("You have Already subscribed")
-      
+      toast.error("You have Already subscribed")
+
     }
 
   }
 
   return (
     <>
-    <Toaster/>
-    <div className="bg-slate-950">
-      <div className="relative w-full">
-        <div className="mx-auto max-w-7xl lg:grid lg:grid-cols-12 lg:gap-x-8 lg:px-8">
-          <div className="flex flex-col justify-center px-4 py-12 md:py-16 lg:col-span-7 lg:gap-x-6 lg:px-6 lg:py-24 xl:col-span-6">
-            <div className="h-[100px] flex flex-col justify-center">
-            <h1 className="text-3xl font-bold tracking-tight text-white md:text-4xl lg:text-6xl">
-              <TypeAnimation
-                sequence={[
-                  'Accelerate Your Tech Journey',
-                  1000,
-                  'Accelerate Your Coding Journey',
-                  1000,
-                  'Get Every Resource in One Place',
-                  1000,
-                  'Free Tech Books Every Sunday',
-                  1000
-                ]}
-                wrapper="span"
-                speed={10}
-                style={{ fontSize: '0.7em', display: 'inline-block' }}
-                repeat={Infinity}
-                />
-            </h1>
-          </div>
-            <p className="mt-8 text-md text-white">
-              Discover a treasure trove of tech resources, featuring in-depth notes, comprehensive guides, practical templates, and detailed roadmaps designed to accelerate your learning and career growth.
-            </p>
-            <div className="relative mt-8">
-              <Link href="/resourses" passHref>
-                <button className="absolute left-0 top-0 rounded-md bg-white px-3 py-2.5 text-sm font-semibold text-black shadow-sm  focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black">
-                  Get Started
-                </button>
-              </Link>
+      <Toaster />
+      <div className="bg-slate-950">
+        <div className="relative w-full">
+          <div className="mx-auto max-w-7xl lg:grid lg:grid-cols-12 lg:gap-x-8 lg:px-8">
+            <div className="flex flex-col justify-center px-4 py-12 md:py-16 lg:col-span-7 lg:gap-x-6 lg:px-6 lg:py-24 xl:col-span-6">
+              <div className="h-[100px] flex flex-col justify-center">
+                <h1 className="text-3xl font-bold tracking-tight text-white md:text-4xl lg:text-6xl">
+                  <TypeAnimation
+                    sequence={[
+                      'Accelerate Your Tech Journey',
+                      1000,
+                      'Accelerate Your Coding Journey',
+                      1000,
+                      'Get Every Resource in One Place',
+                      1000,
+                      'Free Tech Books Every Sunday',
+                      1000
+                    ]}
+                    wrapper="span"
+                    speed={10}
+                    style={{ fontSize: '0.7em', display: 'inline-block' }}
+                    repeat={Infinity}
+                  />
+                </h1>
+              </div>
+              <p className="mt-8 text-md text-white">
+                Discover a treasure trove of tech resources, featuring in-depth notes, comprehensive guides, practical templates, and detailed roadmaps designed to accelerate your learning and career growth.
+              </p>
+              <div className="relative mt-8">
+                <Link href="/resourses" passHref>
+                  <button className="absolute left-0 top-0 rounded-md bg-white px-3 py-2.5 text-sm font-semibold text-black shadow-sm  focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black">
+                    Get Started
+                  </button>
+                </Link>
+              </div>
+            </div>
+            <div className="relative lg:col-span-5 lg:-mr-8 xl:col-span-6  ">
+              <ThreeDCardDemo />
             </div>
           </div>
-          <div className="relative lg:col-span-5 lg:-mr-8 xl:col-span-6  ">
-            <ThreeDCardDemo />
-          </div>
         </div>
-      </div>
       </div>
       {/* Introduction */}
       <div className="bg-slate-900 py-16">
@@ -91,7 +91,7 @@ export default function Home() {
               Welcome to TechResourceHub!
             </h2>
             <p className="mt-8 text-lg text-white animate-fade-in">
-            We provide a variety of tech resources like resume templates and roadmaps, all from reputable sources, to simplify your learning and career growth.
+              We provide a variety of tech resources like resume templates and roadmaps, all from reputable sources, to simplify your learning and career growth.
             </p>
           </div>
           <div className="mt-10 grid gap-10 md:grid-cols-3">
@@ -246,7 +246,7 @@ export default function Home() {
               </div>
               <h3 className="text-2xl font-semibold text-white">Learn & Prepare</h3>
               <p className="mt-3 text-lg text-indigo-200">
-              Learn to prepare yourself to be interview-ready.
+                Learn to prepare yourself to be interview-ready.
               </p>
             </div>
             <div className="flex flex-col items-center text-center transform transition-transform hover:scale-105">
@@ -261,96 +261,96 @@ export default function Home() {
           </div>
         </div>
       </div>
-       {/* Testimonials/Reviews */}
-        <div className="bg-slate-950  py-16">
-          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <div className="text-center">
-              <h2 className="text-3xl font-extrabold text-white sm:text-4xl">
-                Testimonials
-              </h2>
-              <p className="mt-4 text-lg leading-6 text-white">
-                Hear from our satisfied users who have benefited from our resources.
+      {/* Testimonials/Reviews */}
+      <div className="bg-slate-950  py-16">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <h2 className="text-3xl font-extrabold text-white sm:text-4xl">
+              Testimonials
+            </h2>
+            <p className="mt-4 text-lg leading-6 text-white">
+              Hear from our satisfied users who have benefited from our resources.
+            </p>
+          </div>
+          <div className="mt-10 grid gap-10 md:grid-cols-3">
+            <div className="bg-slate-900 p-6 rounded-lg shadow-lg">
+              <div className="flex items-center">
+                <div className="relative w-12 h-12 rounded-full overflow-hidden">
+                  <Image
+                    src="https://d3l4smlx4vuygm.cloudfront.net/abhijeet%20.png"
+                    alt="User Photo"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <div className="ml-4">
+                  <h3 className="text-lg font-medium leading-6 text-white">Abhijeet Singh</h3>
+                  <div className="flex">
+                    {[...Array(5)].map((_, index) => (
+                      <svg key={index} className="h-5 w-5 text-yellow-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                        <path d="M9.049 2.927a1 1 0 011.902 0l1.717 4.253a1 1 0 00.832.674l4.564.33a1 1 0 01.584 1.786l-3.41 2.845a1 1 0 00-.29.96l1.04 4.517a1 1 0 01-1.45 1.054L10 16.61l-4.038 2.47a1 1 0 01-1.45-1.054l1.04-4.517a1 1 0 00-.29-.96L1.852 9.97a1 1 0 01.584-1.786l4.564-.33a1 1 0 00.832-.674l1.717-4.253z" />
+                      </svg>
+                    ))}
+                  </div>
+                </div>
+              </div>
+              <p className="mt-4 text-base text-white">
+                Really very helpful resources. Through this I am able to boost my preparation.
               </p>
             </div>
-            <div className="mt-10 grid gap-10 md:grid-cols-3">
-              <div className="bg-slate-900 p-6 rounded-lg shadow-lg">
-                <div className="flex items-center">
-                  <div className="relative w-12 h-12 rounded-full overflow-hidden">
-                    <Image
-                      src="https://utfs.io/f/9ca0264f-47ac-4690-9119-f9c14c48b942-ei8toq.png"
-                      alt="User Photo"
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
-                  <div className="ml-4">
-                    <h3 className="text-lg font-medium leading-6 text-white">Abhijeet Singh</h3>
-                    <div className="flex">
-                      {[...Array(5)].map((_, index) => (
-                        <svg key={index} className="h-5 w-5 text-yellow-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                          <path d="M9.049 2.927a1 1 0 011.902 0l1.717 4.253a1 1 0 00.832.674l4.564.33a1 1 0 01.584 1.786l-3.41 2.845a1 1 0 00-.29.96l1.04 4.517a1 1 0 01-1.45 1.054L10 16.61l-4.038 2.47a1 1 0 01-1.45-1.054l1.04-4.517a1 1 0 00-.29-.96L1.852 9.97a1 1 0 01.584-1.786l4.564-.33a1 1 0 00.832-.674l1.717-4.253z" />
-                        </svg>
-                      ))}
-                    </div>
+            <div className="bg-slate-900  p-6 rounded-lg shadow-lg">
+              <div className="flex items-center">
+                <div className="relative w-12 h-12 rounded-full overflow-hidden">
+                  <Image
+                    src="https://d3l4smlx4vuygm.cloudfront.net/isha%20mandal.png"
+                    alt="User Photo"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <div className="ml-4">
+                  <h3 className="text-lg font-medium leading-6 text-white">Esha Mandal</h3>
+                  <div className="flex">
+                    {[...Array(4)].map((_, index) => (
+                      <svg key={index} className="h-5 w-5 text-yellow-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                        <path d="M9.049 2.927a1 1 0 011.902 0l1.717 4.253a1 1 0 00.832.674l4.564.33a1 1 0 01.584 1.786l-3.41 2.845a1 1 0 00-.29.96l1.04 4.517a1 1 0 01-1.45 1.054L10 16.61l-4.038 2.47a1 1 0 01-1.45-1.054l1.04-4.517a1 1 0 00-.29-.96L1.852 9.97a1 1 0 01.584-1.786l4.564-.33a1 1 0 00.832-.674l1.717-4.253z" />
+                      </svg>
+                    ))}
                   </div>
                 </div>
-                <p className="mt-4 text-base text-white">
-                  Really very helpful resources. Through this I am able to boost my preparation.
-                </p>
               </div>
-              <div className="bg-slate-900  p-6 rounded-lg shadow-lg">
-                <div className="flex items-center">
-                  <div className="relative w-12 h-12 rounded-full overflow-hidden">
-                    <Image
-                      src="https://utfs.io/f/a497c927-b542-43a2-9519-19595f39a537-ei8top.png"
-                      alt="User Photo"
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
-                  <div className="ml-4">
-                    <h3 className="text-lg font-medium leading-6 text-white">Esha Mandal</h3>
-                    <div className="flex">
-                      {[...Array(4)].map((_, index) => (
-                        <svg key={index} className="h-5 w-5 text-yellow-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                          <path d="M9.049 2.927a1 1 0 011.902 0l1.717 4.253a1 1 0 00.832.674l4.564.33a1 1 0 01.584 1.786l-3.41 2.845a1 1 0 00-.29.96l1.04 4.517a1 1 0 01-1.45 1.054L10 16.61l-4.038 2.47a1 1 0 01-1.45-1.054l1.04-4.517a1 1 0 00-.29-.96L1.852 9.97a1 1 0 01.584-1.786l4.564-.33a1 1 0 00.832-.674l1.717-4.253z" />
-                        </svg>
-                      ))}
-                    </div>
+              <p className="mt-4 text-base text-white">
+                This group is incredibly useful! 📚 The content is top-notch, and the admin deserves more recognition. 🌟 Wishing you all the best and thank you for your help. Take care and have a great day! 😊
+              </p>
+            </div>
+            <div className="bg-slate-900  p-6 rounded-lg shadow-lg">
+              <div className="flex items-center">
+                <div className="relative w-12 h-12 rounded-full overflow-hidden">
+                  <Image
+                    src="https://d3l4smlx4vuygm.cloudfront.net/kuldeep%20pawan.png"
+                    alt="User Photo"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <div className="ml-4">
+                  <h3 className="text-lg font-medium leading-6 text-white">Kuldeep Panwar</h3>
+                  <div className="flex">
+                    {[...Array(5)].map((_, index) => (
+                      <svg key={index} className="h-5 w-5 text-yellow-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                        <path d="M9.049 2.927a1 1 0 011.902 0l1.717 4.253a1 1 0 00.832.674l4.564.33a1 1 0 01.584 1.786l-3.41 2.845a1 1 0 00-.29.96l1.04 4.517a1 1 0 01-1.45 1.054L10 16.61l-4.038 2.47a1 1 0 01-1.45-1.054l1.04-4.517a1 1 0 00-.29-.96L1.852 9.97a1 1 0 01.584-1.786l4.564-.33a1 1 0 00.832-.674l1.717-4.253z" />
+                      </svg>
+                    ))}
                   </div>
                 </div>
-                <p className="mt-4 text-base text-white">
-                  This group is incredibly useful! 📚 The content is top-notch, and the admin deserves more recognition. 🌟 Wishing you all the best and thank you for your help. Take care and have a great day! 😊
-                </p>
               </div>
-              <div className="bg-slate-900  p-6 rounded-lg shadow-lg">
-                <div className="flex items-center">
-                  <div className="relative w-12 h-12 rounded-full overflow-hidden">
-                    <Image
-                      src="https://utfs.io/f/5d434ceb-b575-4a74-8f16-5c05599e1e31-ei8too.png"
-                      alt="User Photo"
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
-                  <div className="ml-4">
-                    <h3 className="text-lg font-medium leading-6 text-white">Kuldeep Panwar</h3>
-                    <div className="flex">
-                      {[...Array(5)].map((_, index) => (
-                        <svg key={index} className="h-5 w-5 text-yellow-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                          <path d="M9.049 2.927a1 1 0 011.902 0l1.717 4.253a1 1 0 00.832.674l4.564.33a1 1 0 01.584 1.786l-3.41 2.845a1 1 0 00-.29.96l1.04 4.517a1 1 0 01-1.45 1.054L10 16.61l-4.038 2.47a1 1 0 01-1.45-1.054l1.04-4.517a1 1 0 00-.29-.96L1.852 9.97a1 1 0 01.584-1.786l4.564-.33a1 1 0 00.832-.674l1.717-4.253z" />
-                        </svg>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-                <p className="mt-4 text-base text-white">
-                  Im deeply grateful to everyone in the Lets Code 🤗 community, especially Avinash sir. Your support has been crucial in providing me with invaluable technical resources and fostering my growth in computer science. Thank you! 🙏💻
-                </p>
-              </div>
+              <p className="mt-4 text-base text-white">
+                Im deeply grateful to everyone in the Lets Code 🤗 community, especially Avinash sir. Your support has been crucial in providing me with invaluable technical resources and fostering my growth in computer science. Thank you! 🙏💻
+              </p>
             </div>
           </div>
         </div>
+      </div>
       {/* Call to Action (CTA) */}
       <div className="bg-gradient-to-r from-blue-600 to-blue-800 py-16">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
@@ -361,8 +361,8 @@ export default function Home() {
             Discover endless resources and stay updated with our latest content.
           </p>
           <div className="mt-8 flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
-             {/* <a href="/resources" className="px-6 py-3 bg-yellow-500 text-white font-semibold rounded-md shadow-lg hover:bg-yellow-400 transition duration-300 w-full sm:w-auto"> */}
-              {/* Explore Resources */}
+            {/* <a href="/resources" className="px-6 py-3 bg-yellow-500 text-white font-semibold rounded-md shadow-lg hover:bg-yellow-400 transition duration-300 w-full sm:w-auto"> */}
+            {/* Explore Resources */}
             {/* </a>  */}
             <a href="https://t.me/offcampusjobsupdatess" target="_blank" className="px-6 py-3 bg-white text-blue-600 font-semibold rounded-md shadow-lg hover:bg-gray-100 transition duration-300 w-full sm:w-auto">
               Join Now
@@ -374,14 +374,14 @@ export default function Home() {
               <input
                 required
                 value={email}
-                onChange={(e)=>setEmail(e.target.value)} 
+                onChange={(e) => setEmail(e.target.value)}
                 type="email"
                 className="w-full px-5 py-3 border border-transparent rounded-md text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-yellow-500"
                 placeholder="Enter your email"
               />
               <button
-              onClick={submithandler}
-              disabled={disabled}
+                onClick={submithandler}
+                disabled={disabled}
                 type="submit"
                 className="mt-3 w-full px-5 py-3 border border-transparent rounded-md shadow-lg bg-yellow-500 text-white font-medium hover:bg-yellow-400 sm:mt-0 sm:ml-3 sm:w-auto sm:flex-shrink-0 transition duration-300"
               >
@@ -399,7 +399,7 @@ export default function Home() {
             <a href="https://t.me/offcampusjobsupdatess" className="text-blue-200 hover:text-white transition duration-300">
               <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                 {/* SVG content */}
-                <path d="M22.461 5.596L19.33 18.097c-.306 1.221-1.12 1.526-2.269.95l-6.26-4.616-3.022 2.91c-.333.323-.611.593-1.251.593l.451-6.406 11.67-10.508c.514-.48-.111-.748-.8-.27L4.517 9.522l-6.366-1.99c-1.215-.38-1.236-1.216.254-1.798L21.009 4.327c.998-.361 1.867.244 1.452 1.269z"/>
+                <path d="M22.461 5.596L19.33 18.097c-.306 1.221-1.12 1.526-2.269.95l-6.26-4.616-3.022 2.91c-.333.323-.611.593-1.251.593l.451-6.406 11.67-10.508c.514-.48-.111-.748-.8-.27L4.517 9.522l-6.366-1.99c-1.215-.38-1.236-1.216.254-1.798L21.009 4.327c.998-.361 1.867.244 1.452 1.269z" />
               </svg>
             </a>
             <a href="https://www.linkedin.com/company/lets-code-forever/" className="text-blue-200 hover:text-white transition duration-300">
@@ -413,6 +413,21 @@ export default function Home() {
                 {/* SVG content */}
                 <path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.366.062 2.633.334 3.608 1.308.974.974 1.246 2.241 1.308 3.608.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.062 1.366-.334 2.633-1.308 3.608-.974.974-2.241 1.246-3.608 1.308-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.366-.062-2.633-.334-3.608-1.308-.974-.974-1.246-2.241-1.308-3.608-.058-1.266-.07-1.646-.07-4.85s.012-3.584.07-4.85c.062-1.366.334-2.633 1.308-3.608C4.517 2.497 5.784 2.225 7.15 2.163 8.416 2.105 8.796 2.093 12 2.093zm0-2.163C8.756 0 8.358.012 7.092.07 5.683.136 4.244.426 3.182 1.488c-1.062 1.062-1.352 2.501-1.418 3.91C1.758 6.89 1.746 7.27 1.746 10.5s.012 3.61.07 4.85c.066 1.409.356 2.848 1.418 3.91 1.062 1.062 2.501 1.352 3.91 1.418 1.266.058 1.646.07 4.85.07s3.61-.012 4.85-.07c1.409-.066 2.848-.356 3.91-1.418 1.062-1.062 1.352-2.501 1.418-3.91.058-1.266.07-1.646.07-4.85s-.012-3.61-.07-4.85c-.066-1.409-.356-2.848-1.418-3.91-1.062-1.062-2.501-1.352-3.91-1.418-1.266-.058-1.646-.07-4.85-.07zm0 5.838a6.163 6.163 0 100 12.326 6.163 6.163 0 000-12.326zm0 10.166a4.003 4.003 0 110-8.006 4.003 4.003 0 010 8.006zm6.406-10.839a1.44 1.44 0 100-2.881 1.44 1.44 0 000 2.881z" />
               </svg>
+            </a>
+          </div>
+          <div className="flex flex-col items-center justify-center mt-8">
+            <a
+              href="https://www.producthunt.com/posts/let-s-resource?embed=true&utm_source=badge-featured&utm_medium=badge&utm_souce=badge-let&#0045;s&#0045;resource"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=466254&theme=light"
+                alt="Let&#0039;s&#0032;Resource - Learn&#0032;Prepare&#0032;&#0038;&#0032;Sucseed | Product Hunt"
+                style={{ width: '250px', height: '54px' }}
+                width="250"
+                height="54"
+              />
             </a>
           </div>
         </div>

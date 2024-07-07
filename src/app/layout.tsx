@@ -21,6 +21,7 @@ export default function RootLayout({
   return (
     <ClerkProvider>
     <html lang="en">
+      <link rel="icon" href="/next.svg" type="image/svg+xml" />
       <body className={inter.className}>
       <Script  id="G-Q0QC4R4RC9" strategy="lazyOnload" src={`https://www.googletagmanager.com/gtag/js?id=G-Q0QC4R4RC9`}/>
           <Script 
