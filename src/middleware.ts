@@ -2,7 +2,7 @@ import { clerkMiddleware, createRouteMatcher } from '@clerk/nextjs/server';
 import { NextResponse } from 'next/server';
 
 // Create matchers for the routes
-const isResourcesRoute = createRouteMatcher(['/resouces(.*)']);
+const isResourcesRoute = createRouteMatcher(['/resouces(.*)','/projects(.*)']);
 const isAdminRoute = createRouteMatcher(['/admin(.*)']);
 
 export default clerkMiddleware((auth, req) => {
