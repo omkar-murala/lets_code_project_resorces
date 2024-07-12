@@ -5,7 +5,7 @@ function PaidProjectCard() {
                 <div className='flex flex-col items-center justify-center gap-8'>
                     <div>
                         <h1 className='font-bold  sm:text-xl text-3xl text-white text-center'>
-                            Get Final Year Project&apos;s at Lowest cost
+                            Get Final Year Project&apos;s at Lowest cost 
                         </h1>
                     </div>
                     <div className='mb-4'>
