@@ -16,21 +16,15 @@ const menuItems = [
   { name: "Home", href: "/" },
   {name:"About", href:"/about"},
   { name: "Contact", href: "/contact" },
-  { name: "Resource", href: "/resourses" }
+  { name: "Resource", href: "/resourses" },{
+    name:"Mock Interview" ,href:"/interviews"
+  }
 ];
 
 export function Navbar() {
-  // const router = useRouter();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [image, setImage] = useState("");
-  // const router = useRouter();
-
-  // const handleSignIn = () => {
-  //   // Redirect to dashboard after sign-in
-  //   router.push('/dashboard');
-  // };
-
-
+ 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };

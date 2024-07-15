@@ -217,9 +217,8 @@ const PrivacyPolicy = () => {
           If you have any questions about this Privacy Policy, You can contact us:
         </p>
         <ul className="list-disc pl-6">
-          <li className="mb-2">By email: contact@example.com</li>
-          <li className="mb-2">By visiting this page on our website: <a href="https://example.com/contact" className="text-blue-500">https://example.com/contact</a></li>
-          <li className="mb-2">By phone number: +123456789</li>
+          <li className="mb-2">By email: letsresource@lets-code.co.in</li>
+          <li className="mb-2">By visiting this page on our website: <a href="https://www.lets-code.co.in" className="text-blue-500">https://www.lets-code.co.in/</a></li>
         </ul>
       </div>
     </div>
