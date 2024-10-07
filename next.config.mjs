@@ -101,7 +101,69 @@ const nextConfig = {
         },{
           protocol:'https',
           hostname:'d3l4smlx4vuygm.cloudfront.net'
-        }
+        },
+        {
+          protocol:'https',
+          hostname:'adda247-wp-multisite-assets.s3.ap-south-1.amazonaws.com'
+        },
+        
+        {
+          protocol:'https',
+          hostname:'edurev.gumlet.io'
+        },
+        {
+          protocol : 'https',
+          hostname : 'avpowertech.com'
+        },
+      {
+        protocol : 'https',
+        hostname : 'th.bing.com'
+      },
+      {
+        protocol : 'https',
+        hostname : 'i1.wp.com'
+       },
+      {
+        protocol : 'https',
+        hostname : 'leverageedublog.s3.ap-south-1.amazonaws.com'
+      },
+      {
+        protocol : 'https',
+        hostname : 'd1uvxqwmcz8fl1.cloudfront.net'
+      },
+      {
+        protocol : 'https',
+        hostname : 'i.ytimg.com'
+      },
+      {
+        protocol : 'https',
+        hostname : 'contenthub-static.grammarly.com'
+      },
+      {
+        protocol : 'https',
+        hostname : 'dz8fbjd9gwp2s.cloudfront.net'
+      },
+      {
+        protocol : 'https',
+        hostname : 'collaborator.pro'
+      },
+      {
+        protocol : 'https',
+        hostname : 'letresourceimage.s3.ap-south-1.amazonaws.com'
+      },
+      {
+        protocol : 'https',
+        hostname : 'www.onlinemath4all.com'
+      },
+      {
+        protocol : 'https',
+        hostname : 'media.dev.to'
+      },
+      {
+        protocol : 'https',
+        hostname : 'pbs.twimg.com'
+      }
+      
       ],
     },
   };

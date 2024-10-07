@@ -26,7 +26,7 @@ const LearningPaths = () => {
     'JavaScript',
     'Java',
     'Jira',
-    'Interview preparation',
+    'interviews preparation',
     'Guided PDF',
     'Git',
     'DBMS & SQL',
