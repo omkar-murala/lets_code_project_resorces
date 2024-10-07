@@ -43,7 +43,6 @@ function Page({ params }: { params: { slug: string } }) {
                 return(
                   <>
               <div  key={index + "-" + index} className='py-8'>
-
               <Card
               link={ele.link}
               name={ele.name}

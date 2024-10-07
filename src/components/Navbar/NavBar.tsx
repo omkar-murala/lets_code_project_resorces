@@ -14,11 +14,12 @@ import {
 
 const menuItems = [
   { name: "Home", href: "/" },
-  {name:"About", href:"/about"},
-  { name: "Contact", href: "/contact" },
-  { name: "Resource", href: "/resourses" },{
-    name:"Mock Interview" ,href:"/interviews"
-  }
+  // {name:"About", href:"/about"},
+  // { name: "Contact", href: "/contact" },
+  { name: "Resource", href: "/resourses" },
+  { name:"Carrer Services" ,href:"/interviews"},
+  { name:"Aptitude" ,href:"/Aptitude"},
+  // { name:"onlineAssessment" ,href:"/onlineAssessment"}
 ];
 
 export function Navbar() {

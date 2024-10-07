@@ -23,7 +23,7 @@ export default function RootLayout({
     <html lang="en">
       <link rel="icon" href="/next.svg" type="image/svg+xml" />
       <body className={inter.className}>
-      <Script  id="G-Q0QC4R4RC9" strategy="lazyOnload" src={`https://www.googletagmanager.com/gtag/js?id=G-Q0QC4R4RC9`}/>
+      {/* <Script  id="G-Q0QC4R4RC9" strategy="lazyOnload" src={`https://www.googletagmanager.com/gtag/js?id=G-Q0QC4R4RC9`}/>
           <Script 
           id="google-analytics"       
       >{
@@ -35,7 +35,7 @@ export default function RootLayout({
       `
       }
       </Script>
-      <Script id="AdSense-id" data-ad-client={`ca-pub-8907718595878644`} async={true} strategy={`beforeInteractive`} src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8907718595878644`} />
+      <Script id="AdSense-id" data-ad-client={`ca-pub-8907718595878644`} async={true} strategy={`beforeInteractive`} src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8907718595878644`} /> */}
           <Navbar />
           {children}
           <Footer />
