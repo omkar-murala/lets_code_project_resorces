@@ -1,0 +1,83 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+
+@layer components {
+  /* Right to Left Animation */
+  @keyframes scroll-right-to-left {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+
+  /* Left to Right Animation */
+  @keyframes scroll-left-to-right {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(100%);
+    }
+  }
+
+  /* Animations applied to elements */
+  .animate-scroll-left-to-right {
+    animation: scroll-left-to-right 40s linear infinite;
+    display: flex;
+    white-space: nowrap;
+  }
+
+  .animate-scroll-right-to-left {
+    animation: scroll-right-to-left 40s linear infinite;
+    display: flex;
+    white-space: nowrap;
+  }
+}
+
+
+.tree-container {
+  display: flex;
+  justify-content: center;
+}
+
+.tree {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.branch {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.connector {
+  width: 2px;
+  height: 20px;
+  background-color: gray;
+  margin-bottom: 10px;
+}
+
+.branch .grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+}
+
+.team-member .group {
+  position: relative;
+}
+
+.team-member .group .absolute {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
