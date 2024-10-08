@@ -1,6 +1,6 @@
-// pages/terms.js
 
-const Terms = () => {
+
+const Terms = async() => {
   return (
     <div className="w-full px-4 py-3 bg-slate-800 sm:px-6 md:px-12 lg:px-20 xl:px-32 2xl:px-40">
 

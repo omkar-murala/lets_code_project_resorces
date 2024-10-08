@@ -1,4 +1,4 @@
-function PaidProjectCard() {
+async function PaidProjectCard() {
     return (
         <>
             <div className='bg-slate-800 p-4 rounded-md'>

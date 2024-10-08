@@ -1,5 +1,5 @@
 
-const PrivacyPolicy = () => {
+const PrivacyPolicy = async() => {
   return (
     <div className="w-full px-4 py-3 bg-slate-800 sm:px-6 md:px-12 lg:px-20 xl:px-32 2xl:px-40">
       <div className="bg-white shadow-lg rounded-lg p-6">

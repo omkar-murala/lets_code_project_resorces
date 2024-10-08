@@ -1,4 +1,4 @@
-"use client";
+
 import React from 'react';
 import MockInterview from './_components/MockInterviewCard';
 import { Card } from './_components/Card';
@@ -43,7 +43,7 @@ const quizData = [
     }
 ];
 
-function HeroSection() {
+async function HeroSection() {
     return (
         
         <div className="bg-blue-100 py-16 px-8 text-center">
