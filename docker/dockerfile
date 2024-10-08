@@ -1,0 +1,24 @@
+# Base image
+FROM node:latest
+
+# Working dir
+WORKDIR /dist
+
+# copying the package.json files
+COPY package*.json /dist/
+
+# Installing the packages
+RUN npm install
+
+# copy the files
+COPY  . /dist/
+
+# Expose the port
+EXPOSE 3000
+
+# Build thr file
+RUN npm run build
+
+# Run the application
+CMD [ "npm","run","start"]
+
